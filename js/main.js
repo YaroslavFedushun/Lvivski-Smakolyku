@@ -135,11 +135,13 @@ producsInBasket.basketTotalPrice=producsInBasket.basketTotalPrice-dellItem.price
 
 var dellIndex = findElement(dellId);
 console.log(dellIndex)
-
+var delHide= "#"+dellId+" "
+console.log(delHide)
+$(this).closest(".col-md-4").parent().hide()
 producsInBasket.splice(dellIndex,1 );
 $(".length-basket").text(producsInBasket.basketTotalPrice+"грн")
+$(".basketTotalPrice").text(producsInBasket.basketTotalPrice+"грн")
 
-renderTmpl("basketTmpl", "modal-body", producsInBasket)
 
 });
 
@@ -340,7 +342,7 @@ var producsInBasket = [];
     if ( producsInBasket.length==0) {
         sweetAlert("Oops...","Корзина пуста","error")
     }else{
-        renderTmpl("basketTmpl", "modal-body", producsInBasket)
+        renderTmpl("basketTmpl", "history", producsInBasket)
     }
     
 
