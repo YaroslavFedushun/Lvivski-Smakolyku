@@ -117,15 +117,29 @@ return   Object.assign({}, Array[i])
 }
 }
 
+function findElement(dellId){
+  for (var i = 0; i<producsInBasket.length; i++) {
+    if (producsInBasket[i].productIdBasket==dellId ) {
+      return i;
+    }
+  }
+}
+
+
 $('#history').on('click', ".dellItem", function() {
  var dellId= $(this).attr("delAttr")
-    console.log(dellId)
+    
 var dellItem= findByProductId(dellId,producsInBasket)
+console.log(dellItem)
 producsInBasket.basketTotalPrice=producsInBasket.basketTotalPrice-dellItem.pricePerOne
-producsInBasket.splice( $.inArray(dellItem,producsInBasket) ,1 );
+
+var dellIndex = findElement(dellId);
+console.log(dellIndex)
+
+producsInBasket.splice(dellIndex,1 );
 $(".length-basket").text(producsInBasket.basketTotalPrice+"грн")
 
-// renderTmpl("basketTmpl", "history", producsInBasket)
+renderTmpl("basketTmpl", "modal-body", producsInBasket)
 
 });
 
@@ -326,7 +340,7 @@ var producsInBasket = [];
     if ( producsInBasket.length==0) {
         sweetAlert("Oops...","Корзина пуста","error")
     }else{
-        renderTmpl("basketTmpl", "history", producsInBasket)
+        renderTmpl("basketTmpl", "modal-body", producsInBasket)
     }
     
 
