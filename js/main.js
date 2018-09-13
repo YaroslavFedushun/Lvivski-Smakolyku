@@ -14,6 +14,18 @@ $(document).on('ready', function() {
 });
 
 
+$('#history').on('click', "#linkDessert", function() {
+    $(".content").hide(100);
+   renderDescribeTmpl("dessertmpl", "desserts")
+
+
+});
+$('#history').on('click', "#linkDish", function() {
+    $(".content").hide(100);
+    renderDescribeTmpl("dishtmpl", "dishes")
+
+
+});
 
 $("#fifthmenu").click(function() {
     $(".content").hide(100);
@@ -422,8 +434,60 @@ $('#history').on('click', "#order", function() {
 sendRender()
 
 });
+$('#myModal2').on('click', "#callBack", function(){
 
+  console.log(12)
+callBack()
+   console.log(12)
+});
 
+function callBack(){
+      var form_id = "jquery_form2";
+
+    var data = {
+        "access_token": "v3aot4ajvbw2htkqvyr94knv"
+    };
+
+    function onSuccess() {
+        // remove this to avoid redirect
+        window.location = window.location.pathname + "?message=Email+Successfully+Sent%21&isError=0";
+         
+    }
+
+    function onError(error) {
+        // remove this to avoid redirect
+        window.location = window.location.pathname + "?message=Email+could+not+be+sent.&isError=1";
+
+    }
+
+    var sendButton = $("#callBack");
+
+    function send() {
+        sendButton.val('Sending…');
+        sendButton.prop('disabled',true);
+      
+        var subject = $("[name='subject1']").val();
+       
+        var number = $("[name='field22']").val();
+        data['subject'] = subject;
+        data['text'] = "Перезвоніть мені будь-ласка мій номер "+ number+" моэ імя "+ subject   ;
+        
+        $.post('https://postmail.invotes.com/send',
+            data,
+            onSuccess
+        ).fail(onError);
+
+        return false;
+    }
+
+    sendButton.on('click', send);
+
+    var $form = $("#" + form_id);
+    $form.submit(function( event ) {
+        event.preventDefault();
+    });
+   
+    }  
 var readyOrder=' ';
 var HowMany=producsInBasket.length
 function sendRender(){
@@ -493,3 +557,6 @@ function sendRender(){
 
 
     }
+
+
+    

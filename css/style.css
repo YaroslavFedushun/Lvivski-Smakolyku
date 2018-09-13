@@ -23,9 +23,18 @@ a{
 	    margin: 40px 0 0px;
 
 }
+.basket-call button {
+    background: transparent;
+    border-color: transparent;
+}
+.btn-info:focus, .btn-info:hover {
+    background: transparent;
+    border-color: transparent;
+}
 
-
-
+#myModal2{
+    font-family: 'Amatic SC', cursive;
+}
 
 .call-back {
 	list-style: none;
