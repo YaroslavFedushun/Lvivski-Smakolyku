@@ -1,79 +1,86 @@
 <!DOCTYPE html>
 <html lang="ru">
-   <head>
-      <meta charset="utf-8">
-      <title>Top-site</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">    
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"><!--bootstrap -->
-      <link href="https://fonts.googleapis.com/css?family=Lato:300i,400,700" rel="stylesheet"><!--fonts -->
-      <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC&amp;subset=cyrillic" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Pacifico&amp;subset=cyrillic,latin-ext,vietnamese" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Amatic+SC&amp;subset=cyrillic" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
-      <!-- fonts -->
-      <link rel="stylesheet" href="css/style.css"><!--style -->
-      <script src="js/objects.js"></script><!--objects -->
-    
-      <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-      <script src="https://code.jquery.com/jquery.min.js"></script><!--jquery -->
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js"></script><!--Lodash-->
-      <script src="lib/slick/slick.js" type="text/javascript" charset="utf-8"></script> <!-- carousel  -->
-      <link rel="stylesheet" type="text/css" href="lib/slick/slick.css">
-      <link rel="stylesheet" type="text/css" href="lib/slick/slick-theme.css">
-      <!-- carousel  -->
-   </head>
-   <body>
+
+<head>
+    <meta charset="utf-8">
+    <title>Top-site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <!--bootstrap -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300i,400,700" rel="stylesheet">
+    <!--fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Pacifico&amp;subset=cyrillic,latin-ext,vietnamese" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+    <!-- fonts -->
+    <link rel="stylesheet" href="css/style.css">
+    <!--style -->
+    <script src="js/objects.js"></script>
+    <!--objects -->
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <SCRIPT type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></SCRIPT>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <!--jquery -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js"></script>
+    <!--Lodash-->
+    <script src="lib/slick/slick.js" type="text/javascript" charset="utf-8"></script> <!-- carousel  -->
+    <link rel="stylesheet" type="text/css" href="lib/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="lib/slick/slick-theme.css">
+    <!-- carousel  -->
+</head>
+
+<body>
 
 
 
 
 
-
-
-<script type="text/template" id="SendTmpl" >
-<form id="jquery_form">
+    <script type="text/template" id="SendTmpl">
+        <form id="jquery_form">
     
     <p>Powered by <a href="https://postmail.invotes.com" target="_blank">PostMail</a></p>
     <div class="form-style-5">
 <form>
 <fieldset>
 <legend>Заповніть будь-ласка анкету</legend>
-<input type="text" name="subject" placeholder="Ваше Імя">
-<input type="tel" minlength="10" maxlength="13" name="field2" placeholder="Ваш номер">
-<textarea name="field3" placeholder="Коментар"></textarea>
+<input type="text" name="subject" id="sendName" placeholder="Ваше Імя">
+<input type="tel" minlength="10" id="sendTel" maxlength="13" name="field2" placeholder="Ваш номер">
+<textarea name="field3" id="sendCommit" placeholder="Коментар"></textarea>
 
      
 </fieldset>
 
-<input type="submit" name="send"  value="Замовити" />
+<input type="submit" name="send" id="sendOrder"   value="Замовити" />
 </form>
 </div>
 </form>
 
 </script>
 
-<script type="text/template" id="WeddingCake">
-	<div class="WeddingCakeState"><p class="PageHeaderState">Кондитерська “Львівські Смаколики” пропонує весільні торти на будь-який смак!</p><p><br>
+    <script type="text/template" id="WeddingCake">
+        <div class="WeddingCakeState"><p class="PageHeaderState">Кондитерська “Львівські Смаколики” пропонує весільні торти на будь-який смак!</p><p><br>
 Ми виготовляємо наші торти лише з відібраних натуральних інгредієнтів, не використовуємо ароматизаторів, підсилювачів смаку та готових сумішей або бісквітів. Усі компоненти тортів ми виготовляємо власноруч. <br>
 Ми можемо запропонувати для вашого весілля  торти від 1.5 - кілограма, і торти в декілька ярусів. Для кожного ярусу можете обрати окремий смак!</p>
 <img class=" second" src="images/wedding2.jpg">
 <p>Ціна весільного торту: 400-550 грн/кг(в вартість входить декор)</p>
 
 <ul>Декор:
-	<li>із мазками</li>
-	<li>із набризками</li>
-	<li>градієнт</li>
-	<li>сусальне золото</li>
-	<li>сусальне срібло</li>
-	<li>мармур</li>
-	<li>живі квіти</li>
-	<li>макаронс</li>
-	<li>топери</li>
-	<li>сезонні фрутки/ягоди</li>
+  <li>із мазками</li>
+  <li>із набризками</li>
+  <li>градієнт</li>
+  <li>сусальне золото</li>
+  <li>сусальне срібло</li>
+  <li>мармур</li>
+  <li>живі квіти</li>
+  <li>макаронс</li>
+  <li>топери</li>
+  <li>сезонні фрутки/ягоди</li>
 </ul>
 
 
@@ -103,12 +110,12 @@
 </script>
 
 
-<script type="text/template" id="dailyAndPay" >
-	<div class="dailyPay"> 
-	<h2>ДОСТАВКА</h2>
-	<p class="dailyPayText">Доставку ми здійснюємо декількома способами</p><br>
+    <script type="text/template" id="dailyAndPay">
+        <div class="dailyPay"> 
+  <h2>ДОСТАВКА</h2>
+  <p class="dailyPayText">Доставку ми здійснюємо декількома способами</p><br>
 
-	 <ul>
+   <ul>
      <li class="dailyPayText">самовивіз (контакти вказуємо при оформленні замовлення)</li>
      <li class="dailyPayText">наша доставка - 150 грн (в межах Львова)</li>
      <li class="dailyPayText">відправлення на таксі ( в такому випадку ми не несемо відповідальності за доставку товару)</li>
@@ -118,44 +125,44 @@
 <p class="dailyPayText">Усі замовлення оформлюються по передоплаті 50% на карту.</p><br>
 <p class="dailyPayText">Оплатити замовлення можна:</p><br>
 <ul>
-	<li class="dailyPayText">готівкою при отриманні</li>
-	<li class="dailyPayText">оплата на картку( усі реквізити надаємо при оформлені замовлення)</li>
+  <li class="dailyPayText">готівкою при отриманні</li>
+  <li class="dailyPayText">оплата на картку( усі реквізити надаємо при оформлені замовлення)</li>
 </ul>
 </div>
 </script>
 
 
-<script type="text/template" id="commentTmpl" >
-	<div class="row commentPage">
-		<div class="col-md-3">
-			<img src="images/comment1.jpg">
-		</div>
-		<div class="col-md-3">
-            <img src="images/comment2.jpg">
-		</div>
-		<div class="col-md-3">
-           <img src="images/comment3.jpg">
-		</div>
-		<div class="col-md-3">
-          <img src="images/comment4.jpg">
-		</div>
-		<div class="col-md-3">
-            <img src="images/comment5.jpg">
-		</div>
-		<div class="col-md-3">
-         <img src="images/comment6.jpg">
-		</div>
-		<div class="col-md-3">
-		<img src="images/comment7.jpg">
-		</div>
+    <script type="text/template" id="commentTmpl">
+        <div class="row commentPage">
+    <div class="col-md-3">
+      <img  class="imageComment" src="images/comment1.jpg">
+    </div>
+    <div class="col-md-3">
+            <img class="imageComment" src="images/comment2.jpg">
+    </div>
+    <div class="col-md-3">
+           <img class="imageComment"  src="images/comment3.jpg">
+    </div>
+    <div class="col-md-3">
+          <img class="imageComment"  src="images/comment4.jpg">
+    </div>
+    <div class="col-md-3">
+            <img  class="imageComment" src="images/comment5.jpg">
+    </div>
+    <div class="col-md-3">
+         <img class="imageComment"  src="images/comment6.jpg">
+    </div>
+    <div class="col-md-3">
+    <img class="imageComment"  src="images/comment7.jpg">
+    </div>
 
-	</div>
+  </div>
 </script>
 
 
-<script type="text/template" id="basketTmpl" >
+    <script type="text/template" id="basketTmpl">
 
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -165,10 +172,10 @@
       <div class="modal-body">
       
         <% for (var i=0;i<list.length;i++){ %>
-        	<div class="row products" id="<%= list[i].productIdBasket %>">
-        		<div class="col-md-3">
-        			<img   class="modal-img" src="<%- list[i].photo %>">
-        			</div>
+          <div class="row products" id="<%= list[i].productIdBasket %>">
+            <div class="col-md-3">
+              <img   class="modal-img" src="<%- list[i].photo %>">
+              </div>
         <% if(list[i].globaltype == "cake") { %>
         <h3><%= list[i].title %></h3>
          
@@ -176,13 +183,13 @@
          <div class="col-md-5"><span>Вага:<%= list[i].kg %>кг</span><br>
         <span>Cмак торту:<%= list[i].taste %>кг</span><br>
         <span>Ціна торту:<%= list[i].pricePerOne %></span><br></div>
-         	<div class="col-md-4"><a  delAttr="<%= list[i].productIdBasket %>"  class="del-item-modal dellItem">X</a></div>
+          <div class="col-md-4"><a  delAttr="<%= list[i].productIdBasket %>"  class="del-item-modal dellItem">X</a></div>
         
     <% }else if (list[i].type=="capcake") {%>
     <div class="col-md-5"><span>Cмак капкейку:<%= list[i].TasteCapcake %></span><br>
         <span>Основа капкейку:<%= list[i].base %></span><br>
         <span>Ціна коробочки:<%= list[i].pricePerOne %></span><br></div>
-    	<div class="col-md-4"><a  delAttr="<%= list[i].productIdBasket %>"  class="del-item-modal dellItem">X</a></div>
+      <div class="col-md-4"><a  delAttr="<%= list[i].productIdBasket %>"  class="del-item-modal dellItem">X</a></div>
     
          
 <%} else { %>
@@ -190,7 +197,7 @@
         <span>Кількість:<%= list[i].kg %>шт</span><br>
         <span>Ціна за одиницю: <%= list[i].price %></span>
         </div>
-             	  <div class="col-md-4"><a  delAttr="<%= list[i].productIdBasket %>"  class="del-item-modal dellItem">X</a></div>
+                <div class="col-md-4"><a  delAttr="<%= list[i].productIdBasket %>"  class="del-item-modal dellItem">X</a></div>
         <% } %>
 
          
@@ -213,10 +220,8 @@
 
 
 
-
-   
-   	  <script type="text/template" id="dessertmpl" >
-   	  	<div class="container">
+    <script type="text/template" id="dessertmpl">
+        <div class="container">
   <div class="row">
     
       <% for (var i=0;i<list.length;i++){ %>
@@ -242,9 +247,9 @@
     
   </div>
  </div>
-   	  </script>
-   	   <script type="text/template" id="dishtmpl" >
-   	  	<div class="container">
+      </script>
+    <script type="text/template" id="dishtmpl">
+        <div class="container">
   <div class="row">
     
       <% for (var i=0;i<list.length;i++){ %>
@@ -269,9 +274,9 @@
     
   </div>
  </div>
-   	  </script>
-   	  <script type="text/template" id="strawberrytmpl" >
-   	  	   <div class="chosseFruit">
+      </script>
+    <script type="text/template" id="strawberrytmpl">
+        <div class="chosseFruit">
          <div class="row">
           <% for (var i=0;i<list.length;i++){ %>
             <div class="col-md-4 col-sm-12 ">
@@ -288,10 +293,10 @@
          </div>
        
      </div>
-   	  </script>
-   	   
-   	  <script type="text/template" id="strawberrytypeTmpl">
-   	  	   <div class="row chosseType" >
+      </script>
+
+    <script type="text/template" id="strawberrytypeTmpl">
+        <div class="row chosseType" >
        <div class="col-md-12">
           <div style="text-align: center;">
               
@@ -318,9 +323,9 @@
          </div>
        
    </div>
-   	  </script>
-   	  <script type="text/template" id="capcakeTmpl">
-   	  	   <div class="row chosseType" >
+      </script>
+    <script type="text/template" id="capcakeTmpl">
+        <div class="row chosseType" >
        <div class="col-md-12">
           <div style="text-align: center;font-family: 'Amatic SC', cursive;">
                <h1>Капкейки</h1>
@@ -374,10 +379,10 @@
          </div>
        
    </div>
-   	  </script>
+      </script>
 
-   	   <script type="text/template" id="cakeTmpl">
-   	  	   <div class="row chosseType" >
+    <script type="text/template" id="cakeTmpl">
+        <div class="row chosseType" >
        <div class="col-md-12">
           <div style="text-align: center;">
               
@@ -397,9 +402,9 @@
          </div>
        
    </div>
-   	  </script>  
-   	    <script type="text/template" id="giftTmpl">
-   	  	   <div class="row chosseType" >
+      </script>
+    <script type="text/template" id="giftTmpl">
+        <div class="row chosseType" >
        <div class="col-md-12">
           <div style="text-align: center;">
                
@@ -419,9 +424,9 @@
          </div>
        
    </div>
-   	  </script>  
-<script type="text/template" id="cakeTasteTmpl">
-   	  	   <div class="row chosseType" >
+      </script>
+    <script type="text/template" id="cakeTasteTmpl">
+        <div class="row chosseType" >
        <div class="col-md-12">
           <div style="text-align: center;">
                
@@ -429,47 +434,47 @@
           <% for (var i=0; i<list.length;i++){ %>
             
                 <div class="Lastcake" data-productID="<%= list[i].id %>" >
-                	<div class="col-md-6"> 
+                  <div class="col-md-6"> 
                     <img class="last-img-taste" src="<%- list[i].photo %>">
                     </div>
-                    	'<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content"><p>vtuf cehfasd </p></div></div>'
-                    	<
+                      '<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content"><p>vtuf cehfasd </p></div></div>'
+                      <
                     <div class="col-md-6">
-                    	<h3><%= list[i].description %>   </h3>
+                      <h3><%= list[i].description %>   </h3>
                     <H2>Оберіть вагу</H2>
                     
                     <form name="f1" method="get">
                     <p><input id="inputcake" type="number" size="3" name="num" min="1.5" max="10" value="1.5" step="0.5">  кг</p>
                                       <h2 class="chosseTypeCake">Оберіть начинку</h2>
-                                   	        <section class="regular slider slider-taste">
+                                            <section class="regular slider slider-taste">
     <div>
-    	<button type="button" id="informer1" class="btn btn-default"  data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="Dark Cherry (Шоколадно вишневий) 350 грн/кг Шоколадний бісквіт, пропитаний вишневим сиропом і соковита вишня з ароматом кориці, підпалена неймовірним єгермейстром.">
+      <button type="button" id="informer1" class="btn btn-default"  data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="Dark Cherry (Шоколадно вишневий) 350 грн/кг Шоколадний бісквіт, пропитаний вишневим сиропом і соковита вишня з ароматом кориці, підпалена неймовірним єгермейстром.">
   <img class="slider-tastecake"  tasteAttr="Dark Cherry (Шоколадно вишневий)"  buy-id="52" src="images/taste1.jpg">
 </button>
       
     </div>
     <div>
-    		<button type="button" id="informer2" class="btn btn-default"  data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="Ніжні ванільні бісквіти, ганаш на основі пюре манго і маракуї в поєднанні з ніжним кремом на основі сиру Маскарпоне та вершків.">
+        <button type="button" id="informer2" class="btn btn-default"  data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="Ніжні ванільні бісквіти, ганаш на основі пюре манго і маракуї в поєднанні з ніжним кремом на основі сиру Маскарпоне та вершків.">
    <img class="slider-tastecake" tasteAttr="Манго-маракуйя"   buy-id="53"  src="images/taste2.jpg">
 </button>
      
     </div>
     <div>
-    	<button type="button" id="informer3" class="btn btn-default"  data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="Snickers(Шоколадно-карамельний) 350 грн/кг
+      <button type="button" id="informer3" class="btn btn-default"  data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="Snickers(Шоколадно-карамельний) 350 грн/кг
 Вологі мегашоколадні коржі, начинка з вершкової соленої карамелі в поєднанні з арахісом, та ніжний крем на основі сиру Маскарпоне та вершків.">
    <img class="slider-tastecake"  tasteAttr="Snickers(Шоколадно-карамельний)" buy-id="54"   src="images/taste3.jpg">
 </button>
       
     </div>
     <div>
-    	<button type="button" id="informer4" class="btn btn-default"  data-trigger="hover" data-container="body" data-toggle="popover" data-placement="top" data-content="Фісташка-малина 500 грн/кг
+      <button type="button" id="informer4" class="btn btn-default"  data-trigger="hover" data-container="body" data-toggle="popover" data-placement="top" data-content="Фісташка-малина 500 грн/кг
 Ароматні фісташкові бісквіти, кисленьке кампоте з малини, і ніжний вершковий крем на  основі сиру Маскарпоне.">
    <img  class="slider-tastecake" tasteAttr="Фісташка-малина"  buy-id="55"  src="images/taste4.jpg">
 </button>
       
     </div>
     <div>
-    	<button type="button" id="informer5" class="btn btn-default"  data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="Червоний бархат 350 грн/кг
+      <button type="button" id="informer5" class="btn btn-default"  data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="Червоний бархат 350 грн/кг
 Неймовірно ніжні бісквіти Червоний бархат і полунична йогуртова прослойка, в поєднанні з ніжним кремом на основі сиру Маскарпоне та вершків.">
    <img class="slider-tastecake"  tasteAttr="Червоний бархат"  buy-id="56"  src="images/taste5.jpg">
 </button>
@@ -494,9 +499,9 @@
          </div>
        
    </div>
-   	  </script>  
-   	  <script type="text/template" id="capTasteTmpl">
-   	  	   <div class="row chosseType" >
+      </script>
+    <script type="text/template" id="capTasteTmpl">
+        <div class="row chosseType" >
        <div class="col-md-12">
           <div style="text-align: center;">
                <h2><%= list[0].h2 %></h2>
@@ -504,10 +509,10 @@
           <% for (var i=0; i<list.length;i++){ %>
             
                 <div class="Lastcake" >
-                	<div class="col-md-6"> 
+                  <div class="col-md-6"> 
                     <img class="last-img-taste" src="<%- list[i].photo %>">
                     </div>
-                    	
+                      
                     <div class="col-md-6">
                     
                     
@@ -558,10 +563,10 @@
          </div>
        
    </div>
-   	  </script>  
-   	     	  
-<script type="text/template" id="candybarTmpl">
-   	  	   <div class="row chosseType" >
+      </script>
+
+    <script type="text/template" id="candybarTmpl">
+        <div class="row chosseType" >
        <div class="col-md-12">
           <div class="candybarState" >
                <h2 style="">Candy Bar на замовлення </h2>
@@ -569,9 +574,9 @@
       <p>Ми гарантуємо Вам якісні солодощі, адже ми виготовляємо наші десерти лише з відібраних натуральних інгредієнтів, не використовуємо ароматизаторів, підсилювачів смаку та готових сумішей. </p><br><br>
       <P>Переглянути всі можливі десерти та прорахувати вартість кенді-бару Ви можете у розділі <a id="linkDessert">“Десерти”</a>.</P>
       <ul>Вартість доставки: 
-      	<li>доставка по Львову - 250 грн</li>
-      	<li>за межами міста 5 км — 600 грн, 10 км — 800 грн.</li>
-      	
+        <li>доставка по Львову - 250 грн</li>
+        <li>за межами міста 5 км — 600 грн, 10 км — 800 грн.</li>
+        
       </ul>
       <p>Додаткові послуги: весь необхідний посуд для кенді-бару ми можемо надати Вам в аренду. Для ознайомлення з вартістю аренди перейдіть у меню <a id="linkDish">“Аренда посуду”</a>.</p>
 <P> Для більш детальної інформації звертайтесь <br>
@@ -591,9 +596,9 @@
        
    </div>
 </div>
-   	  </script>  
-   	  <script type="text/template" id="strawTasteTmpl">
-   	  	   <div class="row chosseType" >
+      </script>
+    <script type="text/template" id="strawTasteTmpl">
+        <div class="row chosseType" >
        <div class="col-md-12">
           <div style="text-align: center;">
               
@@ -601,7 +606,7 @@
           <% for (var i=0; i<list.length;i++){ %>
             
                 <div class="Lastcake strawberrychose" >
-                	<div class="col-md-6"> 
+                  <div class="col-md-6"> 
                     <img src="<%- list[i].photo %>">
                     </div>
                     <div class="col-md-6">
@@ -618,280 +623,282 @@
          </div>
        
    </div>
-   	  </script>  
+      </script>
 
-      <header  class="header-phone">
-         <div  class="container-fluid">
+    <header class="header-phone">
+        <div class="container-fluid">
             <div class="row">
-               <div class="col-md-6 col-sm-6 col-xs-8">
-                  <img class="phone-logo" src="images/logo.jpg">
-                  <a class="phone-link" href="https://www.instagram.com/lvivskismakolyky/"><img class="contacts-phone" src="images/inst.png"></a>
-                  <a class="phone-link" href="#"><img class="contacts-phone" src="images/face.jpg"></a>
-                  <a class="phone-link" href="https://vk.com/lvivskysmakoliki"><img class="contacts-phone" src="images/vk.jpg"></a>
-               </div>
-               <div class="col-md-6 col-sm-6 col-xs-4" style="float: right;">
-                  <div class="basket-call-phone"><a href=""><img class="contacts-phone" src="images/tel.jpg"><span class="basket-price-phone">Зворотній дзвінок</span></a>
-                    
-                  </div>
-               </div>
+                <div class="col-md-6 col-sm-6 col-xs-8">
+                    <img class="phone-logo" src="images/logo.jpg">
+                    <a class="phone-link" href="https://www.instagram.com/lvivskismakolyky/"><img class="contacts-phone" src="images/inst.png"></a>
+                    <a class="phone-link" href="#"><img class="contacts-phone" src="images/face.jpg"></a>
+                    <a class="phone-link" href="https://vk.com/lvivskysmakoliki"><img class="contacts-phone" src="images/vk.jpg"></a>
 
-            </div>
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="phone-daily">
-                     <h2 class="number-phone">+38 (093) 59 28 931</h2>
-                     <p>Замовлення приймаються з пн по сб з 10:00 до 18:00.</p>
-                     <p>Доставка в межах Львова щоденно</p>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </header>
-      <header class="page-header">
-         <div  class="container">
-            <div class="row">
-               <div class="col-md-3 col-sm-4">
-                  <a href="https://www.instagram.com/lvivskismakolyky/"><img class="contacts" src="images/inst.png"></a>
-                  <a href="#"><img class="contacts" src="images/face.jpg"></a>
-                  <a href="https://vk.com/lvivskysmakoliki"><img class="contacts" src="images/vk.jpg"></a>
-                  <div class="input-group">
-                     <input type="text" class="form-control" value="Пошук">
-                     <span class="input-group-btn">
-                     <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                     </span>
-                  </div>
-               </div>
-               <div class="col-md-5 col-sm-4">
-                  <div class="header-logo">
-                    <a href="file:///E:/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%BF%D0%B0%D0%BF%D0%BA%D0%B0/elina/index.html"><img class="logo-img" src="images/logo.jpg"></a> 
-                  </div>
-               </div>
-               <div id="hide-basket" class="col-md-4 col-sm-4">
-                  <h2 class="number">+38 (093) 59 28 931</h2>
-                  <p>Замовлення приймаються з пн по сб з 10:00 до 22:00.</p>
-                  <p>Доставка в межах Львова щоденно</p>
-                  <div   class="basket-call"><a ><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2"><img class="contacts" src="images/tel.jpg"><span class="call-back">Зворотній дзвінок</span></a></button>
-                    
-                  </div>
-               </div>
-                <div id="basketContainer"></div>
-            </div>
-         </div>
-      </header>
-      <div class="row">
-         <div class="col-md-12">
-            <div class="menu-header">
-               <nav class="menu-blocks">
-                  <ul class="menu-list">
-                     <li class="menu-item">
-                        <div class="dropdown" id="hover2">
-                           <a href="#"  style="text-decoration: none;" onclick='renderDescribeTmpl("strawberrytmpl","titlecake")'  class="dropdown-toggle style-list" id="firstmenu" data-toggle="dropdown">ТОРТИ</a>
-                         
-                        </div>
-                     </li>
-                     <li class="menu-item"><a href="#" class="style-list" onclick='renderDescribeTmpl("strawberrytmpl","titlestraw")'  style="text-decoration: none;" id="secondmenu"  data-id="users"  >ПОЛУНИЦЯ В ШОКОЛАДІ </a></li>
-                     <li class="menu-item"><a href="#" class="style-list"  style="text-decoration: none;" id="thirdmenu" > ПОДАРУНКОВІ НАБОРИ</a></li>
-                     <li class="menu-item"><a href="#" class="style-list" style="text-decoration: none;"  id="fourthmenu"> Капкейки</a></li>
-                     
-                     <li class="menu-item"><a  href="#"href="#" id="fifthmenu"  style="text-decoration: none;" class="style-list">Десерти</a>
-                          
-                     </li>
-                     </li>
-                     <li class="menu-item"><a href="#" class="style-list" style="text-decoration: none;"  id="sixthmenu" > CANDY BAR</a></li>
-                     <li class="menu-item"><a href="#" class="style-list" style="text-decoration: none;"  id="seventhmenu"> АРЕНДА ПОСУДУ</a></li>
-                     
-                  </ul>
-               </nav>
-      
-      </div>
-  </div>
-</div>
-        
-     <button id="button1" type="button" onclick="Tmplbasket()" class="btn btn-primary btn-lg button1" data-toggle="modal" data-target="#myModal">
- <img class="contacts basket-button" src="images/basket.png">
- <p class="length-basket"></p>
-</button>
-<div class="modal fade" id="myModal2" role="dialog">
-    <div class="modal-dialog modal-sm">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title"></h4>
-        </div>
-        <div class="modal-body">
-          <form id="jquery_form2">
-    
-    <p>Powered by <a href="https://postmail.invotes.com" target="_blank">PostMail</a></p>
-    <div class="form-style-5">
-<form>
-<fieldset>
-<legend>Заповніть анкету</legend>
-<input type="text" name="subject1" placeholder="Ваше Імя">
-<input type="tel" minlength="10" maxlength="13" name="field22" placeholder="Ваш номер">
-
-
-     
-</fieldset>
-
-<input type="submit" name="send" id="callBack"  value="Відправити" />
-</form>
-</div>
-</form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Закрити</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="wrapper">
-<div class="content">
-	<div class="container">
- <section class="lazy slider" data-sizes="50vw">
-    <div>
-      <img class="carouselPage" data-lazy="http://placehold.it/350x300?text=1-350w" data-srcset="images/image.jpg" data-sizes="100vw">
-    </div>
-    <div>
-      <img class="carouselPage"  data-lazy="http://placehold.it/350x300?text=2-350w" data-srcset="images/image1.jpg" data-sizes="100vw">
-    </div>
-    <div>
-      <img class="carouselPage" data-lazy="http://placehold.it/350x300?text=3-350w"  data-srcset="images/image2.jpg" data-sizes="100vw">
-    </div>
-   
-  </section>
-          </div>        
-  
-
-     
-    
-     
-    
-<div class="container">
-     
-         <div class="row">
-         
-          <div class="our-sets">
-            <h2>НАШІ НАБОРИ</h2>
-              <div class="col-md-4 col-sm-12 ">
-                <div class="set-block" ><a href="">
-                    <div class="img-bg gift-bg">
-                    <span class="font-bg">Коробка "Baby Shower"</span>
-                  </div>
-                  <img src="images/gift0.jpg">
-                          </div>
-                </a>
-                
-          </div>
-                    <div class="col-md-4 col-sm-12 ">
-                <div class="set-block" >
-                  <div class="img-bg gift-bg">
-                    <span class="font-bg">Коробка "Baby Shower"</span>
-         
-                  </div>
-                  <img src="images/gift1.jpg">
-                          </div>
-          </div>
-                <div class="col-md-4 col-sm-12 ">
-                <div class="set-block" >
-                  <div class="img-bg gift-bg">
-                    <span class="font-bg">Коробка "Baby Shower"</span>
-         
-                  </div>
-                  <img src="images/gift10.jpg">
-                          </div>
-          </div>
-          </div>
-         
-         </div>
-         <div class="row">
-         <div class="col-md-6 col-sm-12">
-          <a href=""><img class="img-cakes" src="images/cake1.jpg"></a>
-          <div class="cakes-inform"><h3>Весільні Торти</h3>
-            <p>Сколько времени Вы уже потратили на выбор Именно Того Торта? Вы уже пробовали некоторые, а они слишком <br>сладкие/приторные/недостаточно насыщенные? А может Вы только начали процесс подготовки к свадьбе </p>
-            <a href="">Вибрати весільний торт  -></a></div>
-         
-         </div>
-         <div class="col-md-6 col-sm-12">
-          <a href=""><img class="img-cakes" src="images/cake2.jpg"></a>
-          <div class="cakes-inform"><h3>Корпоративні Торти</h3>
-            <p>В этом разделе Вы найдёте десерты, которые отвечают только современным стандартам кондитерского искусства. <br>Мы делаем сладости, которые понравятся людям с даже самым утончённым вкусом.</p>
-            <a href="">Детальніше  -></a></div>
-         </div>
-         </div>
-         <div class="row">
-         <div class="col-md-12"> <div
-          class="call-back-title"><h1>ПЛАНУЭТЕ ПРАЗНИК ? ПОДЗВОНІТЬ НАМ<br> +38(093)59 28 931 </h1>
-         <a href="#" class="call-back-button" style="margin-top: 10px;">Заказать обратный звонок</a></div>
-         </div>
-         </div>
+  <button type="button" class="navbar-toggle" data-toggle="menu-header" data-target="responsive-menu">sssss</button>
  
-         <div class="container">
-                <div class="row">
-         
-            <div class="col-md-12">
-                <div class="history-confectionery" >
-                    <p>Кондитерская PARIS готовит и доставляет десерты на заказ: свадебные торты, детские торты, корпоративные торты, макарон, кейк-попсы, кап кейки, пироги, безе, мармелад, шоколадные конфеты ручной работы, тематические кенди бары с наполнением по Вашему вкусу.</p>
-                    <p>По случаю самых разных торжеств: свадьбы, крестин ребёнка, воскресного ужина в кругу семьи, Дня рождения любимой бабушки или корпоратива любимой фирмы – PARIS создаст уникальный десерт именно для Вас.
-         
-         </p>
-                    <p>У нас заказывают свадебные торты, сладкие столы для разных торжеств, корпоративные сладкие подарки на Новый год, шоколадные конфеты ручной работы на 8-е марта, детские торты на День рождение ребёнка, кексы и печенье, трубочки со сгущенкой на офисный кофе брейк. Даже, когда хочется просто вишневого пирога к чаю, звоните в кондитерскую PARIS. Доставка осуществляется по Киеву и Киевской области.</p>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-4" style="float: right;">
+                    <div class="basket-call-phone"><a href=""><img class="contacts-phone" src="images/tel.jpg"><span class="basket-price-phone">Зворотній дзвінок</span></a>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="phone-daily">
+                        <h2 class="number-phone">+38 (093) 59 28 931</h2>
+                        <p>Замовлення приймаються з пн по сб з 10:00 до 18:00.</p>
+                        <p>Доставка в межах Львова щоденно</p>
+                    </div>
                 </div>
             </div>
-         </div>
-         </div>
+        </div>
+    </header>
+    <header class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-4">
+                    <a href="https://www.instagram.com/lvivskismakolyky/"><img class="contacts" src="images/inst.png"></a>
+                    <a href="#"><img class="contacts" src="images/face.jpg"></a>
+                    <a href="https://vk.com/lvivskysmakoliki"><img class="contacts" src="images/vk.jpg"></a>
+                   
+                </div>
+                <div class="col-md-5 col-sm-4">
+                    <div class="header-logo">
+                        <a href=""><img class="logo-img" src="images/logo.jpg"></a>
+                    </div>
+                </div>
+                <div id="hide-basket" class="col-md-4 col-sm-4">
+                    <h2 class="number">+38 (093) 59 28 931</h2>
+                    <p>Замовлення приймаються з пн по сб з 10:00 до 22:00.</p>
+                    <p>Доставка в межах Львова щоденно</p>
+                    <div class="basket-call"><a><button type="button" class="btn btn-info btn-lg" data-toggle="modal" style="display: contents" data-target="#myModal2"><img class="contacts" src="images/tel.jpg"><span class="call-back">Зворотній дзвінок</span></a></button>
 
-        
-   
-</div>
-</div>
- <div class="container" id="history"></div>
-<div class="container"><footer class="pageFooter">
-	<nav class="PageLinks">
-		<ul class="LinksFooter">
-			<li><a href="">Головна сторінка</a></li>
+                    </div>
+                </div>
+                <div id="basketContainer"></div>
+            </div>
+        </div>
+    </header>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="menu-header" id="responsive-menu">
+                <nav class="menu-blocks">
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            
+                                <a href="#" style="text-decoration: none;" onclick='renderDescribeTmpl("strawberrytmpl","titlecake")' class="dropdown-toggle style-list" id="firstmenu" data-toggle="dropdown">ТОРТИ</a>
 
-			<li><a id="dailyPay">Оплата і доставка</a></li>
+                       
+                        </li>
+                        <li class="menu-item"><a href="#" class="style-list" onclick='renderDescribeTmpl("strawberrytmpl","titlestraw")' style="text-decoration: none;" id="secondmenu" data-id="users">ПОЛУНИЦЯ В ШОКОЛАДІ </a></li>
+                        <li class="menu-item"><a href="#" class="style-list" style="text-decoration: none;" id="thirdmenu"> ПОДАРУНКОВІ НАБОРИ</a></li>
+                        <li class="menu-item"><a href="#" class="style-list" style="text-decoration: none;" id="fourthmenu"> Капкейки</a></li>
 
-			<li><a id="comment" >Відгуки</a></li>
+                        <li class="menu-item"><a href="#" href="#" id="fifthmenu" style="text-decoration: none;" class="style-list">Десерти</a>
 
-			<li><a href="">Спеціальні пропозицій</a></li>
+                        </li>
+                        </li>
+                        <li class="menu-item"><a href="#" class="style-list" style="text-decoration: none;" id="sixthmenu"> CANDY BAR</a></li>
+                        <li class="menu-item"><a href="#" class="style-list" style="text-decoration: none;" id="seventhmenu"> АРЕНДА ПОСУДУ</a></li>
 
-			<li><a href="">Контактні дані</a></li>
-		</ul>
-	</nav>
- <div class="PageMails">
- 	<div class="PageMails-Phone">
- 	<span>+38(093)59 28 931</span>	<br>
- 	<small>По всім питанням звертатись за телефоном </small>
- 	</div>
- 	<div class="PageMails-Element">
- 		<b>Віділення по замовленнях то доставці:</b>	<br>
- 	<span>email: <a href="mailto:elina-industris@gmail.com">elina-industris@gmail.com</a></span>
- 	</div>
- 	<div class="PageMails-Element last">
- 		<b>По питанням співпраці та партнерства:</b> <br>
- 		<span>email: <a href="mailto:elina-industris@gmail.com">elina-industris@gmail.com</a></span>
- 	</div>
- 	<div class="PageMails-img">
- 		  <a href="https://www.instagram.com/lvivskismakolyky/"><img class="contacts" src="images/inst.png"></a>
-                  <a href="#"><img class="contacts" src="images/face.jpg"></a>
-                  <a href="https://vk.com/lvivskysmakoliki"><img class="contacts" src="images/vk.jpg"></a>
- 	</div>
- </div>
+                    </ul>
+                </nav>
 
+            </div>
+        </div>
+    </div>
 
-</footer></div>
+    <button id="button1" type="button" onclick="Tmplbasket()" class="btn btn-primary btn-lg button1" data-toggle="modal" data-target="#myModal">
+        <img class="contacts basket-button" src="images/basket.png">
+        <p class="length-basket"></p>
+    </button>
+    <div class="modal fade" id="myModal2" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body">
+                    <form id="jquery_form2">
 
 
+                        <div class="form-style-5">
+                            <form>
+                                <fieldset>
+                                    <legend>Зворотрнній звязок</legend>
+
+                                    <input type="text" name="subject1" placeholder="Ваше Імя">
+                                    <input type="tel" minlength="10" maxlength="13" name="field22" placeholder="Ваш номер">
+
+                                    <a href="https://postmail.invotes.com" target="_blank">PostMail</a>
+
+                                </fieldset>
+
+
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" name="send" id="callBack" class="btn btn-default" value="Відправити" />
+                    </form>
 
 
 
-      <!--  Latest compiled and minified JavaScript -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
-      <!-- (Optional) Latest compiled and minified JavaScript translation files -->
-      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/i18n/defaults-*.min.js"></script> -->
-      <script src="js/main.js"></script><!--js-->
- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script><!-- sweetalert -->
-   </body>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрити</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="wrapper">
+        <div class="content">
+            <div class="container carousel1">
+                <section class="lazy slider" data-sizes="50vw">
+                    <div>
+                        <img class="carouselPage" data-lazy="http://placehold.it/350x300?text=1-350w" data-srcset="images/image.jpg" data-sizes="100vw">
+                    </div>
+                    <div>
+                        <img class="carouselPage" data-lazy="http://placehold.it/350x300?text=2-350w" data-srcset="images/image1.jpg" data-sizes="100vw">
+                    </div>
+                    <div>
+                        <img class="carouselPage" data-lazy="http://placehold.it/350x300?text=3-350w" data-srcset="images/image2.jpg" data-sizes="100vw">
+                    </div>
+
+                </section>
+            </div>
+
+
+
+
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="our-sets">
+                        <h2>НАШІ НАБОРИ</h2>
+                        <div class="col-md-4 col-sm-6 ">
+                            <div class="set-block"><a href="">
+                                    <div class="img-bg gift-bg">
+                                        <span class="font-bg"></span>
+                                    </div>
+                                    <img src="images/gift0.jpg">
+                            </div>
+                            </a>
+
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="set-block">
+                                <div class="img-bg gift-bg">
+                                    <span class="font-bg"></span>
+
+                                </div>
+                                <img src="images/gift1.jpg">
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 ">
+                            <div class="set-block">
+                                <div class="img-bg gift-bg">
+                                    <span class="font-bg"></span>
+
+                                </div>
+                                <img src="images/gift10.jpg">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+              
+              
+
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="history-confectionery">
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+        <div class="container" id="history"></div>
+        <div class="container">
+            <footer class="pageFooter">
+                <nav class="PageLinks">
+                    <ul class="LinksFooter">
+                        <li><a href="">Головна сторінка</a></li>
+
+                        <li><a id="dailyPay">Оплата і доставка</a></li>
+
+                        <li><a id="comment">Відгуки</a></li>
+
+                        <li><a href="">Спеціальні пропозицій</a></li>
+
+                        <li><a href="">Контактні дані</a></li>
+                    </ul>
+                </nav>
+                <div class="PageMails">
+                    <div class="PageMails-Phone">
+                        <span>+38(093)59 28 931</span> <br>
+                        <small>По всім питанням звертатись за телефоном </small>
+                    </div>
+                    <div class="PageMails-Element">
+                        <b>Віділення по замовленнях то доставці:</b> <br>
+                        <span>email: <a href="mailto:elina-industris@gmail.com">elina-industris@gmail.com</a></span>
+                    </div>
+                    <div class="PageMails-Element last">
+                        <b>По питанням співпраці та партнерства:</b> <br>
+                        <span>email: <a href="mailto:elina-industris@gmail.com">elina-industris@gmail.com</a></span>
+                    </div>
+                    <div class="PageMails-img">
+                        <a href="https://www.instagram.com/lvivskismakolyky/"><img class="contacts" src="images/inst.png"></a>
+                        <a href="#"><img class="contacts" src="images/face.jpg"></a>
+                        <a href="https://vk.com/lvivskysmakoliki"><img class="contacts" src="images/vk.jpg"></a>
+                    </div>
+                </div>
+
+
+            </footer>
+        </div>
+<div class="container">
+            <footer class="pagePhoneFooter">
+                <nav class="PagePhoneLinks">
+                    <ul class="LinksPhoneFooter">
+                        <li><a href="">Головна сторінка</a></li>
+
+                        <li><a id="dailyPay">Оплата і доставка</a></li>
+
+                        <li><a id="comment">Відгуки</a></li>
+
+                        <li><a href="">Спеціальні пропозицій</a></li>
+
+                        <li><a href="">Контактні дані</a></li>
+                    </ul>
+                </nav>
+                
+
+
+            </footer>
+        </div>
+
+
+
+
+        <!--  Latest compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+        <!-- (Optional) Latest compiled and minified JavaScript translation files -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/i18n/defaults-*.min.js"></script> -->
+        <script src="js/main.js"></script>
+        <!--js-->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script><!-- sweetalert -->
+</body>
+
 </html>

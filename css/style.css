@@ -1,84 +1,88 @@
-@import url("normalize.css");
+    @import url("normalize.css");
 .contacts {
-	width: 30px;
-	height: 30px;
-	margin-bottom: 40px;
-	margin-right: 5px;
-	margin-top: 10px;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 40px;
+    margin-right: 5px;
+    margin-top: 10px;
 }
 
-a{
-	color: black;
+a {
+    color: black;
 }
+
 .logo-img {
-	height: 250px;
+    height: 250px;
 }
-.row{
-	margin-right: 15px;
-}
-.header-logo {
-	text-align: center;
-}
-.page-header{
-	    margin: 40px 0 0px;
 
+.row {
+    margin-right: 15px;
 }
+
+.header-logo {
+    text-align: center;
+}
+
+.page-header {
+    margin: 40px 0 0px;
+}
+
 .basket-call button {
     background: transparent;
     border-color: transparent;
 }
-.btn-info:focus, .btn-info:hover {
+
+.btn-info:focus,
+.btn-info:hover {
     background: transparent;
     border-color: transparent;
 }
 
-#myModal2{
+#myModal2 {
     font-family: 'Amatic SC', cursive;
 }
 
 .call-back {
-	list-style: none;
-	color: black;
-	font-size: 14px;
-	position: relative;
-	bottom: 15px;
-	margin-right: 15px;
+    list-style: none;
+    color: black;
+    font-size: 14px;
+    position: relative;
+    bottom: 15px;
+    margin-right: 15px;
 }
 
 .red-price {
-	color: red;
+    color: red;
 }
 
 .basket-price {
-	color: black;
-	list-style: none;
-	position: relative;
-	bottom: 10px;
+    color: black;
+    list-style: none;
+    position: relative;
+    bottom: 10px;
 }
 
 .menu-header {
-	text-align: center;
-	border-bottom: 1px solid #ede8f1;
-	height: 72px;
-	   
+    text-align: center;
+    border-bottom: 1px solid #ede8f1;
+    height: 72px;
 }
-.menu-item a{
-	font-family: 'Amatic SC', cursive;
+
+.menu-item a {
+    font-family: 'Amatic SC', cursive;
 }
+
 .style-list {
-	color: black;
-	margin-top: 10px;
-	text-align: center;
-	list-style: none;
-	height: 100%;
-	text-decoration:none;
-
-	
-
+    color: black;
+    margin-top: 10px;
+    text-align: center;
+    list-style: none;
+    height: 100%;
+    text-decoration: none;
 }
 
 .menu-blocks ul li {
-display: inline-block;
+    display: inline-block;
     padding: 15px 17px;
     font-size: 28px;
     text-transform: uppercase;
@@ -88,204 +92,216 @@ display: inline-block;
 }
 
 .left-menu ul li a {
-	display: block;
-	padding: 15px 15px 15px 35px;
-	color: #666;
-	text-decoration: none;
-	border-bottom: 1px solid #e5e5e5;
-	position: relative;
-	transition: all .3s;
+    display: block;
+    padding: 15px 15px 15px 35px;
+    color: #666;
+    text-decoration: none;
+    border-bottom: 1px solid #e5e5e5;
+    position: relative;
+    transition: all .3s;
 }
-.menu-blocks ul li:hover{
-	background: #f2dede;
 
+.menu-blocks ul li:hover {
+    background: #f2dede;
 }
 
 
 /*  .cakes{
-    	height: 300px;
-    	width: 300px;
+        height: 300px;
+        width: 300px;
     }*/
 
 .name-cakes a {
-	padding-left: 55px;
-	font-size: 12px;
-	color: #808080d4;
-	text-decoration: none;
+    padding-left: 55px;
+    font-size: 12px;
+    color: #808080d4;
+    text-decoration: none;
 }
 
 .price-cakes {
-	padding-left: 12px;
-	font-size: 23px;
-	font-weight: 500;
-	padding-top: 10px;
+    padding-left: 12px;
+    font-size: 23px;
+    font-weight: 500;
+    padding-top: 10px;
 }
 
 .basket-cakes {
-	width: 27px;
-	position: relative;
-	left: 32px;
-	bottom: 5px;
+    width: 27px;
+    position: relative;
+    left: 32px;
+    bottom: 5px;
 }
 
 .product-list {
-	margin-left: 30px;
+    margin-left: 30px;
 }
 
 .page-wrapper {
-	width: 100%;
-	max-width: 1730px;
-	padding: 0 15px;
-	min-width: 400px;
-	box-sizing: border-box;
-	margin: 0 auto;
+    width: 100%;
+    max-width: 1730px;
+    padding: 0 15px;
+    min-width: 400px;
+    box-sizing: border-box;
+    margin: 0 auto;
 }
-.img-slide{
-	width: 100%;
+
+.img-slide {
+    width: 100%;
 }
+
 .title-producs {
-	font-size: 30px;
-	font-weight: 300;
-	padding-bottom: 25px;
-	color: #84639f;
-	text-transform: uppercase;
-	position: relative;
-	left: 37px;
+    font-size: 30px;
+    font-weight: 300;
+    padding-bottom: 25px;
+    color: #84639f;
+    text-transform: uppercase;
+    position: relative;
+    left: 37px;
 }
+
 .footer ul li {
-	display: inline-block;
-	margin: 18px 17px;
-	font-size: 15px;
-	text-transform: uppercase;
-	border-radius: 40px;
-	transition: all .3s;
-	position: relative;
+    display: inline-block;
+    margin: 18px 17px;
+    font-size: 15px;
+    text-transform: uppercase;
+    border-radius: 40px;
+    transition: all .3s;
+    position: relative;
 }
-.footer{
-	margin-top: 300px;
+
+.footer {
+    margin-top: 300px;
 }
-.our-sets{
-	text-align: center;
-	color: #84639f;
+
+.our-sets {
+    text-align: center;
+   
 }
-.col-none-padding{
-	padding:0;
+
+.col-none-padding {
+    padding: 0;
 }
+
 .img-bg {
-	display: none;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-background-color: rgba(117, 190, 218, 0.5);
-
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(117, 190, 218, 0.5);
 }
-.font-bg{
-	font-family: 'Indie Flower', cursive;
-	color: white;
-	font-size: 36px;
-position: relative;
-top: 50%;
-bottom: 50%;
 
+.font-bg {
+    font-family: 'Indie Flower', cursive;
+    color: white;
+    font-size: 36px;
+    position: relative;
+    top: 50%;
+    bottom: 50%;
 }
-.set-block:hover .img-bg{
-	display: block;
 
+.set-block:hover .img-bg {
+    display: block;
 }
-.item:hover .img-bg-carousel{
-	display: block;
 
+.item:hover .img-bg-carousel {
+    display: block;
 }
+
 .img-bg-carousel {
-	display: none;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-background-color: rgba(0, 0, 0, 0.7);
-
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
 }
-.phone-logo{
+
+.phone-logo {
     height: 114px;
     position: relative;
     right: 34px;
 }
-.contacts-phone{
-	height: 30px;
+
+.contacts-phone {
+    height: 30px;
     position: relative;
     bottom: 20px;
 }
-.phone-daily{
-	text-align: center;
+
+.phone-daily {
+    text-align: center;
 }
-.basket-call-phone a{
-	    text-decoration: none;
+
+.basket-call-phone a {
+    text-decoration: none;
     list-style: none;
     color: black;
-
 }
-.basket-call-phone{
-	float: right;
-}
-.basket-call-phone img{
-	height: 30px;
-	position: relative;
-	top: 10px;
 
+.basket-call-phone {
+    float: right;
+}
+
+.basket-call-phone img {
+    height: 30px;
+    position: relative;
+    top: 10px;
 }
 
 .basket-price-phone {
-	    position: relative;
+    position: relative;
     top: 20px;
     padding: 10px;
 }
+
 .red-price-phone {
-	color: red;
+    color: red;
 }
 
-.cakes-inform{
-
-	  /*  position: relative;
+.cakes-inform {
+    /*  position: relative;
     left: 180px;
     bottom: 157px;*/
-
 }
-.cakes-inform p{
-	 font-size: 12px;
+
+.cakes-inform p {
+    font-size: 12px;
     line-height: 16px;
     color: #999;
- 
 }
-.cakes-inform h3{
-	font-size: 30px;
+
+.cakes-inform h3 {
+    font-size: 30px;
     font-weight: 300;
     color: #6d468b;
-
-}
-.cakes-inform a{
-	color: black;
-}
-.img-cakes{
-float: left;
-margin-right: 10px;
-}
-.call-back-title{
-	height: 150px;
-	text-align: center;
-	background: #e6d1d1;
-	font-family: 'Indie Flower', cursive;
-	margin-bottom: 60px;
-}
-.call-back-title h1{
-	position: relative;
-top: 30%;
-bottom: 70%;
-
 }
 
-.call-back-button{
+.cakes-inform a {
+    color: black;
+}
+
+.img-cakes {
+    float: left;
+    margin-right: 10px;
+}
+
+.call-back-title {
+    height: 150px;
+    text-align: center;
+    background: #e6d1d1;
+    font-family: 'Indie Flower', cursive;
+    margin-bottom: 60px;
+}
+
+.call-back-title h1 {
+    position: relative;
+    top: 30%;
+    bottom: 70%;
+}
+
+.call-back-button {
     color: #fff;
     background: #84639f;
-        height: 40px;
+    height: 40px;
     line-height: 40px;
     padding: 0 20px;
     font-size: 15px;
@@ -295,418 +311,425 @@ bottom: 70%;
     transition: all .3s;
     border-radius: 4px;
     text-decoration: none;
-position: relative;
-top: 30px;
-
+    position: relative;
+    top: 30px;
 }
-.header-phone{
-	display: none;
-}
-.form-control{
-	 
 
-    background: rgba(0,0,0,.05);
+.header-phone {
+    display: none;
+}
+
+.form-control {
+    background: rgba(0, 0, 0, .05);
     border-radius: 35px;
     width: 250px;
 }
 
+.set-block img {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 40px;
+}
 
-.set-block img{
-		width: 100%;
-      height: 300px;
-      margin-bottom: 40px;
-	}
-	.item img{
-	/*	width: 100%;*/
-		height: 1000px;
-	}
-	.history-confectionery{
-		text-align: center;
-		    font-size: 13px;
+.item img {
+    /*  width: 100%;*/
+    height: 1000px;
+}
+
+.history-confectionery {
+    text-align: center;
+    font-size: 13px;
     line-height: 20px;
     color: #666;
-	}
-.reviews{
-	text-align: center;
-	margin: 50px 0;
-}
-.fruits img{
-	width: 100%;
-	height: 500px;
-}
-.fruits{
-	text-align: center;
-	margin-top: 27px;
-}
-.price-fruits img{
-width: 100%;
-}
-.number-pack{
-	display: inline-block;
-}
-.number-sweet{
-	display: inline-block;
 }
 
+.reviews {
+    text-align: center;
+    margin: 50px 0;
+}
 
-.chosseNum{
-display: none;
+.fruits img {
+    width: 100%;
+    height: 500px;
 }
-.chosse-cake{
-	width: 100%;
-	height: 400px;
 
+.fruits {
+    text-align: center;
+    margin-top: 27px;
 }
-.chosseCakePriceLink img{
-	width: 100%;
-	height: 300px;
+
+.price-fruits img {
+    width: 100%;
 }
-.chosseCake{
-	display: none;
+
+.number-pack {
+    display: inline-block;
 }
-.chosseCakePrice{
-	display: none;
+
+.number-sweet {
+    display: inline-block;
 }
-.chosseCakeTaste{
-	display: none;
+
+.chosseNum {
+    display: none;
 }
-.img-strawberry{
-	    width: 100%;
+
+.chosse-cake {
+    width: 100%;
+    height: 400px;
+}
+
+.chosseCakePriceLink img {
+    width: 100%;
+    height: 300px;
+}
+
+.chosseCake {
+    display: none;
+}
+
+.chosseCakePrice {
+    display: none;
+}
+
+.chosseCakeTaste {
+    display: none;
+}
+
+.img-strawberry {
+    width: 100%;
     height: 444px;
 }
+
 .dessert-photo {
-  width: 33.3333%;
-  height: 400px;
-  float: left;
-  margin-right: 20px;
+    width: 33.3333%;
+    height: 400px;
+    float: left;
+    margin-right: 20px;
 }
-.dessert h3{
-  text-align: right;
-  font-size: 32px;
+
+.dessert h3 {
+    text-align: right;
+    font-size: 32px;
 }
-.dessert p{
-  padding-left: 30px;
-  font-size: 26px;
+
+.dessert p {
+    padding-left: 30px;
+    font-size: 26px;
 }
-.dessert input{
-	width: 37px;
+
+.dessert input {
+    width: 37px;
 }
-.fruits{
-   text-align: center;
+
+.fruits {
+    text-align: center;
 }
+
 .img-bg {
-  display: none;
-  position: absolute;
-  width: 92%;
-  height: 95%;
-background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    position: absolute;
+    width: 92%;
+    height: 95%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
 
+.font-bg {
+    font-family: 'Amatic SC', cursive;
+    color: white;
+    font-size: 36px;
+    position: relative;
+    top: 50%;
+    bottom: 50%;
 }
-.font-bg{
-  font-family: 'Amatic SC', cursive;
-  color: white;
-  font-size: 36px;
-position: relative;
-top: 50%;
-bottom: 50%;
 
+.strawberrytitle {
+    font-family: 'Amatic SC', cursive;
+    margin-bottom: 68px;
 }
-.strawberrytitle{
-	font-family: 'Amatic SC', cursive;
-	margin-bottom: 68px;
-}
-.fruits:hover .img-bg{
-  display: block;
 
+.fruits:hover .img-bg {
+    display: block;
 }
-.second{
+
+.second {
     width: 432px;
     float: right;
     height: 546px;
     margin-right: 25px;
 }
-.photoBar{
+
+.photoBar {
     height: 756px;
     width: 100%;
     margin-bottom: 27px;
 }
-.dailyPay{
-	background: rgba(0,0,0,.05);
-font-family: 'Caveat', cursive;
-padding: 30px;
+
+.dailyPay {
+    background: rgba(0, 0, 0, .05);
+    font-family: 'Caveat', cursive;
+    padding: 30px;
 }
-.dailyPayText{
-	font-size: 24px;
+
+.dailyPayText {
+    font-size: 24px;
 }
-.candybarState h2{
-	text-align: center;
-	font-family:'Amatic SC', cursive;
-	 font-size: 30px;
+
+.candybarState h2 {
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
 }
-.candybarState{
-background: rgba(0,0,0,.05);
-        padding: 20px;
-        font-family: 'Caveat', cursive;
-        font-size: 26px;
+
+.candybarState {
+    background: rgba(0, 0, 0, .05);
+    padding: 20px;
+    font-family: 'Caveat', cursive;
+    font-size: 26px;
 }
-.carouselPage{
-	height: 700px;
+
+.carouselPage {
+    height: 700px;
 }
-.commentPage img{
-	height: 314px;
+
+.commentPage img {
+    height: 314px;
     margin: 30px;
     width: 100%;
-
 }
-.weddingImg{
-	    width: 349px;
+
+.weddingImg {
+    width: 349px;
     float: right;
     height: 449px;
 }
-.weddingImgSmall{
-	      width: 406px;
+
+.weddingImgSmall {
+    width: 406px;
     float: right;
     height: 546px;
     margin-left: 10px;
-
 }
-.WeddingCakeState{
+
+.WeddingCakeState {
     font-family: 'Caveat', cursive;
-        background: rgba(0,0,0,.05);
-        padding: 20px;
-    }
-
-.WeddingCakeState p{
-	font-size: 26px;
-	margin-top: 30px;
-
-}
-.WeddingCakeState h1{
-	font-size: 46px;
+    background: rgba(0, 0, 0, .05);
+    padding: 20px;
 }
 
-.WeddingCakeState li{
-	font-size: 28px;
-	
+.WeddingCakeState p {
+    font-size: 26px;
+    margin-top: 30px;
 }
-.WeddingCakeState ul{
-	font-size: 28px;
-	
+
+.WeddingCakeState h1 {
+    font-size: 46px;
 }
-.fourthImg{
+
+.WeddingCakeState li {
+    font-size: 28px;
+}
+
+.WeddingCakeState ul {
+    font-size: 28px;
+}
+
+.fourthImg {
     width: 456px;
     float: left;
     height: 539px;
     margin: 0 24px;
 }
-.WeddingCakeState .PageHeaderState{
-font-family: 'Amatic SC', cursive;
- font-size: 32px;
- text-align: center;
+
+.WeddingCakeState .PageHeaderState {
+    font-family: 'Amatic SC', cursive;
+    font-size: 32px;
+    text-align: center;
+}
+
+.WeddingCakeState h4 {
+    margin-bottom: 30px;
+}
+
+.WeddingCakeState h2 {
+    margin-top: 70px;
+}
+
+.WeddingCakeState span {
+    font-size: 18px;
+}
+
+#myModal span {
+    font-family: 'Amatic SC', cursive;
+    font-size: 25px;
+}
+
 
 }
-.WeddingCakeState h4{
-	
-	margin-bottom:30px;
-	
+.fruits {
+    text-align: center;
 }
-.WeddingCakeState h2{
-	
-	margin-top: 70px;
-	
-}
-.WeddingCakeState span{
-	
-	font-size: 18px;
-	
-}
-#myModal span{
-	font-family: 'Amatic SC', cursive;
-	font-size: 25px;
-}
-}.fruits{
-  text-align: center;
-}
-.chosseTypeCapcake img{
+.chosseTypeCapcake img {
     width: 100%;
     height: 341px;
     margin-top: 50px;
 }
-.capcake{
- width: 92%;
-    height: 81%;
-  margin-top: 50px;
-}
-.chosseTypeCake div{
-	
+.capcake {
     width: 92%;
-        height: 84%;
-  
+    height: 81%;
+    margin-top: 50px;
+}
+.chosseTypeCake div {
+    width: 92%;
+    height: 84%;
     margin-top: 49px;
 }
-.chosseTypeCake img{
-	    width: 100%;
+.chosseTypeCake img {
+    width: 100%;
     height: 404px;
     margin-top: 50px;
 }
 .chosseTypeLink img {
- padding-top: 30px;
+    padding-top: 30px;
 }
-.chosseTypeLink div{
-
+.chosseTypeLink div {
     width: 90%;
     height: 91%;
     margin-top: 30px;
 }
-.dessert-basket{
-	width: 30px;
+.dessert-basket {
+    width: 30px;
     height: 30px;
     float: none;
     margin-right: 0px;
 }
-.carousel-cake{
-height: 400px;
+.carousel-cake {
+    height: 400px;
 }
-.list-style  a{
-	    text-decoration: none;
+.list-style a {
+    text-decoration: none;
 }
-    html, body {
-      margin: 0;
-      padding: 0;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    .slider {
-        width: 100%;
-        margin: 100px auto;
-    }
-
-    .slick-slide {
-      margin: 0px 20px;
-    }
-
-    .slick-slide img {
-      width: 100%;
-    }
-
-    .slick-prev:before,
-    .slick-next:before {
-      color: black;
-    }
-
-
-    .slick-slide {
-      transition: all ease-in-out .3s;
-      
-    }
-    
-  .slick-prev,
-.slick-next
-{
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
+}
+.slider {
+    width: 100%;
+    margin: 100px auto;
+}
+.slick-slide {
+    margin: 0px 20px;
+}
+.slick-slide img {
+    width: 100%;
+}
+.slick-prev:before,
+.slick-next:before {
+    color: black;
+}
+.slick-slide {
+    transition: all ease-in-out .3s;
+}
+.slick-prev,
+.slick-next {
     font-size: 0;
     line-height: 0;
-
     position: absolute;
     top: 50%;
-
     display: block;
-
     width: 30px;
     height: 30px;
     padding: 0;
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
     transform: translate(0, -50%);
-
     cursor: pointer;
-
     color: transparent;
     border: none;
     outline: none;
-    background:     background: rgba(0,0,0,.5);;
+    background: background: rgba(0, 0, 0, .5);
+    ;
 }
- .box-title{    
- 	font-size: 23px;
+.box-title {
+    font-size: 23px;
     font-family: 'Playfair Display SC', serif;
-}  
-.basket-image img{
-	height: 70px;
-	width: 70px;
-	float: left;
-	    margin-right: 20px;
 }
-.basket-box{
-	width: 400px;
+.basket-image img {
+    height: 70px;
+    width: 70px;
+    float: left;
+    margin-right: 20px;
+}
+.basket-box {
+    width: 400px;
 }
 #basketContainer {
- position: absolute;
+    position: absolute;
     left: 1105px;
-          background: #0000007a;
-  
+    background: #0000007a;
     z-index: 9;
-    
 }
 .basket-boxPrice {
-       position: relative;
+    position: relative;
     left: 241px;
     bottom: 34px;
-    color: red;}
-.page-basketPrice{
-	text-align: center;
+    color: red;
+}
+.page-basketPrice {
+    text-align: center;
     font-size: 20px;
     margin-top: 20px;
-    font-family: 'Playfair Display SC', serif;}
-    .taste-img img{
-    	width: 365px;
+    font-family: 'Playfair Display SC', serif;
+}
+.taste-img img {
+    width: 365px;
     height: 334px;
-
-    }
-    .taste-img{
-    	text-align: center;
-    }
-    .taste-img:hover .img-bg{
-  display: block;
-
 }
-.taste{
-	width: 99%;
+.taste-img {
+    text-align: center;
 }
-.LinksFooter{
-	    margin: 0;
+.taste-img:hover .img-bg {
+    display: block;
+}
+.taste {
+    width: 99%;
+}
+.LinksFooter {
+    margin: 0;
     padding: 0;
     list-style: none;
     text-align: center;
 }
 .PageLinks ul li {
-	display: inline-block;
-	padding: 5px 40px;
-color: gray;
-border-right: 1px solid gray;
-
-	text-transform: uppercase;
-	
-	transition: all .3s;
-	position: relative;
+    display: inline-block;
+    padding: 5px 40px;
+    color: gray;
+    border-right: 1px solid gray;
+    text-transform: uppercase;
+    transition: all .3s;
+    position: relative;
 }
+
 /*footer {
  position: fixed;
  bottom: 0;
 
 
  }*/
- .conteiner {
-min-height: calc(100vh - 250px);
+.conteiner {
+    min-height: calc(100vh - 250px);
 }
- 
+
 /* ваш футер */
 footer {
-position: relative;
-height:100px;
-width:100%;
-margin-top:150px;
+    position: relative;
+    height: 100px;
+    width: 100%;
+    margin-top: 150px;
 }
 div .PageMails {
     width: 100%;
@@ -714,8 +737,8 @@ div .PageMails {
     margin-top: 40px;
     margin-bottom: 30px;
 }
-.footer-block{
-text-align: center;
+.footer-block {
+    text-align: center;
 }
 .PageMails-Phone {
     float: left;
@@ -726,8 +749,8 @@ text-align: center;
     height: 50px;
     display: inline-block;
 }
-.PageMails-Phone span{
-font-size: 26px;
+.PageMails-Phone span {
+    font-size: 26px;
 }
 .PageMails-Element {
     float: left;
@@ -738,92 +761,86 @@ font-size: 26px;
     color: #666;
     display: inline-block;
 }
-  .gift-bg{
- 	height: 88%;
- }
- .modal-body img{
-	width: 100px;
-	height: 100px;
-
+.gift-bg {
+    height: 88%;
 }
-.modal-body h3{
-	display: inline-block;
+.modal-body img {
+    width: 100px;
+    height: 100px;
+}
+.modal-body h3 {
+    display: inline-block;
     margin-left: 20px;
 }
-.modal-body p{
-	
-	color: red;
-	margin-left: 20px;
+.modal-body p {
+    color: red;
+    margin-left: 20px;
 }
-.modal-body a{
-	font-size: 27px;
-      float: right
+.modal-body a {
+    font-size: 27px;
+    float: right
 }
-
-#button1{
-	position: fixed;
+#button1 {
+    position: fixed;
 }
 .last-img-taste {
-	height: 600px;
-	width: 500px;
-
+    height: 600px;
+    width: 500px;
 }
-.basketproduct{
+.basketproduct {
     border-radius: 30px;
     width: 137px;
     height: 45px;
-    background: rgba(255,255,255,.15);
+    background: rgba(255, 255, 255, .15);
     color: black;
     font-size: 26px;
     margin-top: 20px;
 }
-.dessert{
-	font-family: 'Amatic SC', cursive; 
+.dessert {
+    font-family: 'Amatic SC', cursive;
 }
-.dessert-but{
-	    border-radius: 30px;
+.dessert-but {
+    border-radius: 30px;
     width: 137px;
     height: 45px;
-    background: rgba(255,255,255,.15);
+    background: rgba(255, 255, 255, .15);
     color: black;
     font-size: 16px;
     margin-top: 20px;
 }
-.last-basket img{
-	height: 50px;
-	width: 50px;
+.last-basket img {
+    height: 50px;
+    width: 50px;
 }
-.slider-taste img{
-	    width: 174px;
+.slider-taste img {
+    width: 174px;
     height: 100px;
 }
-.slider-taste{
-	    margin-top: 18px;
+.slider-taste {
+    margin-top: 18px;
 }
-.chosseTypeCake{
-
+.chosseTypeCake {}
+.Lastcake {
+    font-family: 'Amatic SC', cursive;
 }
-.Lastcake{
-	font-family: 'Amatic SC', cursive; 
+.Lastcake input {
+    font-family: none;
 }
-.Lastcake input{
-	font-family: none;
+.Lastcake p {
+    font-size: 18px;
 }
-.Lastcake p{
-font-size: 18px;
+.Laststraw img {
+    height: 600px;
+    width: 700px;
 }
-.Laststraw img{
-	height: 600px;
-	width: 700px;
+.strawberrychose img {
+    width: 100%;
 }
-.strawberrychose img{
-width: 100%;
+.strawberrychose p {
+    font-size: 26px;
 }
-.strawberrychose p{
-	font-size: 26px;
-}
-.buttoncap{
-	    border-radius: 30px;
+.buttoncap {
+    border-radius: 30px;
     width: 137px;
     height: 45px;
     background: #f2dede;
@@ -832,49 +849,47 @@ width: 100%;
     margin-top: 20px;
 }
 .dropdown-menu li a {
-	font-size: 23px;
+    font-size: 23px;
 }
-.basket-button{
-	    width: 30px;
+.basket-button {
+    width: 30px;
     height: 30px;
     margin-bottom: 7px;
     margin-right: 7px;
     margin-top: 7px;
 }
-.orderInput{
-	display: block;
+.orderInput {
+    display: block;
 }
 #hide-basket {
-	font-family: 'Amatic SC', cursive; 
-	font-size: 23px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 23px;
 }
-.InputDisplay{
-	display: inherit;
+.InputDisplay {
+    display: inherit;
 }
-.bg-straw{
-	width: 89%;
+.bg-straw {
+    width: 89%;
     height: 83%;
     margin-top: 30px;
 }
-.orderInput{
-	margin: 0 auto;
-	    border: 10px solid rgba(255,255,255,.15);
+.orderInput {
+    margin: 0 auto;
+    border: 10px solid rgba(255, 255, 255, .15);
     border-radius: 21px;
-    background: rgba(0,0,0,.075);
+    background: rgba(0, 0, 0, .075);
     margin-bottom: 10px;
 }
-.sender{
-	border: 10px solid rgba(0, 149, 255, 0.49);
+.sender {
+    border: 10px solid rgba(0, 149, 255, 0.49);
 }
-#jquery_form{
-	text-align: center;
+#jquery_form {
+    text-align: center;
 }
-.products{
-	margin-bottom: 30px;
+.products {
+    margin-bottom: 30px;
 }
-
-
-.form-style-5{
+.form-style-5 {
     max-width: 500px;
     padding: 10px 20px;
     background: #f4f7f8;
@@ -884,7 +899,7 @@ width: 100%;
     border-radius: 8px;
     font-family: Georgia, "Times New Roman", Times, serif;
 }
-.form-style-5 fieldset{
+.form-style-5 fieldset {
     border: none;
 }
 .form-style-5 legend {
@@ -906,7 +921,7 @@ width: 100%;
 .form-style-5 textarea,
 .form-style-5 select {
     font-family: Georgia, "Times New Roman", Times, serif;
-    background: rgba(255,255,255,.1);
+    background: rgba(255, 255, 255, .1);
     border: none;
     border-radius: 4px;
     font-size: 16px;
@@ -914,15 +929,15 @@ width: 100%;
     outline: 0;
     padding: 7px;
     width: 100%;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box; 
+    -moz-box-sizing: border-box;
     background-color: #e8eeef;
-    color:#8a97a0;
-    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
-    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    color: #8a97a0;
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
     margin-bottom: 30px;
-    resize:none;
+    resize: none;
 }
 .form-style-5 input[type="text"]:focus,
 .form-style-5 input[type="date"]:focus,
@@ -933,12 +948,12 @@ width: 100%;
 .form-style-5 input[type="time"]:focus,
 .form-style-5 input[type="url"]:focus,
 .form-style-5 textarea:focus,
-.form-style-5 select:focus{
+.form-style-5 select:focus {
     background: #d2d9dd;
 }
-.form-style-5 select{
+.form-style-5 select {
     -webkit-appearance: menulist-button;
-    height:35px;
+    height: 35px;
 }
 .form-style-5 .number {
     background: #1abc9c;
@@ -950,13 +965,11 @@ width: 100%;
     margin-right: 4px;
     line-height: 30px;
     text-align: center;
-    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
     border-radius: 15px 15px 15px 0px;
 }
-
 .form-style-5 input[type="submit"],
-.form-style-5 input[type="button"]
-{
+.form-style-5 input[type="button"] {
     position: relative;
     display: block;
     padding: 19px 39px 18px 39px;
@@ -972,122 +985,147 @@ width: 100%;
     margin-bottom: 10px;
 }
 .form-style-5 input[type="submit"]:hover,
-.form-style-5 input[type="button"]:hover
-{
+.form-style-5 input[type="button"]:hover {
     background: #109177;
 }
 
 
-
-
-
-
+.pagePhoneFooter{
+    display: none;
+  border-top: 0.5px solid rgba(0,0,0,.075);
+    border-bottom: 0.5px solid rgba(0,0,0,.075);
+    margin: 20px 0;
+    color: rgba(255,255,255,.15);
+    text-decoration: underline;
+  
+    height: 150px;
+    padding: 20px 0px;
+}
+/*TODO remove borders in CallBack modal*/
 
 @media screen and (min-width: 2024px) {
-	.menu-blocks ul li {
-		margin: 18px 70px;
-	}
+    .menu-blocks ul li {
+        margin: 18px 70px;
+    }
 }
 @media screen and (max-width: 1024px) {
-	.menu-blocks ul li {
-		margin: 18px 0px;
-	}
-	.number-phone {
-		font-size: 26px;
-	}
-	#last-hide{
-		display: none;
-	}
-	.menu-blocks ul li{
-		font-size: 13px;
-	}
-	.phone-daily p {
-    text-align: center;
-    font-size: 17px;
-	}
-	
-	.menu-header{
-		display: none;
-	}
-	    .header-phone{
-     	display: block;
-     }
-     .page-header{
-     	display: none;
-     }
+    .menu-blocks ul li {
+        margin: 18px 0px;
+    }
+    
+    .number-phone {
+        font-size: 26px;
+    }
+    
+    #last-hide {
+        display: none;
+    }
+    
+    .menu-blocks ul li {
+        font-size: 13px;
+    }
+    
+    .phone-daily p {
+        text-align: center;
+        font-size: 17px;
+    }
+    
+    .menu-header {
+        display: none;
+    }
+    .pagePhoneFooter{
+    display: block;
+    }
+    .pageFooter{
+        display: none;
+    }
+    .header-phone {
+        display: block;
+    }
+    
+    .page-header {
+        display: none;
+    }
+    .carousel1{
+        display: none;
+    }
 }
 @media screen and (max-width: 769px) {
- 
-	
-	.basket-call-phone img{
-		
-}
-.basket-call-phone{
-	padding-left: 30px;
-}
-	.contacts-phone{
-	
-	}
-	.phone-logo{
-		height: 100px;
-	}
-	.number-phone{
-		font-size: 26px
-	}
-	.phone-daily p{
-		font-size: 19x;
-	}
-	.cakes-inform{
-		margin-top: 30px; 
-	}
-.img-cakes{
-	margin-top: 30px; 
-}
-
-
-@media screen and (max-width: 662px){
-	.basket-price-phone{
-		display: none;
-	}
-	.contacts-phone{
-		border:solid 1px gray;
-		border-radius: 30px;
-	}
-}
-@media screen and (max-width: 576px) {
-		.contacts-phone{
-		height: 25px;
-		
-	}
-	.basket-call-phone img{
-		height: 30px
-}
-.basket-call-phone{
-	padding-left: 25px;
-}
-	.phone-logo{
-		height: 80px;
-	}
-	.phone-daily p{
-		font-size: 18px;
-	}
-}
-
-@media screen and (max-width: 375px){
-	.basket-call-phone img {
-    height: 33px;
-    position: relative;
-    top: 0px;
-}
-  .phone-logo{  height: 60px;
-    position: relative;
-    right: 0px;
-}
-.basket-call-phone {
-     padding-left: 0px; 
-}
-.phone-link img{
-	margin-top:20px; 
-}
+    .basket-call-phone img {}
+    
+    .basket-call-phone {
+        padding-left: 30px;
+    }
+    
+    .contacts-phone {}
+    
+    .phone-logo {
+        height: 100px;
+    }
+    
+    .number-phone {
+        font-size: 26px
+    }
+    
+    .phone-daily p {
+        font-size: 19x;
+    }
+    
+    .cakes-inform {
+        margin-top: 30px;
+    }
+    
+    .img-cakes {
+        margin-top: 30px;
+    }
+    
+    @media screen and (max-width: 662px) {
+        .basket-price-phone {
+            display: none;
+        }
+        .contacts-phone {
+            border: solid 1px gray;
+            border-radius: 30px;
+        }
+    }
+    
+    @media screen and (max-width: 576px) {
+        .contacts-phone {
+            height: 25px;
+        }
+        .basket-call-phone img {
+            height: 30px
+        }
+        .basket-call-phone {
+            padding-left: 25px;
+        }
+        .phone-logo {
+            height: 80px;
+        }
+        .phone-daily p {
+            font-size: 18px;
+        }
+    }
+    
+    @media screen and (max-width: 375px) {
+        .basket-call-phone img {
+            height: 33px;
+            position: relative;
+            top: 0px;
+        }
+        .phone-logo {
+            height: 60px;
+            position: relative;
+            right: 0px;
+        }
+        .basket-call-phone {
+            padding-left: 0px;
+        }
+        .phone-link img {
+            margin-top: 20px;
+        }
+    }
+    body {
+    margin:0;
 }
 

@@ -1,3 +1,7 @@
+var producsInBasket = {
+  producs:[],
+  basketTotalPrice:0
+};
 $(document).on('ready', function() {
 
     $(".regular").slick({
@@ -10,10 +14,26 @@ $(document).on('ready', function() {
         lazyLoad: 'ondemand', // ondemand progressive anticipated
         infinite: true
     });
+    producsInLocal= JSON.parse(localStorage.getItem("producsInLocal"))
+    try {
+   if (producsInLocal.length!==0) {
+producsInBasket=producsInLocal;
+   }
+    $(".length-basket").text(producsInBasket.basketTotalPrice+"грн")
+
+} catch (err) {
+
+console.log(1)
+
+}
+   
+  
+
+
 
 });
 
-
+var producsInLocal=[];
 $('#history').on('click', "#linkDessert", function() {
     $(".content").hide(100);
    renderDescribeTmpl("dessertmpl", "desserts")
@@ -113,7 +133,7 @@ function renderTmpl(tmplid, conteinerid, data) {
 
 
 
-var producsInBasketId = [];
+
 
 
 var totalPrice = 0;
@@ -129,7 +149,7 @@ return   Object.assign({}, Array[i])
 }
 }
 
-function findElement(dellId){
+function findDeleteElement(dellId){
   for (var i = 0; i<producsInBasket.length; i++) {
     if (producsInBasket[i].productIdBasket==dellId ) {
       return i;
@@ -139,22 +159,23 @@ function findElement(dellId){
 
 
 $('#history').on('click', ".dellItem", function() {
- var dellId= $(this).attr("delAttr")
-    
-var dellItem= findByProductId(dellId,producsInBasket)
+var dellId= $(this).attr("delAttr")
+console.log(dellId)
+var dellItem= findByProductId(dellId,producsInBasket.producs)
 console.log(dellItem)
 producsInBasket.basketTotalPrice=producsInBasket.basketTotalPrice-dellItem.pricePerOne
 
-var dellIndex = findElement(dellId);
+var dellIndex = findDeleteElement(dellId);
 console.log(dellIndex)
 var delHide= "#"+dellId+" "
 console.log(delHide)
 $(this).closest(".col-md-4").parent().hide()
-producsInBasket.splice(dellIndex,1 );
+producsInBasket.producs.splice(dellIndex,1); ////НЕ ТАК ВИДАЛЯЭ!!!!
+
+
+localStorage.setItem("producsInLocal", JSON.stringify(producsInBasket))
 $(".length-basket").text(producsInBasket.basketTotalPrice+"грн")
 $(".basketTotalPrice").text(producsInBasket.basketTotalPrice+"грн")
-
-
 });
 
 
@@ -291,7 +312,7 @@ $('#history').on('click', ".basketproduct", function  () {
   buyElement.productIdBasket=Math.random();
  buyElement.taste=taste;
 
-    buyElement.number=1;
+    
 
 
 
@@ -317,44 +338,48 @@ if (buyElement.price==undefined) {
     console.log(buyElement.TastePrice)
 sweetAlert("Oops...","Оберіть смак","error")
        } else {
-            
- producsInBasket.push(buyElement);
+        
+           producsInBasket.producs.push(buyElement)
+          
+
+ console.log(producsInBasket)
  
-basketTotalPrice()
+basketTotalPriceTotal()
+// var basketTotalPrice= producsInBasket.basketTotalPrice
+
+localStorage.setItem("producsInLocal", JSON.stringify(producsInBasket))
+     
+
 
 swal("Товар успішно додано в кошик!", "", "success");
  $(".length-basket").text(producsInBasket.basketTotalPrice+"грн")
        }
 
-
 });
 
 
-function basketTotalPrice(){
+function basketTotalPriceTotal(){
     producsInBasket.basketTotalPrice=0;
-        for (var i=0; i<producsInBasket.length; i++ ) {
-            if (producsInBasket[i].globaltype=="cake") {
-producsInBasket.basketTotalPrice=producsInBasket[i].pricePerOne+producsInBasket.basketTotalPrice
+        for (var i=0; i<producsInBasket.producs.length; i++ ) {
+            if (producsInBasket.producs[i].globaltype=="cake") {
+producsInBasket.basketTotalPrice=producsInBasket.producs[i].pricePerOne+producsInBasket.basketTotalPrice
+console.log(producsInBasket.basketTotalPrice)
             }else{
-                producsInBasket.basketTotalPrice=producsInBasket[i].pricePerOne+producsInBasket.basketTotalPrice
+                producsInBasket.basketTotalPrice=producsInBasket.producs[i].pricePerOne+producsInBasket.basketTotalPrice
             }
-          
-       //    if (producsInBasket[i].decorPrice==undefined) {
-
-       // }else{
-       //  producsInBasket.basketTotalPrice=producsInBasket.basketTotalPrice+producsInBasket[i].decorPrice
-       // }
        } 
 }
 
-var producsInBasket = [];
 
 
+var producsInBasketTmpl=[]
  function Tmplbasket() {
-    if ( producsInBasket.length==0) {
+    if ( producsInBasket.producs.length==0) {
         sweetAlert("Oops...","Корзина пуста","error")
     }else{
-        renderTmpl("basketTmpl", "history", producsInBasket)
+       producsInBasketTmpl=producsInBasket.producs;
+        producsInBasketTmpl.basketTotalPrice=producsInBasket.basketTotalPrice
+        renderTmpl("basketTmpl", "history", producsInBasketTmpl)
     }
     
 
@@ -430,34 +455,28 @@ $('#history').on('click', "#order", function() {
     $('#myModal').modal('hide')
 
     renderDescribeTmpl("SendTmpl","producsInBasket")
-    console.log(producsInBasket)
-sendRender()
+   
+
 
 });
+
 $('#myModal2').on('click', "#callBack", function(){
-
-  console.log(12)
-callBack()
-   console.log(12)
+callBackModal("v3aot4ajvbw2htkqvyr94knv")
 });
-
-function callBack(){
+    
+function callBackModal(token){
       var form_id = "jquery_form2";
 
     var data = {
-        "access_token": "v3aot4ajvbw2htkqvyr94knv"
+        "access_token":token
     };
 
-    function onSuccess() {
-        // remove this to avoid redirect
-        window.location = window.location.pathname + "?message=Email+Successfully+Sent%21&isError=0";
-         
-    }
+
 
     function onError(error) {
         // remove this to avoid redirect
         window.location = window.location.pathname + "?message=Email+could+not+be+sent.&isError=1";
-
+        
     }
 
     var sendButton = $("#callBack");
@@ -488,75 +507,134 @@ function callBack(){
     });
    
     }  
+
+
+
+
+
 var readyOrder=' ';
 var HowMany=producsInBasket.length
-function sendRender(){
 
-    for (var i=0 ; i<producsInBasket.length; i++) {
-    console.log(readyOrder);
-       if (producsInBasket[i].globaltype=="cake") {
-        readyOrder= readyOrder + producsInBasket[i].description+" "+producsInBasket[i].pricePerOne+" грн "+producsInBasket[i].taste+" "+producsInBasket[i].kg+"кг; \n"
-       } else if(producsInBasket[i].type=="capcake"){
-         readyOrder= readyOrder + "Номер капкейків "+ producsInBasket[i].id+" "+producsInBasket[i].pricePerOne+" грн  "+producsInBasket[i].kg+" шт на основі "+producsInBasket[i].base +"  з начинкою "+producsInBasket[i].TasteCapcake+ " \n"
+  function onSuccess() {
+     
+     renderDescribeTmpl("strawberrytmpl","titlecake")
+    }
+function sendReadyOrder(data) {
+    
+      
+        
+        $("#sendOrder").val('Sending…');
+        $("#sendOrder").prop('disabled',true);
+        $.post('https://postmail.invotes.com/send',
+            data,
+            localStorage.clear(),
+            onSuccess()
+            
+           )
+        .fail( function(){
+          // getValidToken(data)
+        tokenIndex++;
+        if(tokenIndex>allTokens.length){
+          console.log(11)
+        }else{
+         data.access_token=allTokens[tokenIndex].tokens
+         sendReadyOrder(data);
+         
+        }
+     
+        });
+        
+       
+
+    }
+  
+
+
+
+
+function setOrderText(){  
+
+    for (var i=0 ; i<producsInBasket.producs.length; i++) {
+   
+       if (producsInBasket.producs[i].globaltype=="cake") {
+        readyOrder= readyOrder + producsInBasket.producs[i].description+" "+producsInBasket.producs[i].pricePerOne+" грн "+producsInBasket.producs[i].taste+" "+producsInBasket.producs[i].kg+"кг; \n"
+       } else if(producsInBasket.producs[i].type=="capcake"){
+         readyOrder= readyOrder + "Номер капкейків "+ producsInBasket.producs[i].id+" "+producsInBasket.producs[i].pricePerOne+" грн  "
+         +producsInBasket.producs[i].kg+" шт на основі "+producsInBasket.producs[i].base +"  з начинкою "+producsInBasket.producs[i].TasteCapcake+ " \n"
        } else{
-         readyOrder= readyOrder + producsInBasket[i].description+" "+producsInBasket[i].pricePerOne+" грн  "+producsInBasket[i].kg+"шт \n"
-        console.log(readyOrder);
+         readyOrder= readyOrder + producsInBasket.producs[i].description+" "+producsInBasket.producs[i].pricePerOne+" грн  "+producsInBasket.producs[i].kg+"шт \n"
+        
        }
        
 
+       
 }
 
-  
-
-    //update this with your $form selector
-    var form_id = "jquery_form";
-
-    var data = {
-        "access_token": "v3aot4ajvbw2htkqvyr94knv"
-    };
-
-    function onSuccess() {
-        // remove this to avoid redirect
-        window.location = window.location.pathname + "?message=Email+Successfully+Sent%21&isError=0";
-         
-    }
-
-    function onError(error) {
-        // remove this to avoid redirect
-        window.location = window.location.pathname + "?message=Email+could+not+be+sent.&isError=1";
-    }
-
-    var sendButton = $("#" + form_id + " [name='send']");
-
-    function send() {
-        sendButton.val('Sending…');
-        sendButton.prop('disabled',true);
-        var total= producsInBasket.basketTotalPrice;
-        var subject = $("[name='subject']").val();
-        var message = $(" [name='field3']").val();
-        var number = $("[name='field2']").val();
-        data['subject'] = subject;
-        data['text'] =  number+ "  номер \n"  +readyOrder +"Коментар:  "+message + "\n  Итого:" + total+ "грн ";
+       
         
-        $.post('https://postmail.invotes.com/send',
-            data,
-            onSuccess
-        ).fail(onError);
+}
+var tokenIndex=0;
+var token =allTokens[tokenIndex].tokens;
 
-        return false;
-    }
-
-    sendButton.on('click', send);
-
-    var $form = $("#" + form_id);
-    $form.submit(function( event ) {
-        event.preventDefault();
-    });
-   
-
-
-
-    }
+  
+ $('#history').on('click', "#sendOrder", function(event) {
+       
+       setOrderText();
+       var total= producsInBasket.basketTotalPrice;
+        var subject = $("#sendName").val();
+        var message = $("#sendCommit").val();
+        var number = $("#sendTel").val();
+        
+        var data = {
+        "access_token":token,
+        "subject":subject,
+        "text": "  номер:" + number +"\n" +readyOrder +"Коментар:  "+message + "\n  Итого:" + total+ "грн ",
+    };
+    console.log(data)
+       send(data);
+      
+      });
 
 
     
+
+
+
+
+
+
+
+
+
+
+
+
+    // function onSuccess() {
+    //     // remove this to avoid redirect
+    //     window.location = window.location.pathname + "?message=Email+Successfully+Sent%21&isError=0";
+    // }
+
+    // function onError(error) {
+    //     // remove this to avoid redirect
+    //     window.location = window.location.pathname + "?message=Email+could+not+be+sent.&isError=1";
+    // }
+
+
+    // function send() {
+    //     sendButton.val('Sending…');
+    //     sendButton.prop('disabled',true);
+
+    //     $.post('https://postmail.invotes.com/send',
+    //         data,
+    //         onSuccess
+    //     ).fail(onError);
+
+    //     return false;
+    // }
+
+    // sendButton.on('click', send);
+
+    // var $form = $("#" + form_id);
+    // $form.submit(function( event ) {
+    //     event.preventDefault();
+    // });
