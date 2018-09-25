@@ -49,8 +49,8 @@
 <form>
 <fieldset>
 <legend>Заповніть будь-ласка анкету</legend>
-<input type="text" name="subject" id="sendName" placeholder="Ваше Імя">
-<input type="tel" minlength="10" id="sendTel" maxlength="13" name="field2" placeholder="Ваш номер">
+<input type="text" required name="subject" id="sendName" placeholder="Ваше Імя">
+<input type="tel" required minlength="10" id="sendTel" maxlength="13" name="field2" placeholder="Ваш номер">
 <textarea name="field3" id="sendCommit" placeholder="Коментар"></textarea>
 
      
@@ -181,7 +181,7 @@
          
          
          <div class="col-md-5"><span>Вага:<%= list[i].kg %>кг</span><br>
-        <span>Cмак торту:<%= list[i].taste %>кг</span><br>
+        <span>Cмак торту:<%= list[i].taste %></span><br>
         <span>Ціна торту:<%= list[i].pricePerOne %></span><br></div>
           <div class="col-md-4"><a  delAttr="<%= list[i].productIdBasket %>"  class="del-item-modal dellItem">X</a></div>
         
@@ -730,8 +730,8 @@
                                 <fieldset>
                                     <legend>Зворотрнній звязок</legend>
 
-                                    <input type="text" name="subject1" placeholder="Ваше Імя">
-                                    <input type="tel" minlength="10" maxlength="13" name="field22" placeholder="Ваш номер">
+                                    <input type="text" name="subject1" id="backName" placeholder="Ваше Імя">
+                                    <input type="tel" id="backTel" minlength="10" maxlength="13" name="field22" placeholder="Ваш номер">
 
                                     <a href="https://postmail.invotes.com" target="_blank">PostMail</a>
 
@@ -829,7 +829,7 @@
 
             </div>
         </div>
-        <div class="container" id="history"></div>
+        <div class="container" id="mainContainer"></div>
         <div class="container">
             <footer class="pageFooter">
                 <nav class="PageLinks">

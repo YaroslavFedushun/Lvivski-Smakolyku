@@ -1002,7 +1002,9 @@ div .PageMails {
     padding: 20px 0px;
 }
 /*TODO remove borders in CallBack modal*/
-
+.dellItem{
+    cursor: pointer;
+}
 @media screen and (min-width: 2024px) {
     .menu-blocks ul li {
         margin: 18px 70px;

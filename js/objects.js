@@ -370,7 +370,7 @@
          photo: "images/cheesecake.jpg",
          type:"titlecake"
      }, {
-         price: 500,
+         price: 350,
          id: 52,
          photo: "images/taste1.jpg",
          name:"Dark Cherry (Шоколадно вишневий)"
@@ -385,15 +385,15 @@
          photo: "images/taste3.jpg",
          name:"Snickers(Шоколадно-карамельний)"
      }, {
-         price: 350,
+         price: 500,
          id: 55,
          photo: "images/taste4.jpg",
-         name:"Червоний бархат"
+         name:"Фісташка-малина"
      }, {
-         price: 500,
+         price: 350,
          id: 56,
          photo: "images/taste5.jpg",
-         name:"Фісташка-малина"
+         name:"Червоний бархат"
      },
      {
          price: 250,
