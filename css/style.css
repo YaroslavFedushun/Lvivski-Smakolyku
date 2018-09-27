@@ -15,9 +15,7 @@ a {
     height: 250px;
 }
 
-.row {
-    margin-right: 15px;
-}
+
 
 .header-logo {
     text-align: center;
@@ -49,17 +47,6 @@ a {
     position: relative;
     bottom: 15px;
     margin-right: 15px;
-}
-
-.red-price {
-    color: red;
-}
-
-.basket-price {
-    color: black;
-    list-style: none;
-    position: relative;
-    bottom: 10px;
 }
 
 .menu-header {
@@ -105,60 +92,6 @@ a {
     background: #f2dede;
 }
 
-
-/*  .cakes{
-        height: 300px;
-        width: 300px;
-    }*/
-
-.name-cakes a {
-    padding-left: 55px;
-    font-size: 12px;
-    color: #808080d4;
-    text-decoration: none;
-}
-
-.price-cakes {
-    padding-left: 12px;
-    font-size: 23px;
-    font-weight: 500;
-    padding-top: 10px;
-}
-
-.basket-cakes {
-    width: 27px;
-    position: relative;
-    left: 32px;
-    bottom: 5px;
-}
-
-.product-list {
-    margin-left: 30px;
-}
-
-.page-wrapper {
-    width: 100%;
-    max-width: 1730px;
-    padding: 0 15px;
-    min-width: 400px;
-    box-sizing: border-box;
-    margin: 0 auto;
-}
-
-.img-slide {
-    width: 100%;
-}
-
-.title-producs {
-    font-size: 30px;
-    font-weight: 300;
-    padding-bottom: 25px;
-    color: #84639f;
-    text-transform: uppercase;
-    position: relative;
-    left: 37px;
-}
-
 .footer ul li {
     display: inline-block;
     margin: 18px 17px;
@@ -173,11 +106,6 @@ a {
     margin-top: 300px;
 }
 
-.our-sets {
-    text-align: center;
-   
-}
-
 .col-none-padding {
     padding: 0;
 }
@@ -185,13 +113,13 @@ a {
 .img-bg {
     display: none;
     position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(117, 190, 218, 0.5);
+    width: 92%;
+    height: 95%;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .font-bg {
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Amatic SC', cursive;
     color: white;
     font-size: 36px;
     position: relative;
@@ -205,14 +133,6 @@ a {
 
 .item:hover .img-bg-carousel {
     display: block;
-}
-
-.img-bg-carousel {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .phone-logo {
@@ -245,43 +165,6 @@ a {
     height: 30px;
     position: relative;
     top: 10px;
-}
-
-.basket-price-phone {
-    position: relative;
-    top: 20px;
-    padding: 10px;
-}
-
-.red-price-phone {
-    color: red;
-}
-
-.cakes-inform {
-    /*  position: relative;
-    left: 180px;
-    bottom: 157px;*/
-}
-
-.cakes-inform p {
-    font-size: 12px;
-    line-height: 16px;
-    color: #999;
-}
-
-.cakes-inform h3 {
-    font-size: 30px;
-    font-weight: 300;
-    color: #6d468b;
-}
-
-.cakes-inform a {
-    color: black;
-}
-
-.img-cakes {
-    float: left;
-    margin-right: 10px;
 }
 
 .call-back-title {
@@ -331,23 +214,6 @@ a {
     margin-bottom: 40px;
 }
 
-.item img {
-    /*  width: 100%;*/
-    height: 1000px;
-}
-
-.history-confectionery {
-    text-align: center;
-    font-size: 13px;
-    line-height: 20px;
-    color: #666;
-}
-
-.reviews {
-    text-align: center;
-    margin: 50px 0;
-}
-
 .fruits img {
     width: 100%;
     height: 500px;
@@ -360,40 +226,6 @@ a {
 
 .price-fruits img {
     width: 100%;
-}
-
-.number-pack {
-    display: inline-block;
-}
-
-.number-sweet {
-    display: inline-block;
-}
-
-.chosseNum {
-    display: none;
-}
-
-.chosse-cake {
-    width: 100%;
-    height: 400px;
-}
-
-.chosseCakePriceLink img {
-    width: 100%;
-    height: 300px;
-}
-
-.chosseCake {
-    display: none;
-}
-
-.chosseCakePrice {
-    display: none;
-}
-
-.chosseCakeTaste {
-    display: none;
 }
 
 .img-strawberry {
@@ -420,27 +252,6 @@ a {
 
 .dessert input {
     width: 37px;
-}
-
-.fruits {
-    text-align: center;
-}
-
-.img-bg {
-    display: none;
-    position: absolute;
-    width: 92%;
-    height: 95%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.font-bg {
-    font-family: 'Amatic SC', cursive;
-    color: white;
-    font-size: 36px;
-    position: relative;
-    top: 50%;
-    bottom: 50%;
 }
 
 .strawberrytitle {
@@ -526,11 +337,8 @@ a {
     font-size: 46px;
 }
 
-.WeddingCakeState li {
-    font-size: 28px;
-}
-
-.WeddingCakeState ul {
+.WeddingCakeState li,
+ul {
     font-size: 28px;
 }
 
@@ -706,20 +514,14 @@ body {
 }
 .PageLinks ul li {
     display: inline-block;
-    padding: 5px 40px;
+    padding: 5px 10px;
     color: gray;
     border-right: 1px solid gray;
     text-transform: uppercase;
     transition: all .3s;
     position: relative;
+    font-size: 22px;
 }
-
-/*footer {
- position: fixed;
- bottom: 0;
-
-
- }*/
 .conteiner {
     min-height: calc(100vh - 250px);
 }
@@ -778,7 +580,8 @@ div .PageMails {
 }
 .modal-body a {
     font-size: 27px;
-    float: right
+    float: right;
+    cursor: pointer;
 }
 #button1 {
     position: fixed;
@@ -819,7 +622,6 @@ div .PageMails {
 .slider-taste {
     margin-top: 18px;
 }
-.chosseTypeCake {}
 .Lastcake {
     font-family: 'Amatic SC', cursive;
 }
@@ -988,22 +790,15 @@ div .PageMails {
 .form-style-5 input[type="button"]:hover {
     background: #109177;
 }
-
-
-.pagePhoneFooter{
+.pagePhoneFooter {
     display: none;
-  border-top: 0.5px solid rgba(0,0,0,.075);
-    border-bottom: 0.5px solid rgba(0,0,0,.075);
+    border-top: 0.5px solid rgba(0, 0, 0, .075);
+    border-bottom: 0.5px solid rgba(0, 0, 0, .075);
     margin: 20px 0;
-    color: rgba(255,255,255,.15);
+    color: rgba(255, 255, 255, .15);
     text-decoration: underline;
-  
     height: 150px;
     padding: 20px 0px;
-}
-/*TODO remove borders in CallBack modal*/
-.dellItem{
-    cursor: pointer;
 }
 @media screen and (min-width: 2024px) {
     .menu-blocks ul li {
@@ -1035,12 +830,15 @@ div .PageMails {
     .menu-header {
         display: none;
     }
-    .pagePhoneFooter{
-    display: block;
+    
+    .pagePhoneFooter {
+        display: block;
     }
-    .pageFooter{
+    
+    .pageFooter {
         display: none;
     }
+    
     .header-phone {
         display: block;
     }
@@ -1048,7 +846,8 @@ div .PageMails {
     .page-header {
         display: none;
     }
-    .carousel1{
+    
+    .carousel1 {
         display: none;
     }
 }
@@ -1127,7 +926,7 @@ div .PageMails {
             margin-top: 20px;
         }
     }
+    
     body {
-    margin:0;
-}
-
+        margin: 0;
+    }

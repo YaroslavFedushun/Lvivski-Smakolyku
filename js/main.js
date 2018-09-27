@@ -345,7 +345,7 @@ function sendFeedBack(data) {
          return false;
     }
 
-function onSuccess() {
+function onSuccessOrder() {
     productsInBasketTmpl.length = 0
     $(".length-basket").text("0 грн")
     renderDescribeTmpl("strawberrytmpl", "titlecake")
@@ -357,7 +357,7 @@ function sendReadyOrder(data) {
     $.post('https://postmail.invotes.com/send',
             data,
             localStorage.clear(),
-            onSuccess()
+            onSuccessOrder()
         )
         .fail(function() {
             tokenIndex++;
