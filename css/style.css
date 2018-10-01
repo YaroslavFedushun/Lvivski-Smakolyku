@@ -1,28 +1,21 @@
     @import url("normalize.css");
-.contacts {
-    width: 30px;
-    height: 30px;
-    margin-bottom: 40px;
-    margin-right: 5px;
-    margin-top: 10px;
-}
 
 a {
     color: black;
 }
-
+/* header */ 
 .logo-img {
     height: 250px;
 }
-
-
-
 .header-logo {
     text-align: center;
 }
-
+.contacts {
+    width: 30px;
+    height: 30px;
+}
 .page-header {
-    margin: 40px 0 0px;
+    margin: 40px 0px 0px 0px;
 }
 
 .basket-call button {
@@ -43,10 +36,6 @@ a {
 .call-back {
     list-style: none;
     color: black;
-    font-size: 14px;
-    position: relative;
-    bottom: 15px;
-    margin-right: 15px;
 }
 
 .menu-header {
@@ -92,24 +81,44 @@ a {
     background: #f2dede;
 }
 
-.footer ul li {
-    display: inline-block;
-    margin: 18px 17px;
-    font-size: 15px;
-    text-transform: uppercase;
-    border-radius: 40px;
-    transition: all .3s;
+.phone-logo {
+    height: 114px;
     position: relative;
+    right: 34px;
 }
 
-.footer {
-    margin-top: 300px;
+.contacts-phone {
+    height: 30px;
+    position: relative;
+    bottom: 20px;
 }
+
+.phone-daily {
+    text-align: center;
+}
+.header-phone {
+    display: none;
+}
+.basket-call-phone a {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+
+.basket-call-phone {
+    float: right;
+}
+
+.basket-call-phone img {
+    height: 30px;
+    position: relative;
+    top: 10px;
+}/* header */ 
 
 .col-none-padding {
     padding: 0;
 }
-
+/* Background style */
 .img-bg {
     display: none;
     position: absolute;
@@ -133,39 +142,7 @@ a {
 
 .item:hover .img-bg-carousel {
     display: block;
-}
-
-.phone-logo {
-    height: 114px;
-    position: relative;
-    right: 34px;
-}
-
-.contacts-phone {
-    height: 30px;
-    position: relative;
-    bottom: 20px;
-}
-
-.phone-daily {
-    text-align: center;
-}
-
-.basket-call-phone a {
-    text-decoration: none;
-    list-style: none;
-    color: black;
-}
-
-.basket-call-phone {
-    float: right;
-}
-
-.basket-call-phone img {
-    height: 30px;
-    position: relative;
-    top: 10px;
-}
+}/* Background style */
 
 .call-back-title {
     height: 150px;
@@ -198,20 +175,12 @@ a {
     top: 30px;
 }
 
-.header-phone {
-    display: none;
-}
 
+/* style for products */
 .form-control {
     background: rgba(0, 0, 0, .05);
     border-radius: 35px;
     width: 250px;
-}
-
-.set-block img {
-    width: 100%;
-    height: 300px;
-    margin-bottom: 40px;
 }
 
 .fruits img {
@@ -263,19 +232,16 @@ a {
     display: block;
 }
 
-.second {
-    width: 432px;
-    float: right;
-    height: 546px;
-    margin-right: 25px;
-}
+
 
 .photoBar {
     height: 756px;
     width: 100%;
     margin-bottom: 27px;
 }
+/* style for products */
 
+/* style for daily,Commentspage,Wedding state */
 .dailyPay {
     background: rgba(0, 0, 0, .05);
     font-family: 'Caveat', cursive;
@@ -332,7 +298,12 @@ a {
     font-size: 26px;
     margin-top: 30px;
 }
-
+.weddingImg{
+    width: 432px;
+    float: right;
+    height: 546px;
+    margin-right: 25px;
+}
 .WeddingCakeState h1 {
     font-size: 46px;
 }
@@ -366,6 +337,8 @@ ul {
 .WeddingCakeState span {
     font-size: 18px;
 }
+/* style for daily,Commentspage,Wedding state */
+
 
 #myModal span {
     font-family: 'Amatic SC', cursive;
@@ -462,37 +435,7 @@ body {
     background: background: rgba(0, 0, 0, .5);
     ;
 }
-.box-title {
-    font-size: 23px;
-    font-family: 'Playfair Display SC', serif;
-}
-.basket-image img {
-    height: 70px;
-    width: 70px;
-    float: left;
-    margin-right: 20px;
-}
-.basket-box {
-    width: 400px;
-}
-#basketContainer {
-    position: absolute;
-    left: 1105px;
-    background: #0000007a;
-    z-index: 9;
-}
-.basket-boxPrice {
-    position: relative;
-    left: 241px;
-    bottom: 34px;
-    color: red;
-}
-.page-basketPrice {
-    text-align: center;
-    font-size: 20px;
-    margin-top: 20px;
-    font-family: 'Playfair Display SC', serif;
-}
+
 .taste-img img {
     width: 365px;
     height: 334px;
@@ -526,7 +469,21 @@ body {
     min-height: calc(100vh - 250px);
 }
 
-/* ваш футер */
+/* футер */
+.footer ul li {
+    display: inline-block;
+    margin: 18px 17px;
+    font-size: 15px;
+    text-transform: uppercase;
+    border-radius: 40px;
+    transition: all .3s;
+    position: relative;
+}
+
+.footer {
+    margin-top: 300px;
+}
+
 footer {
     position: relative;
     height: 100px;
@@ -583,9 +540,6 @@ div .PageMails {
     float: right;
     cursor: pointer;
 }
-#button1 {
-    position: fixed;
-}
 .last-img-taste {
     height: 600px;
     width: 500px;
@@ -601,6 +555,9 @@ div .PageMails {
 }
 .dessert {
     font-family: 'Amatic SC', cursive;
+}
+.basketBlock{
+    position: fixed;
 }
 .dessert-but {
     border-radius: 30px;
@@ -663,7 +620,7 @@ div .PageMails {
 .orderInput {
     display: block;
 }
-#hide-basket {
+.headerInformBlock{
     font-family: 'Amatic SC', cursive;
     font-size: 23px;
 }

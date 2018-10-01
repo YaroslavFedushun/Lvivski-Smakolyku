@@ -67,7 +67,7 @@
         <div class="WeddingCakeState"><p class="PageHeaderState">Кондитерська “Львівські Смаколики” пропонує весільні торти на будь-який смак!</p><p><br>
 Ми виготовляємо наші торти лише з відібраних натуральних інгредієнтів, не використовуємо ароматизаторів, підсилювачів смаку та готових сумішей або бісквітів. Усі компоненти тортів ми виготовляємо власноруч. <br>
 Ми можемо запропонувати для вашого весілля  торти від 1.5 - кілограма, і торти в декілька ярусів. Для кожного ярусу можете обрати окремий смак!</p>
-<img class=" second" src="images/wedding2.jpg">
+<img class="weddingImg" src="images/wedding2.jpg">
 <p>Ціна весільного торту: 400-550 грн/кг(в вартість входить декор)</p>
 
 <ul>Декор:
@@ -166,7 +166,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Закрити</span></button>
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">X</span><span class="sr-only">Закрити</span></button>
         <h4 class="modal-title" id="myModalLabel">Корзина</h4>
       </div>
       <div class="modal-body">
@@ -669,7 +669,7 @@
                         <a href=""><img class="logo-img" src="images/logo.jpg"></a>
                     </div>
                 </div>
-                <div id="hide-basket" class="col-md-4 col-sm-4">
+                <div  class="col-md-4 col-sm-4 headerInformBlock">
                     <h2 class="number">+38 (093) 59 28 931</h2>
                     <p>Замовлення приймаються з пн по сб з 10:00 до 22:00.</p>
                     <p>Доставка в межах Львова щоденно</p>
@@ -677,11 +677,10 @@
 
                     </div>
                 </div>
-                <div id="basketContainer"></div>
             </div>
         </div>
     </header>
-    <div class="row">
+    
         <div class="col-md-12">
             <div class="menu-header" id="responsive-menu">
                 <nav class="menu-blocks">
@@ -707,13 +706,11 @@
                 </nav>
 
             </div>
-        </div>
-    </div>
 
-    <button id="button1" type="button" onclick="Tmplbasket()" class="btn btn-primary btn-lg button1" data-toggle="modal" data-target="#myModal">
-        <img class="contacts basket-button" src="images/basket.png">
-        <p class="length-basket"></p>
-    </button>
+        </div>
+   
+
+
     <div class="modal fade" id="myModal2" role="dialog">
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
@@ -753,8 +750,17 @@
         </div>
     </div>
     </div>
+<div class="basketBlock">
+    
+              <button id="basketButton" type="button" onclick="Tmplbasket()" class="btn btn-primary btn-lg " data-toggle="modal" data-target="#myModal">
+        <img class="contacts basket-button" src="images/basket.png">
+        <p class="length-basket"></p>
+    </button>
+</div>
+
+<div class="content">
     <div class="wrapper">
-        <div class="content">
+
             <div class="container carousel1">
                 <section class="lazy slider" data-sizes="50vw">
                     <div>
@@ -769,66 +775,8 @@
 
                 </section>
             </div>
-
-
-
-
-
-            <div class="container">
-
-                <div class="row">
-
-                    <div class="our-sets">
-                        <h2>НАШІ НАБОРИ</h2>
-                        <div class="col-md-4 col-sm-6 ">
-                            <div class="set-block"><a href="">
-                                    <div class="img-bg gift-bg">
-                                        <span class="font-bg"></span>
-                                    </div>
-                                    <img src="images/gift0.jpg">
-                            </div>
-                            </a>
-
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="set-block">
-                                <div class="img-bg gift-bg">
-                                    <span class="font-bg"></span>
-
-                                </div>
-                                <img src="images/gift1.jpg">
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 ">
-                            <div class="set-block">
-                                <div class="img-bg gift-bg">
-                                    <span class="font-bg"></span>
-
-                                </div>
-                                <img src="images/gift10.jpg">
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-              
-              
-
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-md-6">
-                            <div class="history-confectionery">
-                               
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-            </div>
-        </div>
+</div>
+</div>
         <div class="container" id="mainContainer"></div>
         <div class="container">
             <footer class="pageFooter">
