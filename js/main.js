@@ -39,10 +39,12 @@ mainContainer.on('click', ".slider-tastecake", function() {
 
 mainContainer.on('click', ".baseTaste", function() {
     baseTaste = $(this).attr("tasteAttrCap");
+    $(".tasteText").text(baseTaste);
 });
 
 mainContainer.on('click', ".chossebase", function() {
     base = $(this).attr("baseAttrCap");
+    $(".baseText").text(base);
 });
 mainContainer.on('click', ".chosseTypestraw", function() {
     var productId = $(this).attr("cake-id");
@@ -117,37 +119,45 @@ mainContainer.on('click', ".basketproduct", function() {
      initInformByProduct(buyElement,massa,sum)
 });
 
-$("#thirdmenu").click(function() {
+$(".cakeLink").click(function() {
+    $(".content").hide(100);
+   renderDescribeTmpl("strawberrytmpl","titlecake")
+});
+$(".strawberryLink").click(function() {
+    $(".content").hide(100);
+   renderDescribeTmpl("strawberrytmpl","titlestraw")
+})
+$(".giftLink").click(function() {
     $(".content").hide(100);
     renderDescribeTmpl("giftTmpl", "giftbox");
 });
 
-$("#fourthmenu").click(function() {
+$(".capcakeLink").click(function() {
     $(".content").hide(100);
     renderDescribeTmpl("capcakeTmpl", "capcake");
     renderCakeTasteSlider()
 });
 
-$("#fifthmenu").click(function() {
+$(".dessertLink").click(function() {
     $(".content").hide(100);
     renderDescribeTmpl("dessertmpl", "desserts");
 });
-$("#sixthmenu").click(function() {
+$(".candybarLink").click(function() {
     $(".content").hide(100);
     renderDescribeTmpl("candybarTmpl", "candybar");
 });
 
-$("#seventhmenu").click(function() {
+$(".dishLink").click(function() {
     $(".content").hide(100);
     renderDescribeTmpl("dishtmpl", "dishes");
 });
 
-$("#dailyPay").click(function() {
+$(".dailyPayLink").click(function() {
     $(".content").hide(100);
     renderDescribeTmpl("dailyAndPay", "dishes");
 });
 
-$("#comment").click(function() {
+$(".comment").click(function() {
     $(".content").hide(100);
     renderDescribeTmpl("commentTmpl", "dishes");
 });

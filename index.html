@@ -134,25 +134,25 @@
 
     <script type="text/template" id="commentTmpl">
         <div class="row commentPage">
-    <div class="col-md-3">
+    <div class="col-md-3 col-sm-6 col-xs-12">
       <img  class="imageComment" src="images/comment1.jpg">
     </div>
-    <div class="col-md-3">
+    <div class="col-md-3 col-sm-6 col-xs-12">
             <img class="imageComment" src="images/comment2.jpg">
     </div>
-    <div class="col-md-3">
+    <div class="col-md-3 col-sm-6 col-xs-12">
            <img class="imageComment"  src="images/comment3.jpg">
     </div>
-    <div class="col-md-3">
+    <div class="col-md-3 col-sm-6 col-xs-12">
           <img class="imageComment"  src="images/comment4.jpg">
     </div>
-    <div class="col-md-3">
+    <div class="col-md-3 col-sm-6 col-xs-12">
             <img  class="imageComment" src="images/comment5.jpg">
     </div>
-    <div class="col-md-3">
+    <div class="col-md-3 col-sm-6 col-xs-12">
          <img class="imageComment"  src="images/comment6.jpg">
     </div>
-    <div class="col-md-3">
+    <div class="col-md-3 col-sm-6 col-xs-12">
     <img class="imageComment"  src="images/comment7.jpg">
     </div>
 
@@ -173,31 +173,31 @@
       
         <% for (var i=0;i<list.length;i++){ %>
           <div class="row products" id="<%= list[i].productIdBasket %>">
-            <div class="col-md-3">
+            <div class="col-md-3 col-sm-5 col-xs-5">
               <img   class="modal-img" src="<%- list[i].photo %>">
               </div>
         <% if(list[i].globaltype == "cake") { %>
         <h3><%= list[i].title %></h3>
          
          
-         <div class="col-md-5"><span>Вага:<%= list[i].kg %>кг</span><br>
+         <div class="col-md-5 col-sm-5 col-xs-5"><span>Вага:<%= list[i].kg %>кг</span><br>
         <span>Cмак торту:<%= list[i].taste %></span><br>
         <span>Ціна торту:<%= list[i].pricePerOne %></span><br></div>
-          <div class="col-md-4"><a  delAttr="<%= list[i].productIdBasket %>"  class="del-item-modal dellItem">X</a></div>
+          <div class="col-md-4 col-sm-2 col-xs-2"><a  delAttr="<%= list[i].productIdBasket %>"  class="del-item-modal dellItem">X</a></div>
         
     <% }else if (list[i].type=="capcake") {%>
-    <div class="col-md-5"><span>Cмак капкейку:<%= list[i].TasteCapcake %></span><br>
+    <div class="col-md-5 col-sm-5 col-xs-5"><span>Cмак капкейку:<%= list[i].TasteCapcake %></span><br>
         <span>Основа капкейку:<%= list[i].base %></span><br>
         <span>Ціна коробочки:<%= list[i].pricePerOne %></span><br></div>
-      <div class="col-md-4"><a  delAttr="<%= list[i].productIdBasket %>"  class="del-item-modal dellItem">X</a></div>
+      <div class="col-md-4 col-sm-2 col-xs-2"><a  delAttr="<%= list[i].productIdBasket %>"  class="del-item-modal dellItem">X</a></div>
     
          
 <%} else { %>
-     <div class="col-md-5">
+     <div class="col-md-5 col-sm-5 col-xs-5">
         <span>Кількість:<%= list[i].kg %>шт</span><br>
         <span>Ціна за одиницю: <%= list[i].price %></span>
         </div>
-                <div class="col-md-4"><a  delAttr="<%= list[i].productIdBasket %>"  class="del-item-modal dellItem">X</a></div>
+                <div class="col-md-4 col-sm-2 col-xs-2"><a  delAttr="<%= list[i].productIdBasket %>"  class="del-item-modal dellItem">X</a></div>
         <% } %>
 
          
@@ -225,7 +225,7 @@
   <div class="row">
     
       <% for (var i=0;i<list.length;i++){ %>
-<div class="col-md-12">
+<div class="col-md-12 col-sm-12 col-xs-12">
   <div class="dessert">
      <h2><%= list[i].title %></h2>
   <img class="dessert-photo" src="<%- list[i].photo %>" >
@@ -253,7 +253,7 @@
   <div class="row">
     
       <% for (var i=0;i<list.length;i++){ %>
-<div class="col-md-12">
+<div class="col-md-12 col-sm-12 col-xs-12">
   <div class="dessert">
      <h2><%= list[i].title %></h2>
   <img class="dessert-photo" src="<%- list[i].photo %>" >
@@ -279,7 +279,7 @@
         <div class="chosseFruit">
          <div class="row">
           <% for (var i=0;i<list.length;i++){ %>
-            <div class="col-md-4 col-sm-12 ">
+            <div class="col-md-4 col-sm-6 col-xs-12  ">
                 <div   class="fruits"  ><a id="<%= list[i].class %>" >
                     <div class="img-bg">
                     <span class="font-bg"><%= list[i].title %></span>
@@ -302,7 +302,7 @@
               
             </div>
           <% for (var i=0; i<list.length;i++){ %>
-            <div class="col-md-3 col-sm-12 ">
+            <div class="col-md-3 col-sm-6 col-xs-12 ">
                 <div class="fruits"   ><a cake-id="<%= list[i].id %>" class="chosseTypeLink chosseTypestraw" >
                        <% if(list[i].type == "strawberrybox") { %>
                        <div class="img-bg bg-straw">
@@ -330,8 +330,8 @@
           <div style="text-align: center;font-family: 'Amatic SC', cursive;">
                <h1>Капкейки</h1>
             </div>
-
-        <section class="regular slider">
+<div class="capcakeSlider">
+        <section class="regular slider ">
     <div>
       <img src="images/cap1.jpg">
     </div>
@@ -363,7 +363,7 @@
       <img src="images/cap10.jpg">
     </div>
   </section>
-               
+             </div> 
           <% for (var i=0; i<list.length;i++){ %>
             <div class="col-md-4 col-sm-12 ">
                 <div    class="fruits" ><a class="chosseTypeCapcake"  cake-id="<%= list[i].id %>" >
@@ -388,7 +388,7 @@
               
             </div>
           <% for (var i=0; i<list.length;i++){ %>
-            <div class="col-md-4 col-sm-12 ">
+            <div class="col-md-4 col-sm-6 col-xs-12 ">
                 <div cake-id="<%= list[i].id %>"   class="fruits addToBasket" ><a class="chosseTypeCake" >
                     <div class="img-bg">
                     <span class="font-bg"></span>
@@ -410,7 +410,7 @@
                
             </div>
           <% for (var i=0; i<list.length;i++){ %>
-            <div class="col-md-4 col-sm-12 ">
+            <div class="col-md-4 col-sm-6 col-xs-12  ">
                 <div cake-id="<%= list[i].id %>"   class="fruits chosseTypeGift" ><a >
                     <div class="img-bg">
                   <span class="font-bg"><%= list[i].price %>грн/шт</span>
@@ -509,24 +509,23 @@
           <% for (var i=0; i<list.length;i++){ %>
             
                 <div class="Lastcake" >
-                  <div class="col-md-6"> 
+                  <div class="col-md-6 col-sm-6 col-xs-12"> 
                     <img class="last-img-taste" src="<%- list[i].photo %>">
                     </div>
                       
-                    <div class="col-md-6">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
                     
                     
                     <form name="f1" method="get">
-                    
-                                      
 
 <div class="dropdown">
   <button class="btn btn-default dropdown-toggle buttoncap" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-    Оберіть основу
+   <span class="baseText">Оберіть основу</span>
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-    <li role="presentation"><a role="menuitem" class="chossebase" tabindex="-1" baseAttrCap="Шоколадна"  >Шоколадна</a></li>
+    <li role="presentation"><a role="menuitem" me="speed" id="speed">
+  <option value="Шоколадна" class="chossebase" tabindex="-1" baseAttrCap="Шоколадна"  >Шоколадна</a></li>
     <li role="presentation"><a role="menuitem" class="chossebase" tabindex="-1" baseAttrCap="Шоколадно-бананова"  >Шоколадно-бананова</a></li>
     <li role="presentation"><a role="menuitem" class="chossebase" tabindex="-1" baseAttrCap="Ванільна" >Ванільна</a></li>
    
@@ -535,7 +534,7 @@
 
 <div class="dropdown">
   <button class="btn btn-default dropdown-toggle buttoncap" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-    Оберіть начинку
+    <span class="tasteText">Оберіть начинку</span>
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
@@ -547,8 +546,7 @@
    
   </ul>
 </div>
-
-Кількість:<input type="number" class="InputDisplay"  size="3" input-id="<%= list[i].id %>"  name="num" min="1" max="10" value="1">
+<p>Кількість:</p><input type="number" class="InputDisplay"  size="3" input-id="<%= list[i].id %>"  name="num" min="1" max="10" value="1">
 
                         <button type="button" buy-id="<%= list[i].id %>" class="btn btn-default last-basket basketproduct">Додати у кошик</button>    
 
@@ -606,7 +604,7 @@
           <% for (var i=0; i<list.length;i++){ %>
             
                 <div class="Lastcake strawberrychose" >
-                  <div class="col-md-6"> 
+                  <div class="col-md-6 col-sm-6"> 
                     <img src="<%- list[i].photo %>">
                     </div>
                     <div class="col-md-6">
@@ -628,18 +626,46 @@
     <header class="header-phone">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-6 col-sm-6 col-xs-8">
-                    <img class="phone-logo" src="images/logo.jpg">
-                    <a class="phone-link" href="https://www.instagram.com/lvivskismakolyky/"><img class="contacts-phone" src="images/inst.png"></a>
+                <div class=" col-sm-12 col-xs-12">
+                <img class="phone-logo" src="images/logo.jpg">
+                    
+                    <div class="dropdown phoneLinks headerPhoneBurger"> 
+                    <button class="btn btn-default dropdown-toggle dropdownMenuBurger" type="button" data-toggle="dropdown" aria-expanded="true">
+   <span class="glyphicon glyphicon-align-justify"></span>
+  </button>
+    <ul class="dropdown-menu " role="menu" aria-labelledby="dropdownMenu">
+                        <li role="presentation" class="menu-item"><a role="menuitem" tabindex="-1"   class="dropdown-toggle style-list cakeLink">ТОРТИ
+                        </a></li>
+                        <li role="presentation" class="menu-item"><a  role="menuitem" tabindex="-1"   class="style-list strawberryLink" "  data-id="users">ПОЛУНИЦЯ В ШОКОЛАДІ </a></li>
+                        <li role="presentation" class="menu-item"><a   role="menuitem" tabindex="-1"  class="style-list giftLink" " > ПОДАРУНКОВІ НАБОРИ
+                        </a></li>
+                        <li role="presentation" class="menu-item"><a  role="menuitem" tabindex="-1"   class="style-list capcakeLink" "> Капкейки
+                        </a></li>
+                        <li role="presentation" class="menu-item"><a  role="menuitem" tabindex="-1"     class="style-list dessertLink">Десерти
+                        </a> </li>
+                        <li role="presentation" class="menu-item"><a  role="menuitem" tabindex="-1"   class="style-list candybarLink" > CANDY BAR
+                        </a></li>
+                        <li role="presentation" class="menu-item"><a  role="menuitem" tabindex="-1"   class="style-list dishLink" > АРЕНДА ПОСУДУ
+                        </a></li>
+
+                    </ul>
+  </div>
+                                 <a class="phone-link" href="https://www.instagram.com/lvivskismakolyky/"><img class="contacts-phone" src="images/inst.png"></a>
                     <a class="phone-link" href="#"><img class="contacts-phone" src="images/face.jpg"></a>
                     <a class="phone-link" href="https://vk.com/lvivskysmakoliki"><img class="contacts-phone" src="images/vk.jpg"></a>
+                  
+  
 
-  <button type="button" class="navbar-toggle" data-toggle="menu-header" data-target="responsive-menu">sssss</button>
+   
  
-                </div>
-                <div class="col-md-6 col-sm-6 col-xs-4" style="float: right;">
-                    <div class="basket-call-phone"><a href=""><img class="contacts-phone" src="images/tel.jpg"><span class="basket-price-phone">Зворотній дзвінок</span></a>
 
+
+               
+                    <div class="basket-call-phone"><a><button type="button" class="btn btn-info btn-lg" data-toggle="modal" style="display: contents" data-target="#myModal2"><img class="contacts" src="images/tel.jpg"></button></a>
+                         <button type="button" onclick="Tmplbasket()" class="btn btn-primary btn-lg phoneBasketBut " data-toggle="modal" data-target="#myModal">
+        <img class="contacts basket-button" src="images/basket.png">
+        <p class="length-basket"></p>
+    </button>
                     </div>
                 </div>
 
@@ -658,13 +684,13 @@
     <header class="page-header">
         <div class="container">
             <div class="row">
-                <div class="col-md-3 col-sm-4">
+                <div class="col-md-4 col-sm-4">
                     <a href="https://www.instagram.com/lvivskismakolyky/"><img class="contacts" src="images/inst.png"></a>
                     <a href="#"><img class="contacts" src="images/face.jpg"></a>
                     <a href="https://vk.com/lvivskysmakoliki"><img class="contacts" src="images/vk.jpg"></a>
                    
                 </div>
-                <div class="col-md-5 col-sm-4">
+                <div class="col-md-4 col-sm-4">
                     <div class="header-logo">
                         <a href=""><img class="logo-img" src="images/logo.jpg"></a>
                     </div>
@@ -686,21 +712,19 @@
                 <nav class="menu-blocks">
                     <ul class="menu-list">
                         <li class="menu-item">
-                            
-                                <a href="#" style="text-decoration: none;" onclick='renderDescribeTmpl("strawberrytmpl","titlecake")' class="dropdown-toggle style-list" id="firstmenu" data-toggle="dropdown">ТОРТИ</a>
-
-                       
-                        </li>
-                        <li class="menu-item"><a href="#" class="style-list" onclick='renderDescribeTmpl("strawberrytmpl","titlestraw")' style="text-decoration: none;" id="secondmenu" data-id="users">ПОЛУНИЦЯ В ШОКОЛАДІ </a></li>
-                        <li class="menu-item"><a href="#" class="style-list" style="text-decoration: none;" id="thirdmenu"> ПОДАРУНКОВІ НАБОРИ</a></li>
-                        <li class="menu-item"><a href="#" class="style-list" style="text-decoration: none;" id="fourthmenu"> Капкейки</a></li>
-
-                        <li class="menu-item"><a href="#" href="#" id="fifthmenu" style="text-decoration: none;" class="style-list">Десерти</a>
-
-                        </li>
-                        </li>
-                        <li class="menu-item"><a href="#" class="style-list" style="text-decoration: none;" id="sixthmenu"> CANDY BAR</a></li>
-                        <li class="menu-item"><a href="#" class="style-list" style="text-decoration: none;" id="seventhmenu"> АРЕНДА ПОСУДУ</a></li>
+                            <a href="#"  class="dropdown-toggle style-list cakeLink">ТОРТИ</a>
+                              </li>
+                        <li class="menu-item"><a  class="style-list strawberryLink" "  data-id="users">ПОЛУНИЦЯ В ШОКОЛАДІ </a></li>
+                        <li class="menu-item"><a  class="style-list giftLink" " > ПОДАРУНКОВІ НАБОРИ
+                        </a></li>
+                        <li class="menu-item"><a  class="style-list capcakeLink" "> Капкейки
+                        </a></li>
+                        <li class="menu-item"><a    class="style-list dessertLink">Десерти
+                        </a> </li>
+                        <li class="menu-item"><a  class="style-list candybarLink" > CANDY BAR
+                        </a></li>
+                        <li class="menu-item"><a  class="style-list dishLink" > АРЕНДА ПОСУДУ
+                        </a></li>
 
                     </ul>
                 </nav>
@@ -752,7 +776,7 @@
     </div>
 <div class="basketBlock">
     
-              <button id="basketButton" type="button" onclick="Tmplbasket()" class="btn btn-primary btn-lg " data-toggle="modal" data-target="#myModal">
+              <button id="mainBasketButton" type="button" onclick="Tmplbasket()" class="btn btn-primary btn-lg " data-toggle="modal" data-target="#myModal">
         <img class="contacts basket-button" src="images/basket.png">
         <p class="length-basket"></p>
     </button>
@@ -784,9 +808,9 @@
                     <ul class="LinksFooter">
                         <li><a href="">Головна сторінка</a></li>
 
-                        <li><a id="dailyPay">Оплата і доставка</a></li>
+                        <li><a class="dailyPayLink">Оплата і доставка</a></li>
 
-                        <li><a id="comment">Відгуки</a></li>
+                        <li><a class="comment">Відгуки</a></li>
 
                         <li><a href="">Спеціальні пропозицій</a></li>
 
@@ -822,9 +846,9 @@
                     <ul class="LinksPhoneFooter">
                         <li><a href="">Головна сторінка</a></li>
 
-                        <li><a id="dailyPay">Оплата і доставка</a></li>
+                        <li><a class="dailyPayLink">Оплата і доставка</a></li>
 
-                        <li><a id="comment">Відгуки</a></li>
+                        <li><a class="comment">Відгуки</a></li>
 
                         <li><a href="">Спеціальні пропозицій</a></li>
 
