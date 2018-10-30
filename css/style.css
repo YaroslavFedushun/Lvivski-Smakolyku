@@ -93,6 +93,8 @@ a {
 .phone-daily {
     text-align: center;
     font-family: cursive;
+    border-bottom: 1px solid lightslategray;
+    margin: 20px 0px;
 }
 .header-phone {
     display: none;
@@ -303,8 +305,9 @@ a {
 
 .WeddingCakeState p {
     font-size: 26px;
-    margin-top: 30px;
+    margin-top: 71px;
 }
+
 .weddingImg{
     width: 432px;
     float: right;
@@ -379,11 +382,11 @@ a {
 .chosseTypeLink img {
     padding-top: 30px;
 }
-.chosseTypeLink div {
+/*.chosseTypeLink div {
     width: 90%;
     height: 91%;
     margin-top: 30px;
-}
+}*/
 .dessert-basket {
     width: 30px;
     height: 30px;
@@ -541,10 +544,14 @@ div .PageMails {
     color: red;
     margin-left: 20px;
 }
-.modal-body a {
+.modal-body .dellItem {
     font-size: 27px;
     float: right;
     cursor: pointer;
+}
+#myModal span {
+    font-family: 'Amatic SC', cursive;
+    font-size: 23px;
 }
 .last-img-taste {
     height: 600px;
@@ -658,12 +665,12 @@ div .PageMails {
 .form-style-5 {
     max-width: 500px;
     padding: 10px 20px;
-    background: #f4f7f8;
+   
     margin: 10px auto;
     padding: 20px;
-    background: #f4f7f8;
+    
     border-radius: 8px;
-    font-family: Georgia, "Times New Roman", Times, serif;
+     font-family: 'Amatic SC', cursive;
 }
 .form-style-5 fieldset {
     border: none;
@@ -686,8 +693,8 @@ div .PageMails {
 .form-style-5 input[type="url"],
 .form-style-5 textarea,
 .form-style-5 select {
-    font-family: Georgia, "Times New Roman", Times, serif;
-    background: rgba(255, 255, 255, .1);
+    font-family: 'Amatic SC', cursive;
+
     border: none;
     border-radius: 4px;
     font-size: 16px;
@@ -698,7 +705,7 @@ div .PageMails {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    background-color: #e8eeef;
+        background-color: rgba(0,0,0,.05);
     color: #8a97a0;
     -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;

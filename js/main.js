@@ -1,9 +1,33 @@
 
-$(document).on('ready', function() {
-  renderMainSlider()
-  getProductsByLocalStorage()
-    
+
+window.addEventListener('popstate', function(e) {
+renderContentByUrl();
 });
+
+
+   (function(history){
+    var pushState = history.pushState;
+    history.pushState = function(state) {
+        if (typeof history.onpushstate == "function") {
+            history.onpushstate({state: state});
+            
+        }
+        // whatever else you want to do
+        // maybe call onhashchange e.handler
+
+   setTimeout(renderContentByUrl, 12)
+
+   
+        return pushState.apply(history, arguments);
+    }
+})(window.history); 
+
+
+$(document).on('ready', function() {
+  renderMainSlider();
+   getProductsByLocalStorage();
+   renderContentByUrl();
+ });
 
 var PRODUCTS_IN_BASKET = {
     products: [],
@@ -20,16 +44,126 @@ var baseTaste = "";
 var caketypeTmpl = [];
 var caketypeId = [];
 
+function router(url){
+switch (url) {
+  case "/":
+     renderTmpl("mainContentTmpl", "mainContainer", productsInBasketTmpl);
+       renderMainSlider();
+    break;
+    case "/cake":
+      $(".content").hide(100);
+   renderDescribeTmpl("strawberrytmpl","titlecake")
+    break;
+    case "/caketype1":
+        renderDescribeTmpl("WeddingCake", "cake2");
+    break;
+    case "/caketype2":
+       var n=getUrlProductId();
+        console.log(n)
+        if (n) {
+        routerTmpl();
+        initPopover();
+        }else{
+        	renderDescribeTmpl("cakeTmpl", "cake2");
+        }
+       
+    break;
+    case "/caketype3":
+        renderDescribeTmpl("cakeTmpl", "cake3");
+    break;
+    case "/straw":
+       renderDescribeTmpl("strawberrytmpl","titlestraw");
+    break;
+    case "/strawtype1":
+     var n=getUrlProductId();
+        if (n) {
+        routerTmpl();
+        }else{
+        renderDescribeTmpl("strawberrytypeTmpl", "strawberrybox");
+    }
+    break;
+    case "/strawtype2":
+     var n=getUrlProductId();
+        if (n) {
+        routerTmpl();
+        }else{
+       renderDescribeTmpl("strawberrytypeTmpl", "strawberryflowerbox");
+   }
+    break;
+    case "/strawtype3":
+     var n=getUrlProductId();
+        if (n) {
+        routerTmpl();
+        }else{
+        renderDescribeTmpl("strawberrytypeTmpl", "strawberryflower");
+    }
+    break;
+    case "/giftbox":
+     var n=getUrlProductId();
+        console.log(n)
+        if (n) {
+        routerTmpl();
+        }else{
+        renderDescribeTmpl("cakeTmpl", "giftbox");
+    }
+    break;
+    case "/capcake":
+     var n=getUrlProductId();
+        console.log(n)
+        if (n) {
+        routerTmpl();
+        }else{
+   renderDescribeTmpl("capcakeTmpl", "capcake");
+    renderCakeTasteSlider();
+}
+    break;
+    case "/desserts":
+  renderDescribeTmpl("dessertmpl", "desserts");
+    break;
+     case "/candybar":
+ renderDescribeTmpl("candybarTmpl", "candybar");
+    break;
+     case "/dishes":
+  renderDescribeTmpl("dessertmpl", "dishes");
+      break;
+     case "/comment":
+   renderDescribeTmpl("commentTmpl", "dishes");
+    break;
+    case "/dailyandpay":
+   renderDescribeTmpl("dailyAndPay", "dishes");
+    break;
+    
+     
+}
+}
 
-mainContainer.on('click', "#linkDessert", function() {
-    $(".content").hide(100);
-    renderDescribeTmpl("dessertmpl", "desserts");
-  });
 
-mainContainer.on('click', "#linkDish", function() {
-    $(".content").hide(100);
-    renderDescribeTmpl("dishtmpl", "dishes");
+mainContainer.on('click', "#sendOrder", function(event) {
+    var orderText=getOrderText()
+    var total = PRODUCTS_IN_BASKET.basketTotalPrice;
+    var subject = $("#sendName").val();
+    var message = $("#sendCommit").val();
+    var number = $("#sendTel").val();
+     var data = {
+        "access_token": token,
+        "subject": subject,
+        "text": "  номер:" + number + "\n" + orderText + "Коментар:  " + message + "\n  Итого:" + total + "грн ",
+    };
+  
+    if (subject=="") {
+    sweetAlert("Oops...", "Ведіть ваше імя", "error");
+    }else if(number==""){
+ sweetAlert("Oops...", "Ведіть ваш номер", "error");
+    }else{
+    sendReadyOrder(data);
+}
 });
+
+mainContainer.on('click', "#order", function() {
+    $('#myModal').modal('hide');
+    renderDescribeTmpl("SendTmpl", "PRODUCTS_IN_BASKET");
+});
+
 mainContainer.on('click', ".slider-tastecake", function() {
     taste = $(this).attr("tasteAttr");
     var buyId = $(this).attr("buy-id");
@@ -46,68 +180,6 @@ mainContainer.on('click', ".chossebase", function() {
     base = $(this).attr("baseAttrCap");
     $(".baseText").text(base);
 });
-mainContainer.on('click', ".chosseTypestraw", function() {
-    var productId = $(this).attr("cake-id");
-   var  curentProduct = findByID(productId, dataproducts);
-    renderTmpl("strawTasteTmpl","mainContainer", [curentProduct]);
-});
-
-mainContainer.on('click', ".chosseTypeCapcake", function() {
-   var productId = $(this).attr("cake-id");
-  var  curentProduct = findByID(productId, dataproducts);
-    renderTmpl("capTasteTmpl", "mainContainer", [curentProduct]);
-});
-
-mainContainer.on('click', "#caketype1", function() {
-    renderDescribeTmpl("WeddingCake", "cake2");
-});
-
-mainContainer.on('click', ".chosseTypeGift", function() {
-   var productId = $(this).attr("cake-id");
-   var  curentProduct = findByID(productId, dataproducts);
-    renderTmpl("strawTasteTmpl", "mainContainer", [curentProduct]);
-    
-});
-
-mainContainer.on('click', "#caketype2", function() {
-    renderDescribeTmpl("cakeTmpl", "cake2");
-});
-
-mainContainer.on('click', "#caketype3", function() {
-    renderDescribeTmpl("cakeTmpl", "cake3");
-});
-
-mainContainer.on('click', "#type1", function() {
-    renderDescribeTmpl("strawberrytypeTmpl", "strawberrybox");
-});
-
-mainContainer.on('click', "#type2", function() {
-    renderDescribeTmpl("strawberrytypeTmpl", "strawberryflowerbox");
-});
-
-mainContainer.on('click', "#type3", function() {
-    renderDescribeTmpl("strawberrytypeTmpl", "strawberryflower");
-});
-
-mainContainer.on('click', "#sendOrder", function(event) {
-    var orderText=getOrderText()
-    var total = PRODUCTS_IN_BASKET.basketTotalPrice;
-    var subject = $("#sendName").val();
-    var message = $("#sendCommit").val();
-    var number = $("#sendTel").val();
-     var data = {
-        "access_token": token,
-        "subject": subject,
-        "text": "  номер:" + number + "\n" + orderText + "Коментар:  " + message + "\n  Итого:" + total + "грн ",
-    };
-    sendReadyOrder(data);
-
-});
-
-mainContainer.on('click', "#order", function() {
-    $('#myModal').modal('hide');
-    renderDescribeTmpl("SendTmpl", "PRODUCTS_IN_BASKET");
-});
 
 mainContainer.on('click', ".basketproduct", function() {
     var massa = $(this).closest(".Lastcake").find("#inputcake").val();
@@ -119,48 +191,8 @@ mainContainer.on('click', ".basketproduct", function() {
      initInformByProduct(buyElement,massa,sum)
 });
 
-$(".cakeLink").click(function() {
-    $(".content").hide(100);
-   renderDescribeTmpl("strawberrytmpl","titlecake")
-});
-$(".strawberryLink").click(function() {
-    $(".content").hide(100);
-   renderDescribeTmpl("strawberrytmpl","titlestraw")
-})
-$(".giftLink").click(function() {
-    $(".content").hide(100);
-    renderDescribeTmpl("giftTmpl", "giftbox");
-});
 
-$(".capcakeLink").click(function() {
-    $(".content").hide(100);
-    renderDescribeTmpl("capcakeTmpl", "capcake");
-    renderCakeTasteSlider()
-});
 
-$(".dessertLink").click(function() {
-    $(".content").hide(100);
-    renderDescribeTmpl("dessertmpl", "desserts");
-});
-$(".candybarLink").click(function() {
-    $(".content").hide(100);
-    renderDescribeTmpl("candybarTmpl", "candybar");
-});
-
-$(".dishLink").click(function() {
-    $(".content").hide(100);
-    renderDescribeTmpl("dishtmpl", "dishes");
-});
-
-$(".dailyPayLink").click(function() {
-    $(".content").hide(100);
-    renderDescribeTmpl("dailyAndPay", "dishes");
-});
-
-$(".comment").click(function() {
-    $(".content").hide(100);
-    renderDescribeTmpl("commentTmpl", "dishes");
-});
 
 mainContainer.on('click', ".dellItem", function() {
     var dellId = $(this).attr("delAttr");
@@ -170,13 +202,17 @@ mainContainer.on('click', ".dellItem", function() {
     
 });
 
-mainContainer.on('click', ".addToBasket", function() {
-   var productId = $(this).attr("cake-id");
-   var curentProduct = findByID(productId, dataproducts);
-    renderTmpl("cakeTasteTmpl", "mainContainer", [curentProduct]);
-    renderCakeTasteSlider();
-initPopover()
-});
+// mainContainer.on('click', ".addToBasket", function() {
+//    var productId = $(this).attr("cake-id");
+//    var curentProduct = findByID(productId, dataproducts);
+//     renderTmpl("tasteTmpl", "mainContainer", [curentProduct]);
+//     renderCakeTasteSlider();
+// initPopover()
+// });
+
+
+
+
 
 function renderMainSlider() {
     $(".regular").slick({
@@ -246,6 +282,8 @@ function renderDescribeTmpl(tmpl, typeArr) {
      $(".content").hide(100);
      var productsByType = getElementByType(typeArr);
      renderTmpl(tmpl, "mainContainer", productsByType);
+    
+     
 };
 
 function  basketTotalPrice() {
@@ -267,7 +305,7 @@ function initPopover(){
     $("#informer5").popover();
 };
 
-function Tmplbasket() {
+function tmplbasket() {
     if (PRODUCTS_IN_BASKET.products.length == 0) {
         sweetAlert("Oops...", "Корзина пуста", "error");
     } else {
@@ -296,6 +334,7 @@ function getValueInput(){
         "subject": subject,
         "text":"Перезвоніть мені будь-ласка мій номер " + number + " моэ імя " + subject,
     };
+
     return data
 };
 
@@ -403,3 +442,45 @@ function dellProductInBasket(dellId){
         renderDescribeTmpl("strawberrytmpl", "titlecake");
 }
 };
+
+
+function renderContentByUrl() {
+var url = getUrl();
+console.log(url);
+router(url);
+
+} 
+function setUrl(){
+ var url=$(this).attr("type");
+console.log(url);
+}
+
+function updateUrl(url) {
+ history.pushState(null, null, '/'+url);
+ return
+}
+
+function getUrl(){
+ return window.location.pathname;
+  }
+
+$("body").on('click', ".links", function() {
+var type = $(this).attr("type");
+console.log(type)
+updateUrl(type);
+
+});
+
+
+function getUrlProductId(){
+ return + window.location.search.replace('?', '');
+
+
+}
+
+function routerTmpl(){
+	var productId= getUrlProductId();
+    var curentProduct = findByID(productId, dataproducts);
+    renderTmpl("tasteTmpl", "mainContainer", [curentProduct]);
+    renderCakeTasteSlider();
+}

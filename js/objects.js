@@ -340,19 +340,19 @@
      }, {
          id: 46,
          title: "Полуниця в шоколаді в коробці",
-         class: "type1",
+         class: "strawtype1",
          photo: "images/3sweet.jpg",
          type:"titlestraw"
      }, {
          id: 47,
          title: "Композиція  з квітами",
-         class: "type2",
+         class: "strawtype2",
          photo: "images/2sweet.jpg",
          type:"titlestraw"
      }, {
          id: 48,
          title: "Букети з полуниці",
-         class: "type3",
+         class: "strawtype3",
          photo: "images/flower1.jpg",
          type:"titlestraw"
      }, {
