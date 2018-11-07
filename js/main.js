@@ -316,8 +316,8 @@ function tmplbasket() {
 };
 
 $('#myModal2').on('click', "#callBack", function() {
-     data=getValueInput()
-    sendFeedBack(data);
+     
+    sendFeedBack();
 });
 
 mainContainer.on('click', "#order", function() {
@@ -325,18 +325,7 @@ mainContainer.on('click', "#order", function() {
     renderDescribeTmpl("SendTmpl", "PRODUCTS_IN_BASKET");
 });
 
-function getValueInput(){
-   var total = PRODUCTS_IN_BASKET.basketTotalPrice;
-    var subject = $("#backName").val();
-    var number = $("#backTel").val();
-     var data = {
-        "access_token": "v3aot4ajvbw2htkqvyr94knv",
-        "subject": subject,
-        "text":"Перезвоніть мені будь-ласка мій номер " + number + " моэ імя " + subject,
-    };
 
-    return data
-};
 
 function onSuccessFeedBack(){
   renderDescribeTmpl("strawberrytmpl", "titlecake");
@@ -344,14 +333,28 @@ function onSuccessFeedBack(){
             alert("Ми вам зателефонуем");
 };
 
-function sendFeedBack(data) {
-        $("#callBack").val('Sending…');
-        $("#callBack").prop('disabled', true);
-       $.post('https://postmail.invotes.com/send',
+function sendFeedBack() {
+      
+        
+        var subject = $("#backName").val();
+        var number = $("#backTel").val();
+        var data = {
+        "access_token": "v3aot4ajvbw2htkqvyr94knv",
+        "subject": subject,
+        "text":"Перезвоніть мені будь-ласка мій номер " + number + " моэ імя " + subject,
+    }
+    if (subject=="") {
+    sweetAlert("Oops...", "Ведіть ваше імя", "error");
+    }else if (number=="") {
+        sweetAlert("Oops...","Ведіть номер","error")
+    }else{
+         $.post('https://postmail.invotes.com/send',
             data,
             onSuccessFeedBack()
             ).fail();
          return false;
+    }
+      
     };
 
 function onSuccessOrder() {
