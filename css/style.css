@@ -808,6 +808,19 @@ div .PageMails {
    
     font-size: 20px;
 }
+.phone-block{
+    display: none;
+}
+.giftblock{
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+}
+    .giftblock .mukolaya {
+
+        margin-left: 33.3%;
+        margin-right: 33.3%;
+    }
+
  @media screen and (min-width: 769px) {
         .phone-logo{
           height: 148px;
@@ -861,7 +874,9 @@ div .PageMails {
     .pageFooter {
         display: none;
     }
-    
+    .phone-block{
+        display: block;
+    }
     .header-phone {
         display: block;
     }
@@ -922,7 +937,7 @@ div .PageMails {
         .basket-price-phone {
             display: none;
         }
-        
+
     }
     
     @media screen and (max-width: 576px) {
