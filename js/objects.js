@@ -371,7 +371,7 @@
          id: 51,
          title: "Чізкейки",
          class: "caketype3",
-         photo: "https://lh4.googleusercontent.com/ao3yglQGblJ_qKxb6bhH3nUAmkUoTBDHWtucpPRCnTd3QZ0StT0KoxajGNGx-oTnCna7m75EIYt7zg=w1920-h938-rw",
+         photo: "https://lh6.googleusercontent.com/Qin9cIQRgYXMsyjWkTZD2pRPxIS7lRSZqBnHSBl3EPRMwmX812tsYUp91FDPC0UW48qXPdpoSMY5VQ=w1920-h938-rw",
          type:"titlecake"
      }, {
          price: 350,
