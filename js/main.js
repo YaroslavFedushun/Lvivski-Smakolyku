@@ -69,7 +69,15 @@ switch (url) {
        
     break;
     case "/caketype3":
-        renderDescribeTmpl("cakeTmpl", "cake3");
+     var n=getUrlProductId();
+        console.log(n)
+        if (n) {
+        routerTmpl();
+        initPopover();
+        }else{
+        	renderDescribeTmpl("cakeTmpl", "cake3");;
+        }
+        
     break;
     case "/straw":
        renderDescribeTmpl("strawberrytmpl","titlestraw");

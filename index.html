@@ -383,7 +383,7 @@
                          <% } else if(list[i].type == "cake3" ) { %>
                         <div cake-id="<%= list[i].id %>"   class="fruits addToBasket" ><a class="chosseTypeCake links" type="caketype3?<%= list[i].id %>" >
                      <div class="img-bg">
-                     <span class="font-bg"></span>
+                   <span class="font-bg"><%= list[i].price %>грн/кг</span>
                    </div>
                    <img  src="<%- list[i].photo %>" />
                            
@@ -410,7 +410,7 @@
          <div class="row chosseType" >
          
            <% for (var i=0; i<list.length;i++){ %>
-              <% if(list[i].globaltype == "cake") { %>
+              <% if(list[i].type == "cake2") { %>
          <div class="Lastcake "  data-productID="<%= list[i].id %>" >
                    <div class="col-md-6"> 
                      <img class="last-img-taste" src="<%- list[i].photo %>">
@@ -518,6 +518,31 @@
                  </div>
                  </div>
            
+         <%}  else if (list[i].type=="cake3") {%>
+            <div class="Lastcake "  data-productID="<%= list[i].id %>" >
+                   <div class="col-md-6"> 
+                     <img class="last-img-taste" src="<%- list[i].photo %>">
+                     </div>
+                       '<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content"><p>vtuf cehfasd </p></div></div>'
+                       <
+                     <div class="col-md-6">
+                       <h3><%= list[i].description %>   </h3>
+                     <H2>Оберіть вагу</H2>
+                     
+                     <form name="f1" method="get">
+                     <p><input id="inputcake" type="number" size="3" name="num" min="1.5" max="10" value="1.5" step="0.5">  кг</p>
+                                     
+         
+         <h2>Вартість декору: <%= list[i].decorPrice %> грн </h2>
+         
+         
+                         <button type="button" buy-id="<%= list[i].id %>" class="btn btn-default last-basket  basketproduct">Додати у кошик</button>    
+         
+                         </form>
+                        
+                 </div>
+                 </div>
+           
          <%} else { %>
                 <div class="Lastcake strawberrychose" >
                    <div class="col-md-6 col-sm-6"> 
@@ -594,10 +619,10 @@
          </div>
              <div class="row giftblock">
                  <h1>Пропозиції до Дня Св.Миколая</h1>
-                 <div class="col-md-4 col-sm-6 col-xs-12  mukolaya">
+                 <div class="col-md-12 col-sm-12 col-xs-12  mukolaya">
                      <div   class="fruits "  ><a  class="links" type="giftbox" >
-                         <div class="img-bg">
-                             <span class="font-bg">Candy Bar</span>
+                         <div class="gift-bg">
+                             <span class="font-bg">Подарункові набори</span>
                          </div>
                          <img class="img-strawberry "  src="images/gift0.jpg" />
 
@@ -607,10 +632,10 @@
              </div>
 
          </div>
-         <div class="row giftblock">
+         <div class="row instagrammBlock giftblock">
              <h1>Ми в Інстаграмі</h1>
              <div class="container">
-                 
+         <iframe src="//widget.instagramm.ru/?imageW=6&imageH=3&thumbnail_size=122&type=0&typetext=lvivskismakolyky&head_show=0&profile_show=1&shadow_show=1&bg=240,240,240,1&opacity=true&head_bg=629ccc&subscribe_bg=ff0000&border_color=333030&head_title=" allowtransparency="true" frameborder="0" scrolling="no" style="border:none;overflow:hidden;width:800px;height:506px;"></iframe>
 
              </div>
          </div>
