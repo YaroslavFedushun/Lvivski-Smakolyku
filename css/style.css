@@ -3,9 +3,45 @@
 a {
     color: black;
 }
-/* header */ 
+    .lds-ripple {
+        display: none;
+        position: relative;
+        width: 64px;
+        height: 64px;
+        margin: 100px auto;
+    }
+    .lds-ripple div {
+        position: absolute;
+        border: 4px solid gray;
+        opacity: 1;
+        border-radius: 50%;
+        animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+    }
+    .lds-ripple div:nth-child(2) {
+        animation-delay: -0.5s;
+    }
+    @keyframes lds-ripple {
+        0% {
+            top: 28px;
+            left: 28px;
+            width: 0;
+            height: 0;
+            opacity: 1;
+        }
+        100% {
+            top: -1px;
+            left: -1px;
+            width: 58px;
+            height: 58px;
+            opacity: 0;
+        }
+    }
+#mainContainer{
+    min-height: 100px;
+}
+    /* header */
 .logo-img {
-    height: 250px;
+    height: 160px;
 }
 .header-logo {
     text-align: center;
@@ -17,7 +53,9 @@ a {
 .page-header {
     margin: 40px 0px 0px 0px;
 }
-
+.socialLink{
+    padding-left:30px ;
+}
 .basket-call button {
     background: transparent;
     border-color: transparent;
@@ -42,6 +80,7 @@ a {
     text-align: center;
     border-bottom: 1px solid #ede8f1;
     height: 72px;
+    margin-bottom: 20px;
 }
 
 .menu-item a {
@@ -85,15 +124,9 @@ a {
 .menu-blocks ul li:hover {
     background: #f2dede;
 }
-
-
-
-
-
 .phone-daily {
     text-align: center;
     font-family: cursive;
-    border-bottom: 1px solid lightslategray;
     margin: 20px 0px;
 }
 .header-phone {
@@ -103,7 +136,7 @@ a {
     text-decoration: none;
     list-style: none;
     color: black;
-    padding-right: 10px;
+
 }
 
 .basket-call-phone {
@@ -111,7 +144,7 @@ a {
 }
 
 .basket-call-phone img {
-    height: 30px;
+    height: 28px;
     position: relative;
     top: 10px;
 }/* header */ 
@@ -197,7 +230,7 @@ a {
 
 .fruits {
     text-align: center;
-    margin-top: 27px;
+
 }
 
 .price-fruits img {
@@ -352,47 +385,34 @@ a {
     font-family: 'Amatic SC', cursive;
     font-size: 25px;
 }
-
-
-}
 .fruits {
     text-align: center;
+    margin-bottom: 20px;
 }
 .chosseTypeCapcake img {
     width: 100%;
     height: 341px;
-    margin-top: 50px;
+
 }
 .capcake {
     width: 92%;
     height: 81%;
-    margin-top: 50px;
 }
-.chosseTypeCake div {
-    width: 92%;
-    height: 84%;
-    margin-top: 49px;
-}
+
 .chosseTypeCake img {
     width: 100%;
     height: 404px;
-    margin-top: 50px;
+
 }
-.chosseTypeLink img {
-    padding-top: 30px;
-}
+
 .img-bg {
     display: none;
     position: absolute;
     width: 92%;
-    height: 580px;
+    height: 631px;
     background-color: rgba(0, 0, 0, 0.5);
 }
-/*.chosseTypeLink div {
-    width: 90%;
-    height: 91%;
-    margin-top: 30px;
-}*/
+
 .dessert-basket {
     width: 30px;
     height: 30px;
@@ -413,10 +433,7 @@ body {
 * {
     box-sizing: border-box;
 }
-.slider {
-    width: 100%;
-    margin: 100px auto;
-}
+
 .slick-slide {
     margin: 0px 20px;
 }
@@ -447,7 +464,7 @@ body {
     color: transparent;
     border: none;
     outline: none;
-    background: background: rgba(0, 0, 0, .5);
+    background: rgba(0, 0, 0, .5);
     ;
 }
 
@@ -472,13 +489,13 @@ body {
 }
 .PageLinks ul li {
     display: inline-block;
-    padding: 5px 10px;
+    padding: 5px 29px;
     color: gray;
     border-right: 1px solid gray;
     text-transform: uppercase;
     transition: all .3s;
     position: relative;
-    font-size: 41px;
+    font-size: 35px;
 }
 .conteiner {
     min-height: calc(100vh - 250px);
@@ -662,6 +679,23 @@ div .PageMails {
     background: rgba(0, 0, 0, .075);
     margin-bottom: 10px;
 }
+.img-layaut{
+    display: flex;
+  flex-direction: row;
+  flex-wrap: wrap ;
+   justify-content: space-between;
+    align-items:stretch;
+    padding: 10px 15px;
+}
+.img-layaut img{
+    margin: 6px 0;
+    height: 373px;
+    width: 373px;
+}
+.giftboxImg{
+    width: 100%;
+    height: 700px;
+}
 .sender {
     border: 10px solid rgba(0, 149, 255, 0.49);
 }
@@ -776,13 +810,19 @@ div .PageMails {
     border-bottom: 0.5px solid rgba(0, 0, 0, .075);
     margin: 20px 0;
     color: rgba(255, 255, 255, .15);
-    text-decoration: underline;
+
     height: 150px;
     padding: 20px 0px;
 }
 .LinksPhoneFooter a{
     font-size: 14px;
 }
+    .socialLinkFooter{
+        text-align: center;
+        color: black;
+
+
+    }
 .dropdownMenu {
   background: none;
     border: none;
@@ -791,10 +831,11 @@ div .PageMails {
 }
 
 .dropdownMenuBurger{
-   background: none;
+    background: none;
     border: none;
-    padding: 0px;
+    padding: 10px 0 0 0;
     margin: 0px;
+    font-size: 24px;
 }
 .phoneBasketBut{
     background: transparent;
@@ -824,7 +865,14 @@ footer li a{
     text-align: center;
     font-family: 'Amatic SC', cursive;
 }
- 
+ .instaSub{
+    margin-bottom: 22%;
+    font-size: 20px;
+    font-family: 'Amatic SC', cursive;
+ }
+.giftMenu{
+    margin-bottom: 35px;
+}
 
  @media screen and (min-width: 769px) {
         .phone-logo{
@@ -898,11 +946,10 @@ footer li a{
     width: 100%;
 }
 .instagrammBlock{
-    display: none;
+   /* display: none;*/
 }
 }
 @media screen and (max-width: 769px) {
-    .basket-call-phone img {}
     .length-basket{
         display: none;
     }
@@ -926,7 +973,7 @@ footer li a{
     }
     
     .phone-daily p {
-        font-size: 19x;
+        font-size: 19px;
     }
     
     .cakes-inform {
@@ -940,21 +987,28 @@ footer li a{
      width: 100%;
      height: 100%;
     }
+    .img-layaut img {
+        margin: 6px 0;
+        height: 284px;
+        width: 100%;
+    }
+
+
 }
     @media screen and (max-width: 662px) {
         .basket-price-phone {
             display: none;
         }
-
+        .fruits img {
+            width: 99%;
+            height: 354px;
+        }
     }
     
     @media screen and (max-width: 576px) {
         .contacts-phone {
             height: 16px;
             width: 24px;
-        }
-        .basket-call-phone img {
-            height: 30px
         }
         .basket-call-phone {
             padding-left: 25px;
@@ -982,10 +1036,7 @@ footer li a{
     }
     
     @media screen and (max-width: 375px) {
-        .basket-call-phone img {
-                height: 21px;
-            
-        }
+
         .phone-logo {
                     height: 54px;
     position: relative;
@@ -1006,7 +1057,7 @@ footer li a{
     font-size: 25px;
 }
 .LinksPhoneFooter a {
-    font-size: 10px;
+    font-size: 17px;
 }
 .basketproduct {
     border-radius: 30px;

@@ -371,7 +371,7 @@
          id: 51,
          title: "Чізкейки",
          class: "caketype3",
-         photo: "https://lh3.googleusercontent.com/Ba-L-nnAIFR2c9jozBrlQFECt-QjFvRruzNQds8QtTDGqCQeu4GJfv2_p4t4p6fAm4BIAj6uATyIVLmhRIApVCrALuNbDlpp5VqTX_s9gormDOpYyozIO3BHBT-J_Goh1POasx4HkgZEZgfwe5cSyPze03YSjhfqsV5-SQ8EBwykwpvqs0k5UlOxr_JBNQoh0saliyiUBi5Hcu58n0_i-DM9Xz6VE-INcINx3DWi3ZuE_UQS-hCHeAlfa2UftDI4Yj9qwDiOrxUDNPcxEDBc1pltm7rdKE5B5wMJCIi62RR0K4-HHl8uoltDDP-FPOF0oyXJIPfvEVhdFUkplhD8Hazn4AmCUWBPJq8dSsZqY3yKwouZewB-c158slKN7nQLe4sRZMTvgHmNVh86bKPdsByUTdtYG1RERSSZ2aciCG37-YqhxOaaByXDHVvxRoXUbGY0hdk4kdlaGzb8Mf6t5IvctUsJnOChp_f4NR-TDCl-OgcJq7p0WoW_M8agiADMrtJdYjMZ6cDKsLLnXwcTbl4cdrKp57JAzmJA5WZPzTMuRzLMKOfV6pAzg3_LKWUJ58gTSw3exwzCcFG8zaXsN1b2OAa_awdD6_vn1sowrN8NcmZp5bRA8YzbFZkHRpzmu3dALUMX5SljijaW0BhzhxpS=w956-h938-no",
+         photo: "https://i.imgur.com/GCrPmkh.jpg",
          type:"titlecake"
      }, {
          price: 350,
@@ -771,7 +771,7 @@
      }, {
          price: 450 ,
          id: 199,
-         photo: "https://lh3.googleusercontent.com/JaZYQC5Ej3CYPYkErudsxIiSbQENCto7tb6nUDfEYmvsu7hP1nOi_DV7pqNjHlpMBSRn_TN8kB6GJ2NgGsObeThBHPvdHCLDhWg7dBVe7pr12BJ4-1R1-tc9fpp_b0gIjyDHo7zYLfDFTSkjmP5w7PKg-s9B1uWiuGr5eRbXDK_-iqWM96anAVtpo6prqqJm4QLG3VJMTLcfSnsKZkQKNiTrDwzPVIYiv2ljZJxNn6EZ70_z6kAOhu0b8Fkdj3ckcl3oQeRY66lKmHttcsN6mpTP7CY-GaRv0pRbHNXNERdY4Tttxd1f2zReYaJtk6Yz-s4uI8wUsn3rkWhfPSow15OX5lp9hakRW4PtcNbd_KotsI6Q-4zJ9N--dLOT9-dMrmJKAfhhzuJygy2ytHvCc2RzH7sfgdSbVlnGWtwB5fco9T2h3IIyQUD1ewUJjS41yle5410H-JgNhKysqTc-JFgg7uuf1Pj0ZRdczHt50PeVLXMA9zPkDSpx0916OXjfgG5MsEaufcOfGICZpW_7QKK3deAtc73yHp2jVKhTD7UnMnm3Fw00iE4WPk2VBcXvfVu-QeVJUNFuF3fJW_2PdNqGYFEAgBsiQCB2vX8rZFwjc2vVyxM1yOPLngoZiPkDPENySp8--YCa6G9c3dUUtbBU=w552-h412-no",
+         photo: "https://i.imgur.com/FaK7w3M.jpg",
          decorPrice: 0,
          type:"cake3",
          globaltype:"cake",
@@ -779,7 +779,7 @@
      }, {
          price: 600 ,
          id: 200,
-         photo: "https://lh3.googleusercontent.com/pZM9Fat08g8q0vOhxSw7odxOi1lwe5KU06sSvhfWDDsRgKz8kHUvaZRIZw1V1RbYTCV2H3jEZrvZbR3ocvHVbBkVrgYrAGt6AWOwV8FXRDTvYh-F1hF2Hys9tjVLmsao48731D3npdDqv8wzKchmPH0iPKzvEzSb6UO_JaFM6kX21OkekIsU4o3hz3GYudwJNhNRMG4gw9FyTAYU3H2Dh-ejM9raHxf5yn8v6OZwAmOYA0ax2U-zYWb_LTuU24IFuVNObfmNK9FTmnGDmEMPwUbybDC5FNMyDbCEKAXzR6ly2GvNR7Yyu1jCOidk7CC3alKHMzpH4h6HI1uAXiJqtTyKZJ1x_l7qh8bmRsEO0ThxTv2Zu8-py7nWu3IzQGm_IszevHP4P8ctHNFWhrSlZb11JcZeccjzbAnSIAVl3HfMU-jcIJ9ErsJtzHxt4eerhVfxBDgZ8xOcTj17W73xWL--bKXiZJMoSRREiwhnKyFI2tBojF-ndRwm69a3GO2mAwwJuxfGHw3qdGvCW6gxd1ErQ0PG39U02OP-THf5I-qC9zNxOh_vqoHf1wRiTkv1cseQB9A4eMfn9_rhahDubFl5jgz8kHQ9bhw5m3tah-qSc7KeNYC5arVag2jbHtB_MpWPWU05m3FAoh0yEe0YH7Fm=w939-h626-no",
+         photo: "https://i.imgur.com/vaTjpaG.jpg",
          decorPrice: 0,
          type:"cake3",
          globaltype:"cake",
@@ -787,7 +787,7 @@
      }, {
          price: 450 ,
          id: 201,
-         photo: "https://lh3.googleusercontent.com/Y-iaJj1Bc4ut7v-aGnP-jgEajlac0PXw_2z3_IgeOrkxiyu3hM1iOuXbxQW8QOOoqXZ6x9HZpO2nd_pytL2qcxNU9f5H6AXjzQaZ7ELU9DEVvBum_8sSRhOkR4fFm2v50P763JTOaO14tqm92vv0fP1HbIeh8qHu2Ab0t59EHRV3e1VpqiXcDVi3CYjPzrC_P8uyc42Xffp_DTjSG3TDz-tyiIbcJgZscu5fYAqo1EV5G5goe0enQW8kThrgEsCEVrDUM5pHp-2xNyeUEkFksVNHbBJyuXZ7FYXvxJamtpcy7JfOB3swCh1TOX0Ci9lN649x8dSYhEpAJqYFqOi_yrMjjdTGFicnvHaaWL4yzma9AoxzB9VpqtdKyoKLGCEXM6mmgAyg4-GZzXZjY40jleXGFHoZmSE3U4dkZRN5yoDBc6MONCRKH5CsCeCxI_-i144aSGqkU40MhHqcPYatFZIQk_OJi-32oGcKezocqMt_w4POJZz-GEDtp4_FaBbCm7ygKKCHly7np4NnTvICaeMa6B9K9b5afCO2bhoe2Q4vB5Ucg2M9056Vx3UGzgfc7lMF_CZpRQm_Mjj5MdOlwo5NOekon-Qg6urj0W2KwU31sWuG-QBXQhIajQlrwMMd27dpqZdbi0rNtTa2u_shHlRp=w650-h433-no",
+         photo: "https://i.imgur.com/znd1syn.jpg",
          decorPrice: 0,
          type:"cake3",
          globaltype:"cake",
@@ -906,3 +906,4 @@
          type:"giftbox"
      }
  ]
+ 

@@ -1,2 +1,0 @@
-# Lvivski-Smakolyku
-Bakery

@@ -24,9 +24,10 @@ renderContentByUrl();
 
 
 $(document).on('ready', function() {
-  renderMainSlider();
+
    getProductsByLocalStorage();
    renderContentByUrl();
+    setBgSize()
  });
 
 var PRODUCTS_IN_BASKET = {
@@ -43,108 +44,7 @@ var base = "";
 var baseTaste = "";
 var caketypeTmpl = [];
 var caketypeId = [];
-
-function router(url){
-switch (url) {
-  case "/":
-     renderTmpl("mainContentTmpl", "mainContainer", productsInBasketTmpl);
-       renderMainSlider();
-    break;
-    case "/cake":
-      $(".content").hide(100);
-   renderDescribeTmpl("strawberrytmpl","titlecake")
-    break;
-    case "/caketype1":
-        renderDescribeTmpl("WeddingCake", "cake2");
-    break;
-    case "/caketype2":
-       var n=getUrlProductId();
-        console.log(n)
-        if (n) {
-        routerTmpl();
-        initPopover();
-        }else{
-        	renderDescribeTmpl("cakeTmpl", "cake2");
-        }
-       
-    break;
-    case "/caketype3":
-     var n=getUrlProductId();
-        console.log(n)
-        if (n) {
-        routerTmpl();
-        initPopover();
-        }else{
-        	renderDescribeTmpl("cakeTmpl", "cake3");;
-        }
-        
-    break;
-    case "/straw":
-       renderDescribeTmpl("strawberrytmpl","titlestraw");
-    break;
-    case "/strawtype1":
-     var n=getUrlProductId();
-        if (n) {
-        routerTmpl();
-        }else{
-        renderDescribeTmpl("strawberrytypeTmpl", "strawberrybox");
-    }
-    break;
-    case "/strawtype2":
-     var n=getUrlProductId();
-        if (n) {
-        routerTmpl();
-        }else{
-       renderDescribeTmpl("strawberrytypeTmpl", "strawberryflowerbox");
-   }
-    break;
-    case "/strawtype3":
-     var n=getUrlProductId();
-        if (n) {
-        routerTmpl();
-        }else{
-        renderDescribeTmpl("strawberrytypeTmpl", "strawberryflower");
-    }
-    break;
-    case "/giftbox":
-     var n=getUrlProductId();
-        console.log(n)
-        if (n) {
-        routerTmpl();
-        }else{
-        renderDescribeTmpl("cakeTmpl", "giftbox");
-    }
-    break;
-    case "/capcake":
-     var n=getUrlProductId();
-        console.log(n)
-        if (n) {
-        routerTmpl();
-        }else{
-   renderDescribeTmpl("capcakeTmpl", "capcake");
-    renderCakeTasteSlider();
-}
-    break;
-    case "/desserts":
-  renderDescribeTmpl("dessertmpl", "desserts");
-    break;
-     case "/candybar":
- renderDescribeTmpl("candybarTmpl", "candybar");
-    break;
-     case "/dishes":
-  renderDescribeTmpl("dessertmpl", "dishes");
-      break;
-     case "/comment":
-   renderDescribeTmpl("commentTmpl", "dishes");
-    break;
-    case "/dailyandpay":
-   renderDescribeTmpl("dailyAndPay", "dishes");
-    break;
-    
-     
-}
-}
-
+var instagramPhotos=[];
 
 mainContainer.on('click', "#sendOrder", function(event) {
     var orderText=getOrderText()
@@ -210,30 +110,8 @@ mainContainer.on('click', ".dellItem", function() {
     
 });
 
-// mainContainer.on('click', ".addToBasket", function() {
-//    var productId = $(this).attr("cake-id");
-//    var curentProduct = findByID(productId, dataproducts);
-//     renderTmpl("tasteTmpl", "mainContainer", [curentProduct]);
-//     renderCakeTasteSlider();
-// initPopover()
-// });
 
 
-
-
-
-function renderMainSlider() {
-    $(".regular").slick({
-        dots: true,
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 3
-    });
-    $(".lazy").slick({
-        lazyLoad: 'ondemand', // ondemand progressive anticipated
-        infinite: true
-    });
-}
 
 function renderCakeTasteSlider() {
     $(".regular").slick({
@@ -290,7 +168,7 @@ function renderDescribeTmpl(tmpl, typeArr) {
      $(".content").hide(100);
      var productsByType = getElementByType(typeArr);
      renderTmpl(tmpl, "mainContainer", productsByType);
-    
+
      
 };
 
@@ -324,7 +202,6 @@ function tmplbasket() {
 };
 
 $('#myModal2').on('click', "#callBack", function() {
-     
     sendFeedBack();
 });
 
@@ -342,8 +219,6 @@ function onSuccessFeedBack(){
 };
 
 function sendFeedBack() {
-      
-        
         var subject = $("#backName").val();
         var number = $("#backTel").val();
         var data = {
@@ -459,7 +334,7 @@ function renderContentByUrl() {
 var url = getUrl();
 console.log(url);
 router(url);
-
+    setBgSize()
 } 
 function setUrl(){
  var url=$(this).attr("type");
@@ -489,9 +364,40 @@ function getUrlProductId(){
 
 }
 
-function routerTmpl(){
-	var productId= getUrlProductId();
+
+
+function routerTmpl(productId){
+	// var productId= getUrlProductId();
     var curentProduct = findByID(productId, dataproducts);
     renderTmpl("tasteTmpl", "mainContainer", [curentProduct]);
     renderCakeTasteSlider();
 }
+
+
+// ждем загрузки картинки браузером
+function setBgSize(){
+    var img = $('.imgTmpl');
+    var width  = img.width();
+    var height = img.height();
+    $(".img-bg").css({"width":width, "height":height})
+};
+
+
+
+var  getInstagramPhotos=$.ajax({
+	url: 'https://api.instagram.com/v1/users/2948360510/media/recent',
+	dataType: 'jsonp',
+	type: 'GET',
+	data: {access_token: '2948360510.6ff386b.98860a84c74e4ed49f75ed3b45e8659f', count: 9},
+    beforeSend: function(  ) {
+	    $(".lds-ripple").show();
+    },
+	success: function(result){
+    instagramPhotos=result.data;
+        $(".lds-ripple").hide();
+	},
+	error: function(result){
+		console.log(result); // пишем в консоль об ошибках
+	}
+
+});

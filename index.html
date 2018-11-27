@@ -18,6 +18,7 @@
       <link rel="stylesheet" href="css/style.css">
       <!--style -->
       <script src="js/objects.js"></script>
+       <script src="js/router.js"></script>
       <!--objects -->
       <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
       <SCRIPT type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></SCRIPT>
@@ -251,7 +252,7 @@
                      <div class="img-bg">
                      <span class="font-bg"><%= list[i].title %></span>
                    </div>
-                   <img class="img-strawberry "  src="<%- list[i].photo %>" />
+                   <img class="imgTmpl"  src="<%- list[i].photo %>" />
                            
                  </a>
                  </div>
@@ -275,7 +276,7 @@
                         <div class="img-bg bg-straw">
                      <span class="font-bg"><%= list[i].price %>грн/коробочка</span>
                    </div>
-                   <img class="straw-img"  style="height:300px; " src="<%- list[i].photo %>" />
+                   <img class="imgTmpl"  style="height:300px; " src="<%- list[i].photo %>" />
                            
                  </a>
                  </div>
@@ -285,16 +286,16 @@
                           <div class="img-bg">
                      <span class="font-bg"><%= list[i].price %>грн/шт</span>
                    </div>
-                   <img class="straw-img"  style="height:300px; " src="<%- list[i].photo %>" />
+                   <img class="imgTmpl"  style="height:300px; " src="<%- list[i].photo %>" />
                            
                  </a>
                  </div>
          <%} else { %>
-        <div class="fruits"   ><a cake-id="<%= list[i].id %>" class="chosseTypeLink chosseTypestraw links" type="/srawtype3?<%= list[i].id %>" >
+        <div class="fruits"   ><a cake-id="<%= list[i].id %>" class="chosseTypeLink chosseTypestraw links" type="strawtype3?<%= list[i].id %>" >
                           <div class="img-bg">
                      <span class="font-bg"><%= list[i].price %>грн/шт</span>
                    </div>
-                   <img class="straw-img"  style="height:300px; " src="<%- list[i].photo %>" />
+                   <img class="imgTmpl"  style="height:300px; " src="<%- list[i].photo %>" />
                            
                  </a>
                  </div>
@@ -353,7 +354,7 @@
                      <div class="img-bg capcake">
                      <span class="font-bg"><%= list[i].price %>грн/коробочка</span>
                    </div>
-                   <img src="<%- list[i].photo %>" />
+                   <img class="imgTmpl" src="<%- list[i].photo %>" />
                            
                  </a>
                  </div>
@@ -374,9 +375,9 @@
               <% if(list[i].type == "cake2") { %>
                         <div cake-id="<%= list[i].id %>"   class="fruits addToBasket" ><a class="chosseTypeCake links" type="caketype2?<%= list[i].id %>" >
                      <div class="img-bg">
-                     <span class="font-bg"></span>
+
                    </div>
-                   <img  src="<%- list[i].photo %>" />
+                   <img  class="imgTmpl" src="<%- list[i].photo %>" />
                            
                  </a>
                  </div>
@@ -385,16 +386,16 @@
                      <div class="img-bg">
                    <span class="font-bg"><%= list[i].price %>грн/кг</span>
                    </div>
-                   <img  src="<%- list[i].photo %>" />
+                   <img class="imgTmpl"  src="<%- list[i].photo %>" />
                            
                  </a>
                  </div>
                                   <%} else { %>
-             <div cake-id="<%= list[i].id %>"   class="fruits chosseTypeGift" ><a class="links"  type="giftbox?<%= list[i].id %>" >
+             <div cake-id="<%= list[i].id %>"   class="fruits chosseTypeGift giftMenu" ><a class="links"  type="giftbox?<%= list[i].id %>" >
                      <div class="img-bg">
                    <span class="font-bg"><%= list[i].price %>грн/шт</span>
                    </div>
-                   <img  src="<%- list[i].photo %>" />
+                   <img class="imgTmpl" src="<%- list[i].photo %>" />
                            
                  </a>
                  </div>
@@ -426,33 +427,33 @@
                                        <h2 class="chosseTypeCake">Оберіть начинку</h2>
                                              <section class="regular slider slider-taste">
          <div>
-         <button type="button" id="informer1" class="btn btn-default"  data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="Dark Cherry (Шоколадно вишневий) 350 грн/кг Шоколадний бісквіт, пропитаний вишневим сиропом і соковита вишня з ароматом кориці, підпалена неймовірним єгермейстром.">
+         <button type="button" id="informer1" class="btn btn-default"  data-trigger="click hover "  data-container="body" data-toggle="popover" data-placement="top" data-content="Dark Cherry (Шоколадно вишневий) 350 грн/кг Шоколадний бісквіт, пропитаний вишневим сиропом і соковита вишня з ароматом кориці, підпалена неймовірним єгермейстром.">
          <img class="slider-tastecake"  tasteAttr="Dark Cherry (Шоколадно вишневий)"  buy-id="52" src="images/taste1.jpg">
          </button>
          
          </div>
          <div>
-         <button type="button" id="informer2" class="btn btn-default"  data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="Ніжні ванільні бісквіти, ганаш на основі пюре манго і маракуї в поєднанні з ніжним кремом на основі сиру Маскарпоне та вершків.">
+         <button type="button" id="informer2" class="btn btn-default"  data-trigger="click hover "  data-container="body" data-toggle="popover" data-placement="top" data-content="Ніжні ванільні бісквіти, ганаш на основі пюре манго і маракуї в поєднанні з ніжним кремом на основі сиру Маскарпоне та вершків.">
          <img class="slider-tastecake" tasteAttr="Манго-маракуйя"   buy-id="53"  src="images/taste2.jpg">
          </button>
          
          </div>
          <div>
-         <button type="button" id="informer3" class="btn btn-default"  data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="Snickers(Шоколадно-карамельний) 350 грн/кг
+         <button type="button" id="informer3" class="btn btn-default"  data-trigger="click hover "  data-container="body" data-toggle="popover" data-placement="top" data-content="Snickers(Шоколадно-карамельний) 350 грн/кг
          Вологі мегашоколадні коржі, начинка з вершкової соленої карамелі в поєднанні з арахісом, та ніжний крем на основі сиру Маскарпоне та вершків.">
          <img class="slider-tastecake"  tasteAttr="Snickers(Шоколадно-карамельний)" buy-id="54"   src="images/taste3.jpg">
          </button>
          
          </div>
          <div>
-         <button type="button" id="informer4" class="btn btn-default"  data-trigger="hover" data-container="body" data-toggle="popover" data-placement="top" data-content="Фісташка-малина 500 грн/кг
+         <button type="button" id="informer4" class="btn btn-default"  data-trigger="click hover " data-container="body" data-toggle="popover" data-placement="top" data-content="Фісташка-малина 500 грн/кг
          Ароматні фісташкові бісквіти, кисленьке кампоте з малини, і ніжний вершковий крем на  основі сиру Маскарпоне.">
          <img  class="slider-tastecake" tasteAttr="Фісташка-малина"  buy-id="55"  src="images/taste4.jpg">
          </button>
          
          </div>
          <div>
-         <button type="button" id="informer5" class="btn btn-default"  data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="Червоний бархат 350 грн/кг
+         <button type="button" id="informer5" class="btn btn-default"  data-trigger="click hover "  data-container="body" data-toggle="popover" data-placement="top" data-content="Червоний бархат 350 грн/кг
          Неймовірно ніжні бісквіти Червоний бархат і полунична йогуртова прослойка, в поєднанні з ніжним кремом на основі сиру Маскарпоне та вершків.">
          <img class="slider-tastecake"  tasteAttr="Червоний бархат"  buy-id="56"  src="images/taste5.jpg">
          </button>
@@ -482,11 +483,11 @@
                      <form name="f1" method="get">
          
          <div class="dropdown">
-         <button class="btn btn-default dropdown-toggle buttoncap" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+         <button class="btn btn-default dropdown-toggle buttoncap" type="button" id="dropdownMenu" data-toggle="dropdown" aria-expanded="true">
          <span class="baseText">Оберіть основу</span>
          <span class="caret"></span>
          </button>
-         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
          <li role="presentation"><a role="menuitem" me="speed" id="speed">
          <option value="Шоколадна" class="chossebase" tabindex="-1" baseAttrCap="Шоколадна"  >Шоколадна</a></li>
          <li role="presentation"><a role="menuitem" class="chossebase" tabindex="-1" baseAttrCap="Шоколадно-бананова"  >Шоколадно-бананова</a></li>
@@ -566,53 +567,32 @@
          </div>
       </script>
       <script type="text/template" id="mainContentTmpl">
-        
          <div class="wrapper">
-         
-               <div class="container carousel1">
-                   <section class="lazy slider" data-sizes="50vw">
-                       <div>
-                           <img class="carouselPage" data-lazy="http://placehold.it/350x300?text=1-350w" data-srcset="images/image.jpg" data-sizes="100vw">
-                       </div>
-                       <div>
-                           <img class="carouselPage" data-lazy="http://placehold.it/350x300?text=2-350w" data-srcset="images/image1.jpg" data-sizes="100vw">
-                       </div>
-                       <div>
-                           <img class="carouselPage" data-lazy="http://placehold.it/350x300?text=3-350w" data-srcset="images/image2.jpg" data-sizes="100vw">
-                       </div>
-         
-                   </section>
-               </div>
              <div class="row phone-block">
 <div class="col-md-4 col-sm-6 col-xs-12  ">
                  <div   class="fruits "  ><a  class="links" type="cake" >
                      <div class="img-bg">
                      <span class="font-bg">Торти</span>
                    </div>
-                   <img class="img-strawberry "  src="images/tort1.jpg" />
-                           
+                   <img class="imgTmpl"  src="images/tort1.jpg" />
                  </a>
                  </div>
-
          </div>
          <div class="col-md-4 col-sm-6 col-xs-12  ">
                  <div   class="fruits "  ><a  class="links" type="straw" >
                      <div class="img-bg">
                      <span class="font-bg">Полуниця в шоколаді</span>
                    </div>
-                   <img class="img-strawberry "  src="images/3sweet.jpg" />
-                           
+                   <img class="imgTmpl"  src="images/3sweet.jpg" />
                  </a>
                  </div>
-
          </div>
          <div class="col-md-4 col-sm-6 col-xs-12  ">
                  <div   class="fruits "  ><a  class="links" type="candybar" >
                      <div class="img-bg">
                      <span class="font-bg">Candy Bar</span>
                    </div>
-                   <img class="img-strawberry "  src="images/candybar2.jpg" />
-                           
+                   <img class="imgTmpl"  src="images/candybar2.jpg" />
                  </a>
                  </div>
          </div>
@@ -620,26 +600,25 @@
              <div class="row giftblock">
                  <h1>Пропозиції до Дня Св.Миколая</h1>
                  <div class="col-md-12 col-sm-12 col-xs-12  mukolaya">
-                     <div   class="fruits "  ><a  class="links" type="giftbox" >
-                         <div class="gift-bg">
-                             <span class="font-bg">Подарункові набори</span>
-                         </div>
-                         <img class="img-strawberry "  src="images/gift0.jpg" />
-
+                     <div><a  class="links" type="giftbox" >
+                         <img class="giftboxImg"  src="images/gift0.jpg" />
                      </a>
                      </div>
                  </div>
              </div>
-
          </div>
-         <div class="row instagrammBlock giftblock">
-             <h1>Ми в Інстаграмі</h1>
-             <div class="container">
-         <iframe src="//widget.instagramm.ru/?imageW=6&imageH=3&thumbnail_size=122&type=0&typetext=lvivskismakolyky&head_show=0&profile_show=1&shadow_show=1&bg=240,240,240,1&opacity=true&head_bg=629ccc&subscribe_bg=ff0000&border_color=333030&head_title=" allowtransparency="true" frameborder="0" scrolling="no" style="border:none;overflow:hidden;width:800px;height:506px;"></iframe>
-
-             </div>
-         </div>
-      </script>  
+      </script>
+      <script type="text/template" id="instagrammTmpl">
+          <div class="row instagrammBlock giftblock">
+              <h1>Приэднуйтесь до нас в Instargramm</h1>
+              <div class="img-layaut">
+                  <% for (var i=0; i<list.length;i++){ %>
+                  <div ><a href="<%- list[i].link %>"><img  src="<%- list[i].images.low_resolution.url %>"></a>
+                  </div>
+                  <% } %>
+              </div>
+          </div>
+</script>
       <script type="text/template" id="candybarTmpl">
          <div class="row chosseType" >
          <div class="col-md-12">
@@ -659,7 +638,7 @@
          +38(093) 592 89 31<br>
          lvivskismakolyky@gmail.com</P>
          <div class="row">
-           <% for (var i=0; i<list.length;i++){ %>
+           <% for (var i=0; i<list.length; i++){ %>
          <div class="col-md-6" >
          <img class="photoBar" src="<%- list[i].photo %>">
          
@@ -675,7 +654,7 @@
       <header class="header-phone">
          <div class="container-fluid">
             <div class="row">
-               <div class=" col-sm-12 col-xs-12">
+               <div class=" col-sm-4 col-xs-4">
                   
                   <div class="dropdown phoneLinks headerPhoneBurger">
                      <button class="btn btn-default dropdown-toggle dropdownMenuBurger" type="button" data-toggle="dropdown" aria-expanded="true">
@@ -703,21 +682,28 @@
                         </li>
                      </ul>
                   </div>
-                  <img class="phone-logo" src="images/logo.jpg">
-                  <a class="phone-link" href="https://www.instagram.com/lvivskismakolyky/"><img class="contacts-phone" src="images/inst.png"></a>
-                  <a class="phone-link" href="#"><img class="contacts-phone" src="images/face.jpg"></a>
-                  <a class="phone-link" href="https://vk.com/lvivskysmakoliki"><img class="contacts-phone" src="images/vk.jpg"></a>
-                  <div class="basket-call-phone">
-                     <a><button type="button"  data-toggle="modal" style="display: contents" data-target="#myModal2"><img class="contacts" src="images/tel.jpg"></button></a>
-                     <button type="button" onclick="tmplbasket()" class="btn btn-primary btn-lg phoneBasketBut " data-toggle="modal" data-target="#myModal">
-                        <img class="contacts basket-button" src="images/basket.png">
-                        <p class="length-basket"></p>
-                     </button>
-                  </div>
                </div>
+                <div class="col-sm-4 col-xs-4">
+                    <a class="links" type=" "><img class="phone-logo" src="images/logo.jpg"></a>
+                  </div>
+                <div class="col-sm-4 col-xs-4">
+
+                    <div class="basket-call-phone">
+                        <a><button type="button"  data-toggle="modal" style="display: contents" data-target="#myModal2"><img class="contacts" src="images/tel.jpg"></button></a>
+                        <button type="button" onclick="tmplbasket()" class="phoneBasketBut " data-toggle="modal" data-target="#myModal">
+                            <img class="contacts basket-button" src="images/basket.png">
+                            <p class="length-basket"></p>
+                        </button>
+                    </div>
+                </div>
             </div>
+               </div>
+
             <div class="row">
                <div class="col-md-12">
+                   <!--<a class="phone-link" href="https://www.instagram.com/lvivskismakolyky/"><img class="contacts-phone" src="images/inst.png"></a>-->
+                   <!--<a class="phone-link" href="#"><img class="contacts-phone" src="images/face.jpg"></a>-->
+                   <!--<a class="phone-link" href="https://vk.com/lvivskysmakoliki"><img class="contacts-phone" src="images/vk.jpg"></a>-->
                   <div class="phone-daily">
                      <h2 class="number-phone">+38 (093) 59 28 931</h2>
                      <p>Замовлення приймаються з пн по сб з 10:00 до 18:00.</p>
@@ -814,7 +800,15 @@
          </button>
          
       </div>
-      <div class="container" id="mainContainer"></div>
+      <div class="container" id="mainContainer">
+          <div id="contentBlock">
+
+          </div>
+          <div id="instagrammBlock">
+              <div class="lds-ripple"><div></div><div></div></div>
+          </div>
+
+      </div>
       <div class="container">
          <footer class="pageFooter">
             <nav class="PageLinks">
@@ -858,6 +852,12 @@
                   <li><a class="links"  href="">Контактні дані</a></li>
                </ul>
             </nav>
+             <div class="socialLinkFooter">
+                 <h4>Ми в Соціальних Мережах</h4>
+             <a href="https://www.instagram.com/lvivskismakolyky/"><img class="contacts" src="images/inst.png"></a>
+             <a href="#"><img class="contacts" src="images/face.jpg"></a>
+             <a href="https://vk.com/lvivskysmakoliki"><img class="contacts" src="images/vk.jpg"></a>
+             </div>
          </footer>
       </div>
       <!--  Latest compiled and minified JavaScript -->
