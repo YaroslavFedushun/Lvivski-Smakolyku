@@ -78,7 +78,7 @@
          
          
          <h4 class="PageHeaderState" style="margin-top: 110px;">ВЕСІЛЬНІ ТЕНДЕНЦІЇ 2018</h4>
-         <h1>Торт із живими квітами</h2>
+         <h2>Торт із живими квітами</h2>
          
          <img  class="fourthImg" src="images/wedding4.jpg"><p style="margin-top:10px; "><p>Оздоблення живими квітами — у тренді вже не один сезон, але як і раніше пари його обожнюють. Натуральні елементи декору виглядають дуже стильно на білосніжному або виконаному в пастельних тонах торті, такі поєднання підійдуть для розкішних класичних весіль, святкувань у стилі рустик, бохо, етно, еко-весіль тощо.<br> Квіти для торта можуть повторювати наповнення букета нареченої чи кольорову гаму оформлення або ж ефектно виділятися. Серед найпопулярніших прикрас десерту: троянди, орхідеї, ромашки, петунії, тигрові лілії, чебрець, братики, волошки, яблуневий цвіт, квіти апельсинового дерева, листочки орегано, базиліку, м’яти та інша зелень. Такі торти вирізняються своєю легкістю і неповторністю. Орхідеї чи тигрові лілії для екзотичних десертів, півонії та троянди — для розкішних європейських весіль.Весняний торт можна прикрасити цвітом яблуні або апельсинового дерева. Для торжеств у стилі рустик підійде евкаліпт, орегано, лаванда, а для українського стилю — ромашки, волошки, колоски.</p>
          
@@ -86,7 +86,7 @@
          <h1>Торт із фруктами</h1>
          <p>Якщо ви бажаєте додати трохи літніх ноток у своє весілля- торт із фруктами- те що потрібно! Це також  не просто модний тренд, а чудове поєднання смачних інгредієнтів. Солодкі коржі, ніжний повітряний крем та освіжаюча кислинка свіжих плодів. Суниці, полуниці, малина, чорниця, ожина, лохина, аґрус, гілочки порічок чи смородини, грона винограду, вишні, черешні — всі вони чудово підійдуть для оздоблення. Є з чого обрати і серед екзотичних фруктів, у яких не лише смак незвичний, а й форми та кольори. 
          </p>
-         <h1 style="margin-top: 177px;">Naked cake або відкритий торт</h2>
+         <h2 style="margin-top: 177px;">Naked cake або відкритий торт</h2>
          <img  style="height: 545px;
          float: left;margin-right: 60px; " src="images/wedding1.jpg">
          <p>Природність і натуральність, простота і оригінальність. Ось що зробило цей дизайн дуже популярним у всьому світі.<br> Коржі та начинка не приховані, й самі по собі створюють привабливий смугастий візерунок, що робить десерт незвичайним і ще апетитнішим.<br> Такий торт може складатися як з одного, так і з кількох ярусів, мати лаконічну або асиметричну форму. <br>Прикрасити такий торт можна будь-чим: це можуть бути квіти, фрукти, ягоди. Такий торт ідеально підійде для весілля у стилі Рустик та Бохо.</p> 
@@ -155,7 +155,7 @@
          </div>
          <div class="modal-body">
          
-         <% for (var i=0;i<list.length;i++){ %>
+         <% for (var i=0;i < list.length;i++){ %>
            <div class="row products" id="<%= list[i].productIdBasket %>">
              <div class="col-md-3 col-sm-5 col-xs-5">
                <img   class="modal-img" src="<%- list[i].photo %>">
@@ -203,12 +203,12 @@
          <div class="container">
          <div class="row">
          
-         <% for (var i=0;i<list.length;i++){ %>
+         <% for (var i=0;i < list.length;i++){ %>
           <% if(list[i].type == "desserts") { %>
                     <div class="col-md-12 col-sm-12 col-xs-12">
          <div class="dessert">
          <h2><%= list[i].title %></h2>
-         <img class="dessert-photo" src="<%- list[i].photo %>" >
+         <img class="dessert-photo" src="<%- list[i].photo %>">
          <h3><%= list[i].description %></h3>
          <p>Ціна:<%= list[i].price %>грн/шт</p>
          <p>Вага:<%= list[i].value %></p>
@@ -244,9 +244,9 @@
       </script>
 
       <script type="text/template" id="strawberrytmpl">
-         <div class="chosseFruit">
+
           <div class="row">
-           <% for (var i=0;i<list.length;i++){ %>
+           <% for (var i=0;i < list.length;i++){ %>
              <div class="col-md-4 col-sm-6 col-xs-12  ">
                  <div   class="fruits "  ><a id="<%= list[i].class %>" class="links" type="<%= list[i].class %>" >
                      <div class="img-bg">
@@ -260,7 +260,7 @@
               <% } %>
           </div>
          
-         </div>
+
       </script>
       <script type="text/template" id="strawberrytypeTmpl">
          <div class="row chosseType" >
@@ -268,15 +268,15 @@
            <div style="text-align: center;">
                
              </div>
-           <% for (var i=0; i<list.length;i++){ %>
-             <div class="col-md-3 col-sm-6 col-xs-12 ">
+           <% for (var i=0; i < list.length;i++){ %>
+             <div class="col-md-4 col-sm-6 col-xs-12 ">
         
          <% if(list[i].type == "strawberrybox") { %>
                         <div class="fruits"   ><a cake-id="<%= list[i].id %>" class="chosseTypeLink chosseTypestraw links" type="strawtype1?<%= list[i].id %>" >
                         <div class="img-bg bg-straw">
                      <span class="font-bg"><%= list[i].price %>грн/коробочка</span>
                    </div>
-                   <img class="imgTmpl"  style="height:300px; " src="<%- list[i].photo %>" />
+                   <img class="imgTmpl" src="<%- list[i].photo %>" />
                            
                  </a>
                  </div>
@@ -286,7 +286,7 @@
                           <div class="img-bg">
                      <span class="font-bg"><%= list[i].price %>грн/шт</span>
                    </div>
-                   <img class="imgTmpl"  style="height:300px; " src="<%- list[i].photo %>" />
+                   <img class="imgTmpl"  src="<%- list[i].photo %>" />
                            
                  </a>
                  </div>
@@ -295,7 +295,7 @@
                           <div class="img-bg">
                      <span class="font-bg"><%= list[i].price %>грн/шт</span>
                    </div>
-                   <img class="imgTmpl"  style="height:300px; " src="<%- list[i].photo %>" />
+                   <img class="imgTmpl"  src="<%- list[i].photo %>" />
                            
                  </a>
                  </div>
@@ -348,7 +348,7 @@
          </div>
          </section>
               </div> 
-           <% for (var i=0; i<list.length;i++){ %>
+           <% for (var i=0; i< list.length;i++){ %>
              <div class="col-md-4 col-sm-12 ">
                  <div    class="fruits" ><a class="chosseTypeCapcake links"   cake-id="<%= list[i].id %>" type="capcake?<%= list[i].id %>" >
                      <div class="img-bg capcake">
@@ -370,7 +370,7 @@
            <div style="text-align: center;">
                
              </div>
-           <% for (var i=0; i<list.length;i++){ %>
+           <% for (var i=0; i< list.length;i++){ %>
              <div class="col-md-4 col-sm-6 col-xs-12 ">
               <% if(list[i].type == "cake2") { %>
                         <div cake-id="<%= list[i].id %>"   class="fruits addToBasket" ><a class="chosseTypeCake links" type="caketype2?<%= list[i].id %>" >
@@ -410,50 +410,50 @@
        <script type="text/template" id="tasteTmpl">
          <div class="row chosseType" >
          
-           <% for (var i=0; i<list.length;i++){ %>
+           <% for (var i=0; i< list.length;i++){ %>
               <% if(list[i].type == "cake2") { %>
          <div class="Lastcake "  data-productID="<%= list[i].id %>" >
                    <div class="col-md-6"> 
                      <img class="last-img-taste" src="<%- list[i].photo %>">
                      </div>
-                       '<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content"><p>vtuf cehfasd </p></div></div>'
-                       <
+                       <div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content"><p> </p></div></div>
+
                      <div class="col-md-6">
                        <h3><%= list[i].description %>   </h3>
                      <H2>Оберіть вагу</H2>
                      
                      <form name="f1" method="get">
-                     <p><input id="inputcake" type="number" size="3" name="num" min="1.5" max="10" value="1.5" step="0.5">  кг</p>
+                     <p><input class="inputcake" type="number" size="3" name="num" min="1.5" max="10" value="1.5" step="0.5">  кг</p>
                                        <h2 class="chosseTypeCake">Оберіть начинку</h2>
                                              <section class="regular slider slider-taste">
          <div>
-         <button type="button" id="informer1" class="btn btn-default"  data-trigger="click hover "  data-container="body" data-toggle="popover" data-placement="top" data-content="Dark Cherry (Шоколадно вишневий) 350 грн/кг Шоколадний бісквіт, пропитаний вишневим сиропом і соковита вишня з ароматом кориці, підпалена неймовірним єгермейстром.">
+         <button type="button" id="informer1"  data-trigger="click hover "  data-container="body" data-toggle="popover" data-placement="top" data-content="Dark Cherry (Шоколадно вишневий) 350 грн/кг Шоколадний бісквіт, пропитаний вишневим сиропом і соковита вишня з ароматом кориці, підпалена неймовірним єгермейстром.">
          <img class="slider-tastecake"  tasteAttr="Dark Cherry (Шоколадно вишневий)"  buy-id="52" src="images/taste1.jpg">
          </button>
          
          </div>
          <div>
-         <button type="button" id="informer2" class="btn btn-default"  data-trigger="click hover "  data-container="body" data-toggle="popover" data-placement="top" data-content="Ніжні ванільні бісквіти, ганаш на основі пюре манго і маракуї в поєднанні з ніжним кремом на основі сиру Маскарпоне та вершків.">
+         <button type="button" id="informer2" data-trigger="click hover "  data-container="body" data-toggle="popover" data-placement="top" data-content="Ніжні ванільні бісквіти, ганаш на основі пюре манго і маракуї в поєднанні з ніжним кремом на основі сиру Маскарпоне та вершків.">
          <img class="slider-tastecake" tasteAttr="Манго-маракуйя"   buy-id="53"  src="images/taste2.jpg">
          </button>
          
          </div>
          <div>
-         <button type="button" id="informer3" class="btn btn-default"  data-trigger="click hover "  data-container="body" data-toggle="popover" data-placement="top" data-content="Snickers(Шоколадно-карамельний) 350 грн/кг
+         <button type="button" id="informer3"   data-trigger="click hover "  data-container="body" data-toggle="popover" data-placement="top" data-content="Snickers(Шоколадно-карамельний) 350 грн/кг
          Вологі мегашоколадні коржі, начинка з вершкової соленої карамелі в поєднанні з арахісом, та ніжний крем на основі сиру Маскарпоне та вершків.">
          <img class="slider-tastecake"  tasteAttr="Snickers(Шоколадно-карамельний)" buy-id="54"   src="images/taste3.jpg">
          </button>
          
          </div>
          <div>
-         <button type="button" id="informer4" class="btn btn-default"  data-trigger="click hover " data-container="body" data-toggle="popover" data-placement="top" data-content="Фісташка-малина 500 грн/кг
+         <button type="button" id="informer4"  data-trigger="click hover " data-container="body" data-toggle="popover" data-placement="top" data-content="Фісташка-малина 500 грн/кг
          Ароматні фісташкові бісквіти, кисленьке кампоте з малини, і ніжний вершковий крем на  основі сиру Маскарпоне.">
          <img  class="slider-tastecake" tasteAttr="Фісташка-малина"  buy-id="55"  src="images/taste4.jpg">
          </button>
          
          </div>
          <div>
-         <button type="button" id="informer5" class="btn btn-default"  data-trigger="click hover "  data-container="body" data-toggle="popover" data-placement="top" data-content="Червоний бархат 350 грн/кг
+         <button type="button" id="informer5"  data-trigger="click hover "  data-container="body" data-toggle="popover" data-placement="top" data-content="Червоний бархат 350 грн/кг
          Неймовірно ніжні бісквіти Червоний бархат і полунична йогуртова прослойка, в поєднанні з ніжним кремом на основі сиру Маскарпоне та вершків.">
          <img class="slider-tastecake"  tasteAttr="Червоний бархат"  buy-id="56"  src="images/taste5.jpg">
          </button>
@@ -531,7 +531,7 @@
                      <H2>Оберіть вагу</H2>
                      
                      <form name="f1" method="get">
-                     <p><input id="inputcake" type="number" size="3" name="num" min="1.5" max="10" value="1.5" step="0.5">  кг</p>
+                     <p><input class="inputcake" type="number" size="3" name="num" min="1.5" max="10" value="1.5" step="0.5">  кг</p>
                                      
          
          <h2>Вартість декору: <%= list[i].decorPrice %> грн </h2>
@@ -607,6 +607,9 @@
                  </div>
              </div>
          </div>
+         <div class="container" id="instagrammBlock">
+             <div class="lds-ripple"><div></div><div></div></div>
+         </div>
       </script>
       <script type="text/template" id="instagrammTmpl">
           <div class="row instagrammBlock giftblock">
@@ -654,10 +657,10 @@
       <header class="header-phone">
          <div class="container-fluid">
             <div class="row">
-               <div class=" col-sm-4 col-xs-4">
+               <div class=" col-sm-3 col-xs-3">
                   
                   <div class="dropdown phoneLinks headerPhoneBurger">
-                     <button class="btn btn-default dropdown-toggle dropdownMenuBurger" type="button" data-toggle="dropdown" aria-expanded="true">
+                     <button class="dropdown-toggle dropdownMenuBurger" type="button" data-toggle="dropdown" aria-expanded="true">
                      <span class="glyphicon glyphicon-align-justify"></span>
                      </button>
                      <ul class="dropdown-menu " role="menu" aria-labelledby="dropdownMenu">
@@ -680,16 +683,21 @@
                         <li role="presentation" class="menu-item"><a  role="menuitem" tabindex="-1"   class="style-list dishLink links" type="dishes" > АРЕНДА ПОСУДУ
                            </a>
                         </li>
+                         <li role="presentation" class="menu-item"><a role="menuitem" tabindex="-1" ><button type="button"  data-toggle="modal" style="display:contents" data-target="#myModal2"> Зворотній дзвінок<img class="contacts" src="images/tel.jpg"></button></a>
+                         </li>
+
                      </ul>
                   </div>
                </div>
-                <div class="col-sm-4 col-xs-4">
+                <div class="col-sm-6 col-xs-6">
+                    <div class="header-logo">
                     <a class="links" type=" "><img class="phone-logo" src="images/logo.jpg"></a>
+                    </div>
                   </div>
-                <div class="col-sm-4 col-xs-4">
+                <div class="col-sm-3 col-xs-3">
 
                     <div class="basket-call-phone">
-                        <a><button type="button"  data-toggle="modal" style="display: contents" data-target="#myModal2"><img class="contacts" src="images/tel.jpg"></button></a>
+
                         <button type="button" onclick="tmplbasket()" class="phoneBasketBut " data-toggle="modal" data-target="#myModal">
                             <img class="contacts basket-button" src="images/basket.png">
                             <p class="length-basket"></p>
@@ -723,7 +731,7 @@
                </div>
                <div class="col-md-4 col-sm-4">
                   <div class="header-logo">
-                     <a class="links" type=""><img class="logo-img" src="images/logo.jpg"></a>
+                     <a class="links" type=" "><img class="logo-img" src="images/logo.jpg"></a>
                   </div>
                </div>
                <div  class="col-md-4 col-sm-4 headerInformBlock">
@@ -801,19 +809,15 @@
          
       </div>
       <div class="container" id="mainContainer">
-          <div id="contentBlock">
-
-          </div>
-          <div id="instagrammBlock">
-              <div class="lds-ripple"><div></div><div></div></div>
-          </div>
-
       </div>
+
+
+
       <div class="container">
          <footer class="pageFooter">
             <nav class="PageLinks">
                <ul class="LinksFooter">
-                  <li><a  class="links" type="">Головна сторінка</a></li>
+                  <li><a  class="links" type=" ">Головна сторінка</a></li>
                   <li><a class="links"  type="dailyandpay">Оплата і доставка</a></li>
                   <li><a  class="links" type="comment" >Відгуки</a></li>
                   <li><a  class="links" href="">Спеціальні пропозицій</a></li>
@@ -853,7 +857,7 @@
                </ul>
             </nav>
              <div class="socialLinkFooter">
-                 <h4>Ми в Соціальних Мережах</h4>
+                 <h5>Ми в Соціальних Мережах</h5>
              <a href="https://www.instagram.com/lvivskismakolyky/"><img class="contacts" src="images/inst.png"></a>
              <a href="#"><img class="contacts" src="images/face.jpg"></a>
              <a href="https://vk.com/lvivskysmakoliki"><img class="contacts" src="images/vk.jpg"></a>

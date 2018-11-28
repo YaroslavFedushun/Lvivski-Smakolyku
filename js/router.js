@@ -56,7 +56,7 @@ function router(url){
     }
 }
 function renderMainPageContent() {
-    renderTmpl("mainContentTmpl", "contentBlock",instagramPhotos);
+    renderTmpl("mainContentTmpl", "mainContainer", dataproducts);
     getInstagramPhotos.done(function(data) {
         renderTmpl("instagrammTmpl", "instagrammBlock",instagramPhotos);
     })

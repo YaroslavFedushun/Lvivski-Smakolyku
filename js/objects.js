@@ -1,14 +1,10 @@
   var allTokens =[{
-  tokens:"12k8xytwztmxzpb3a3cnuuzhy"
+      tokens:"v3aot4ajvbw2htkqvyr94knv"
   },{
-   tokens:"1v3aot4ajvbw2htkqvyr94knv"
+      tokens:"5k8xytwztmxzpb3a3cnuuzhy"
   },{
-    tokens:"15k8xytwztmxzpb3a3cnuuzhy"
-  },{
-    tokens:"15k8xytwztmxzpb3a3cnuuzhy"
-  },{
-    tokens:"v3aot4ajvbw2htkqvyr94knv"
-  }] 
+      tokens:"5k8xytwztmxzpb3a3cnuuzhy"
+  }]
 
 
  var dataproducts = [{

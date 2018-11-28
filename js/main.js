@@ -24,10 +24,9 @@ renderContentByUrl();
 
 
 $(document).on('ready', function() {
-
    getProductsByLocalStorage();
    renderContentByUrl();
-    setBgSize()
+
  });
 
 var PRODUCTS_IN_BASKET = {
@@ -90,7 +89,7 @@ mainContainer.on('click', ".chossebase", function() {
 });
 
 mainContainer.on('click', ".basketproduct", function() {
-    var massa = $(this).closest(".Lastcake").find("#inputcake").val();
+    var massa = $(this).closest(".Lastcake").find(".inputcake").val();
     var sum = $(this).prev().val();
     var buyId = $(this).attr("buy-id");
     buyElement = findByID(buyId, dataproducts);
@@ -334,7 +333,7 @@ function renderContentByUrl() {
 var url = getUrl();
 console.log(url);
 router(url);
-    setBgSize()
+
 } 
 function setUrl(){
  var url=$(this).attr("type");
@@ -374,13 +373,7 @@ function routerTmpl(productId){
 }
 
 
-// ждем загрузки картинки браузером
-function setBgSize(){
-    var img = $('.imgTmpl');
-    var width  = img.width();
-    var height = img.height();
-    $(".img-bg").css({"width":width, "height":height})
-};
+
 
 
 
@@ -388,7 +381,7 @@ var  getInstagramPhotos=$.ajax({
 	url: 'https://api.instagram.com/v1/users/2948360510/media/recent',
 	dataType: 'jsonp',
 	type: 'GET',
-	data: {access_token: '2948360510.6ff386b.98860a84c74e4ed49f75ed3b45e8659f', count: 9},
+	data: {access_token: '2948360510.6ff386b.98860a84c74e4ed49f75ed3b45e8659f', count: 8},
     beforeSend: function(  ) {
 	    $(".lds-ripple").show();
     },
