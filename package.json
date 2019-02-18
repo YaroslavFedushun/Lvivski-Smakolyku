@@ -1,0 +1,29 @@
+{
+  "name": "Server",
+  "version": "1.0.0",
+  "description": "Simple node.js & react.js app",
+  "engines": {
+    "node": "8.9.x",
+    "npm": "5.6.x"
+  },
+  "scripts": {
+    "start": "node server",
+    "heroku-postbuild": "cd reactApp/ && npm install && npm install && npm run build"
+  },
+  "author": "Liubert",
+  "cacheDirectories": [
+    "node_modules",
+    "reactApp/node_modules"
+  ],
+  "dependencies": {
+    "express": "^4.14.1"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "create-react-app",
+    "react"
+  ],
+  "license": "VYACH",
+  "devDependencies": {}
+}
